@@ -1,1 +1,72 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_998l","dbfId":45726,"name":"불가사의한 마법봉","type":"SPELL","cardClass":"NEUTRAL","collectible":false,"cost":3,"text":"카드를 3장 뽑습니다.\n그 카드들의 비용을\n(1)|1(으로,로) 만듭니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-253_S.psd:ee29f05710ee06b4696b330edffa7f7d","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":3},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":5}],"races":[],"race":"","classes":[],"art":"art/LOOT_998l.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-253_S.psd:ee29f05710ee06b4696b330edffa7f7d","goldenMaterial":"LOOT_998l_PremiumCard.mat:e1135c91c0464c1419a5079a351a8094","goldenAnimation":"LOOT_998l_PremiumCard.asset:42c95b1192528b045a923b8aefa54582"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Wondrous Wand",
+  "card": {
+    "id": "LOOT_998l",
+    "dbfId": 45726,
+    "name": "불가사의한 마법봉",
+    "text": "카드를 3장 뽑습니다.\n그 카드들의 비용을\n(1)|1(으로,로) 만듭니다.",
+    "type": "SPELL",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-253_S.psd:ee29f05710ee06b4696b330edffa7f7d",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      }
+    ],
+    "nativeRawText": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n(1)|1(으로,로) 만듭니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

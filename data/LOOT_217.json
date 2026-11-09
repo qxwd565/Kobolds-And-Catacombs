@@ -1,1 +1,87 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_217","dbfId":45546,"name":"이리 와라!","type":"SPELL","cardClass":"HUNTER","rarity":"EPIC","collectible":true,"cost":6,"text":"동료 야수를 소환합니다. 내 덱에 하수인이 없으면 동료 야수를 2마리 소환합니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"난 혼자 사냥하지. 음, 미샤랑 같이. 아, 킁킁이도. 아, 레오크도.","spellSchool":"","portrait":"HS12-223_S.psd:e03d0c9cfc14e224d9cdb72a70d0b672","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":6},{"id":199,"name":"직업","value":3},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":4},{"id":321,"name":"수집 가능","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_217.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-223_S.psd:e03d0c9cfc14e224d9cdb72a70d0b672","goldenMaterial":"LOOT_217_PremiumCard.mat:90051bb7c3866ac44b68e8e66d449cf4","goldenAnimation":"LOOT_217_PremiumCard.asset:c0af29377a89ee749bff3c32f1f85a70"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "To My Side!",
+  "card": {
+    "id": "LOOT_217",
+    "dbfId": 45546,
+    "name": "이리 와라!",
+    "text": "동료 야수를 소환합니다. 내 덱에 하수인이 없으면 동료 야수를 2마리 소환합니다.",
+    "type": "SPELL",
+    "cardClass": "HUNTER",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "EPIC",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 6,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-223_S.psd:e03d0c9cfc14e224d9cdb72a70d0b672",
+    "flavor": "난 혼자 사냥하지. 음, 미샤랑 같이. 아, 킁킁이도. 아, 레오크도.",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 6
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 3
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 4
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "동료 야수를 소환합니다. 내 덱에 하수인이 없으면 동료 야수를 2마리 소환합니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [
+    100,
+    226,
+    959
+  ],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,1 +1,87 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_526t","dbfId":46467,"name":"어둠의 양초","type":"SPELL","cardClass":"NEUTRAL","collectible":false,"cost":4,"text":"<b>뽑을 때 시전</b>\n양초를 끕니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-243_S.psd:a882c47aca5a5a74f932fcd0d2ac00f9","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":4},{"id":114,"name":"전설 속성","value":0},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":5},{"id":321,"name":"수집 가능","value":0},{"id":1077,"name":"뽑을 때 시전","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_526t.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-243_S.psd:a882c47aca5a5a74f932fcd0d2ac00f9","goldenMaterial":"LOOT_526t_PremiumCard.mat:245caa24dc3c204419aafdee910b5d28","goldenAnimation":"LOOT_526t_PremiumCard.asset:94dcf5271b1409c488b033d91b5eaf22"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Darkness Candle",
+  "card": {
+    "id": "LOOT_526t",
+    "dbfId": 46467,
+    "name": "어둠의 양초",
+    "text": "<b>뽑을 때 시전</b>\n양초를 끕니다.",
+    "type": "SPELL",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 4,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-243_S.psd:a882c47aca5a5a74f932fcd0d2ac00f9",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 4
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 0
+      },
+      {
+        "id": 1077,
+        "name": "뽑을 때 시전",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>뽑을 때 시전</b>\n양초를 끕니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

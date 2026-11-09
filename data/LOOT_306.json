@@ -1,1 +1,103 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_306","dbfId":45820,"name":"지배당한 졸개","type":"MINION","cardClass":"WARLOCK","rarity":"RARE","collectible":true,"cost":5,"text":"<b>죽음의 메아리:</b>\n악마를 <b>소집</b>합니다.","attack":2,"health":2,"durability":0,"armor":0,"flavor":"졸개의 품위 유지비 미지급 시 졸개가 회수 처리될 수 있습니다.","spellSchool":"","portrait":"HS12-194_M.psd:401577a933961de43b7e702384fd6da1","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":2},{"id":47,"name":"공격력","value":2},{"id":48,"name":"마나 비용","value":5},{"id":199,"name":"직업","value":9},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":3},{"id":217,"name":"죽음의 메아리","value":1},{"id":321,"name":"수집 가능","value":1},{"id":763,"name":"소집","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_306.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-194_M.psd:401577a933961de43b7e702384fd6da1","goldenMaterial":"LOOT_306_PremiumCard.mat:bcefd13250671b94e83b8dca3b604aad","goldenAnimation":"LOOT_306_PremiumCard.asset:a0b8a834bac6e0f4d88f9fb2b07290a2"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Possessed Lackey",
+  "card": {
+    "id": "LOOT_306",
+    "dbfId": 45820,
+    "name": "지배당한 졸개",
+    "text": "<b>죽음의 메아리:</b>\n악마를 <b>소집</b>합니다.",
+    "type": "MINION",
+    "cardClass": "WARLOCK",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 5,
+    "attack": 2,
+    "health": 2,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-194_M.psd:401577a933961de43b7e702384fd6da1",
+    "flavor": "졸개의 품위 유지비 미지급 시 졸개가 회수 처리될 수 있습니다.",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 2
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 2
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 5
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 9
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 217,
+        "name": "죽음의 메아리",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 763,
+        "name": "소집",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>죽음의 메아리:</b>\n악마를 <b>소집</b>합니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

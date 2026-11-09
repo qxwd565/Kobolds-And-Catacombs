@@ -1,1 +1,107 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_507t","dbfId":46308,"name":"다이아몬드 주문석","type":"SPELL","cardClass":"PRIEST","rarity":"RARE","collectible":false,"cost":7,"text":"서로 다른 아군 하수인 셋을 부활시킵니다. @","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"HOLY","portrait":"HS12-023_S.psd:5d322a380e3640b4983b9c18dfd51c85","set":"LOOTAPALOOZA","nativeTags":[{"id":3,"name":"효과 수치 2","value":4},{"id":48,"name":"마나 비용","value":7},{"id":114,"name":"전설 속성","value":0},{"id":199,"name":"직업","value":6},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":3},{"id":321,"name":"수집 가능","value":0},{"id":1635,"name":"주문 속성","value":5}],"races":[],"race":"","classes":[],"art":"art/LOOT_507t.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-023_S.psd:5d322a380e3640b4983b9c18dfd51c85","goldenMaterial":"LOOT_507t_PremiumCard.mat:aeb1e2c96db4d0b42aefaa245f89fac7","goldenAnimation":"LOOT_507t_PremiumCard.asset:b12d007ac03fa914b810204be88b536e"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Diamond Spellstone",
+  "card": {
+    "id": "LOOT_507t",
+    "dbfId": 46308,
+    "name": "다이아몬드 주문석",
+    "text": "서로 다른 아군 하수인 셋을 부활시킵니다. @",
+    "type": "SPELL",
+    "cardClass": "PRIEST",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 7,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-023_S.psd:5d322a380e3640b4983b9c18dfd51c85",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 3,
+        "name": "효과 수치 2",
+        "value": 4
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 7
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 6
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 0
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 5
+      }
+    ],
+    "nativeRawText": "서로 다른 아군 하수인 셋을 부활시킵니다. @",
+    "nativeTextBuilder": 13,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "HOLY"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

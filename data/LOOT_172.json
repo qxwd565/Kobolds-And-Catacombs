@@ -1,1 +1,107 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_172","dbfId":45271,"name":"용의 분노","type":"SPELL","cardClass":"MAGE","rarity":"EPIC","collectible":true,"cost":5,"text":"내 덱의 주문을 공개해 그 주문의 비용만큼 <b>모든</b> 하수인에게 피해를 줍니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"\"괜찮아, 허클먹. 동전 하나 가져가도 절대 눈치 못 챌 걸?\"","spellSchool":"FIRE","portrait":"HS12-066_S.psd:a20bc8a4f61ca3e4dbd3361e783a1f7e","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":5},{"id":199,"name":"직업","value":4},{"id":201,"name":"진영","value":3},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":4},{"id":321,"name":"수집 가능","value":1},{"id":370,"name":"주문 공격력 적용","value":1},{"id":1635,"name":"주문 속성","value":2}],"races":[],"race":"","classes":[],"art":"art/LOOT_172.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-066_S.psd:a20bc8a4f61ca3e4dbd3361e783a1f7e","goldenMaterial":"LOOT_172_PremiumCard_NEW.mat:6cb21555ea070564ebd8a1434081431f","goldenAnimation":"LOOT_172_PremiumCard_NEW.asset:eb7d255269c24c94aa4b10651fadfe97"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Dragon's Fury",
+  "card": {
+    "id": "LOOT_172",
+    "dbfId": 45271,
+    "name": "용의 분노",
+    "text": "내 덱의 주문을 공개해 그 주문의 비용만큼 <b>모든</b> 하수인에게 피해를 줍니다.",
+    "type": "SPELL",
+    "cardClass": "MAGE",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "EPIC",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 5,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-066_S.psd:a20bc8a4f61ca3e4dbd3361e783a1f7e",
+    "flavor": "\"괜찮아, 허클먹. 동전 하나 가져가도 절대 눈치 못 챌 걸?\"",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 5
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 4
+      },
+      {
+        "id": 201,
+        "name": "진영",
+        "value": 3
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 4
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 370,
+        "name": "주문 공격력 적용",
+        "value": 1
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 2
+      }
+    ],
+    "nativeRawText": "내 덱의 주문을 공개해 그 주문의 비용만큼 <b>모든</b> 하수인에게 피해를 줍니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "FIRE"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,1 +1,97 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_008","dbfId":43112,"name":"영혼의 절규","type":"SPELL","cardClass":"PRIEST","rarity":"EPIC","collectible":true,"cost":7,"text":"<b>모든</b> 하수인을 상대편의 덱에\n섞어 넣습니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"모두 귀를 막으세요! 사실 별 효과는 없습니다.","spellSchool":"SHADOW","portrait":"HS12-066_S.psd:a5a306d0fd729f84fa47b445149baba9","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":7},{"id":199,"name":"직업","value":6},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":4},{"id":321,"name":"수집 가능","value":1},{"id":1635,"name":"주문 속성","value":6}],"races":[],"race":"","classes":[],"art":"art/LOOT_008.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-066_S.psd:a5a306d0fd729f84fa47b445149baba9","goldenMaterial":"LOOT_008_PremiumCard.mat:5a17401159952ae4082a458e039aa9b3","goldenAnimation":"LOOT_008_PremiumCard.asset:06fe2109114d23740b78ec10295ddf64"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Psychic Scream",
+  "card": {
+    "id": "LOOT_008",
+    "dbfId": 43112,
+    "name": "영혼의 절규",
+    "text": "<b>모든</b> 하수인을 상대편의 덱에\n섞어 넣습니다.",
+    "type": "SPELL",
+    "cardClass": "PRIEST",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "EPIC",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 7,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-066_S.psd:a5a306d0fd729f84fa47b445149baba9",
+    "flavor": "모두 귀를 막으세요! 사실 별 효과는 없습니다.",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 7
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 6
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 4
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 6
+      }
+    ],
+    "nativeRawText": "<b>모든</b> 하수인을 상대편의 덱에\n섞어 넣습니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "SHADOW"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

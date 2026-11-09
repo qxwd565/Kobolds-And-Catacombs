@@ -1,1 +1,97 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_998k","dbfId":45727,"name":"황금 코볼트","type":"MINION","cardClass":"NEUTRAL","collectible":false,"cost":3,"text":"<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다.","attack":6,"health":6,"durability":0,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-256_M.psd:3347c9bb9514d4d47913ccc73d5244db","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":6},{"id":47,"name":"공격력","value":6},{"id":48,"name":"마나 비용","value":3},{"id":114,"name":"전설 속성","value":1},{"id":190,"name":"도발","value":1},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":4},{"id":218,"name":"전투의 함성","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_998k.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-256_M.psd:3347c9bb9514d4d47913ccc73d5244db","goldenMaterial":"LOOT_998k_PremiumCard.mat:3f3b68f8fd1d29644aa4f791fdb96d65","goldenAnimation":"LOOT_998k_PremiumCard.asset:9567c8d31d52ef24b81b3ea65a0933a4"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Golden Kobold",
+  "card": {
+    "id": "LOOT_998k",
+    "dbfId": 45727,
+    "name": "황금 코볼트",
+    "text": "<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다.",
+    "type": "MINION",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 6,
+    "health": 6,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-256_M.psd:3347c9bb9514d4d47913ccc73d5244db",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 6
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 6
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 1
+      },
+      {
+        "id": 190,
+        "name": "도발",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 218,
+        "name": "전투의 함성",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "[x]<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,1 +1,87 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_131t1","dbfId":43484,"name":"녹색 수액","type":"MINION","cardClass":"NEUTRAL","collectible":false,"cost":2,"text":"<b>도발</b>","attack":1,"health":2,"durability":0,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-235_M.psd:3536224186e683446ab54983b1010226","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":2},{"id":47,"name":"공격력","value":1},{"id":48,"name":"마나 비용","value":2},{"id":190,"name":"도발","value":1},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":4}],"races":[],"race":"","classes":[],"art":"art/LOOT_131t1.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-235_M.psd:3536224186e683446ab54983b1010226","goldenMaterial":"LOOT_131t1_PremiumCard.mat:7fbfeac501f82854aa7f758971e3df40","goldenAnimation":"LOOT_131t1_PremiumCard.asset:45b85b04415231645b9b2686a2a37155"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Green Ooze",
+  "card": {
+    "id": "LOOT_131t1",
+    "dbfId": 43484,
+    "name": "녹색 수액",
+    "text": "<b>도발</b>",
+    "type": "MINION",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 2,
+    "attack": 1,
+    "health": 2,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-235_M.psd:3536224186e683446ab54983b1010226",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 2
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 1
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 2
+      },
+      {
+        "id": 190,
+        "name": "도발",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      }
+    ],
+    "nativeRawText": "<b>도발</b>",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

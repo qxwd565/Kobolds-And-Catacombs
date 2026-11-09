@@ -1,1 +1,102 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_104","dbfId":43420,"name":"변화하는 두루마리","type":"SPELL","cardClass":"MAGE","rarity":"COMMON","collectible":true,"cost":0,"text":"이 주문은 내 손에 있으면 내 턴이 시작될 때마다 무작위 마법사 주문으로 변신합니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"다음 턴이 어느 때보다 기다려질 거예요.","spellSchool":"ARCANE","portrait":"HS12-236_S.psd:7c403864149527448b02ea8828f54165","set":"LOOTAPALOOZA","nativeTags":[{"id":199,"name":"직업","value":4},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":1},{"id":321,"name":"수집 가능","value":1},{"id":402,"name":"능력치 숨김","value":1},{"id":1544,"name":"게임 태그 1544","value":1},{"id":1635,"name":"주문 속성","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_104.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-236_S.psd:7c403864149527448b02ea8828f54165","goldenMaterial":"LOOT_104_PremiumCard.mat:6ac572c11ee7f114ca22ccf16d88c683","goldenAnimation":"LOOT_104_PremiumCard.asset:200d46a9868139347bfaa368501a266d"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Shifting Scroll",
+  "card": {
+    "id": "LOOT_104",
+    "dbfId": 43420,
+    "name": "변화하는 두루마리",
+    "text": "이 주문은 내 손에 있으면 내 턴이 시작될 때마다 무작위 마법사 주문으로 변신합니다.",
+    "type": "SPELL",
+    "cardClass": "MAGE",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "COMMON",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 0,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-236_S.psd:7c403864149527448b02ea8828f54165",
+    "flavor": "다음 턴이 어느 때보다 기다려질 거예요.",
+    "nativeTags": [
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 4
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 402,
+        "name": "능력치 숨김",
+        "value": 1
+      },
+      {
+        "id": 1544,
+        "name": "게임 태그 1544",
+        "value": 1
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "이 주문은 내 손에 있으면 내 턴이 시작될 때마다 무작위 마법사 주문으로 변신합니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "ARCANE"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

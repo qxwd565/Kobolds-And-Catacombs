@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "set": "Kobolds And Catacombs",
+  "repository": "qxwd565/Kobolds-And-Catacombs",
+  "sourceRecords": 204,
+  "sourceVariants": 0,
+  "totalSourceJSON": 204,
+  "collectible": 135,
+  "uncollectible": 69,
+  "pendingReleaseIds": [],
+  "patchVerifiedIds": [
+    "LOOT_017",
+    "LOOT_093",
+    "LOOT_149"
+  ],
+  "patchVerifiedCardCount": 3,
+  "patchEvents": 5,
+  "excludedDifferentNativeSet": [],
+  "historicalAccuracy": "Historical initial snapshots are provisional, except fields directly reconstructed from cited patches; no exhaustive patch verification claimed",
+  "existingArtworkAndGoldenPreserved": true,
+  "committedPatchEvents": 62,
+  "skippedUnconfirmedFields": 8
+}

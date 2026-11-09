@@ -1,1 +1,77 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_541t","dbfId":46588,"name":"덱값 지불","type":"SPELL","cardClass":"NEUTRAL","collectible":false,"cost":5,"text":"상대편과 덱을 바꿉니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-233_S.psd:192710739e5abca44ad8c18041f7f205","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":5},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":5},{"id":321,"name":"수집 가능","value":0}],"races":[],"race":"","classes":[],"art":"art/LOOT_541t.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-233_S.psd:192710739e5abca44ad8c18041f7f205","goldenMaterial":"LOOT_541t_PremiumCard.mat:3fb3223575c85814daa87ab82c60e349","goldenAnimation":"LOOT_541t_PremiumCard.asset:a35469232e525b644bd39cbedc7d2374"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "King's Ransom",
+  "card": {
+    "id": "LOOT_541t",
+    "dbfId": 46588,
+    "name": "덱값 지불",
+    "text": "상대편과 덱을 바꿉니다.",
+    "type": "SPELL",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 5,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-233_S.psd:192710739e5abca44ad8c18041f7f205",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 5
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 0
+      }
+    ],
+    "nativeRawText": "상대편과 덱을 바꿉니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,1 +1,103 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_351","dbfId":45945,"name":"욕심쟁이 요마","type":"MINION","cardClass":"DRUID","rarity":"RARE","collectible":true,"cost":3,"text":"<b>죽음의 메아리:</b> 빈 마나 수정을 얻습니다.","attack":3,"health":1,"durability":0,"armor":0,"flavor":"일곱 마리의 대요마 중 가장 반짝입니다.","spellSchool":"","portrait":"HS12-047_D.psd:9fca94838e8fe964ead16c9b8f64ce8e","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":1},{"id":47,"name":"공격력","value":3},{"id":48,"name":"마나 비용","value":3},{"id":114,"name":"전설 속성","value":0},{"id":199,"name":"직업","value":2},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":3},{"id":217,"name":"죽음의 메아리","value":1},{"id":321,"name":"수집 가능","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_351.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-047_D.psd:9fca94838e8fe964ead16c9b8f64ce8e","goldenMaterial":"LOOT_351_PremiumCard.mat:5da4c19478f4be64389ed12a5acb7087","goldenAnimation":"LOOT_351_PremiumCard.asset:72ebb3420efef5e47958f5d71ef4fe76"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Greedy Sprite",
+  "card": {
+    "id": "LOOT_351",
+    "dbfId": 45945,
+    "name": "욕심쟁이 요마",
+    "text": "<b>죽음의 메아리:</b> 빈 마나 수정을 얻습니다.",
+    "type": "MINION",
+    "cardClass": "DRUID",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 3,
+    "health": 1,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-047_D.psd:9fca94838e8fe964ead16c9b8f64ce8e",
+    "flavor": "일곱 마리의 대요마 중 가장 반짝입니다.",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 1
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 3
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 2
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 217,
+        "name": "죽음의 메아리",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>죽음의 메아리:</b> 빈 마나 수정을 얻습니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

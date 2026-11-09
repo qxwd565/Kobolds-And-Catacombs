@@ -1,1 +1,96 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_504t","dbfId":45904,"name":"불안정한 진화","type":"SPELL","cardClass":"SHAMAN","collectible":false,"cost":1,"text":"아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다. 이번 턴에 반복할 수 있습니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"NATURE","portrait":"Hs12-185_S.psd:b7abad4d44a704f4f8b7b7b62996bf53","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":1},{"id":114,"name":"전설 속성","value":0},{"id":199,"name":"직업","value":8},{"id":202,"name":"카드 유형","value":5},{"id":321,"name":"수집 가능","value":0},{"id":1635,"name":"주문 속성","value":4}],"races":[],"race":"","classes":[],"art":"art/LOOT_504t.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"Hs12-185_S.psd:b7abad4d44a704f4f8b7b7b62996bf53","goldenMaterial":"LOOT_504_PremiumCard.mat:677760df472f28a44bb06335921571c2","goldenAnimation":"LOOT_504_PremiumCard.asset:c98d5135952c5a741ab48f83a46932d5"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Unstable Evolution",
+  "card": {
+    "id": "LOOT_504t",
+    "dbfId": 45904,
+    "name": "불안정한 진화",
+    "text": "아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다. 이번 턴에 반복할 수 있습니다.",
+    "type": "SPELL",
+    "cardClass": "SHAMAN",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 1,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "Hs12-185_S.psd:b7abad4d44a704f4f8b7b7b62996bf53",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 1
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 8
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 0
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 4
+      }
+    ],
+    "nativeRawText": "아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다. 이번 턴에 반복할 수 있습니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "NATURE"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

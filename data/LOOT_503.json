@@ -1,1 +1,115 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_503","dbfId":46296,"name":"하급 흑마노 주문석","type":"SPELL","cardClass":"ROGUE","rarity":"RARE","collectible":true,"cost":5,"text":"무작위 적 하수인을 처치합니다.\n@<i>(<b>죽음의 메아리</b> 카드를 3회 내면 강화됩니다.)</i>","attack":0,"health":0,"durability":0,"armor":0,"flavor":"고대의 트롤은 축복을 받아들였네 큰 힘이 담겨 있는 칠흑의 보석 보석을 지닌 자는 단검을 휘둘러 동료를 모두 베고 고고하게 홀로 섰네","spellSchool":"SHADOW","portrait":"HS12-016_S.psd:b68c78bddd938fd42a12d410e01c6d61","set":"LOOTAPALOOZA","nativeTags":[{"id":3,"name":"효과 수치 2","value":3},{"id":48,"name":"마나 비용","value":5},{"id":114,"name":"전설 속성","value":0},{"id":199,"name":"직업","value":7},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":3},{"id":217,"name":"죽음의 메아리","value":1},{"id":321,"name":"수집 가능","value":1},{"id":1635,"name":"주문 속성","value":6}],"races":[],"race":"","classes":[],"art":"art/LOOT_503.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-016_S.psd:b68c78bddd938fd42a12d410e01c6d61","goldenMaterial":"LOOT_503_PremiumCard.mat:3e1e33cea1c3af145aaa2ef85dfdf8dc","goldenAnimation":"LOOT_503_PremiumCard.asset:072e99e9f545c694e95a5d5c3fdca02a"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Lesser Onyx Spellstone",
+  "card": {
+    "id": "LOOT_503",
+    "dbfId": 46296,
+    "name": "하급 흑마노 주문석",
+    "text": "무작위 적 하수인을 처치합니다.\n@<i>(<b>죽음의 메아리</b> 카드를 3회 내면 강화됩니다.)</i>",
+    "type": "SPELL",
+    "cardClass": "ROGUE",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 5,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-016_S.psd:b68c78bddd938fd42a12d410e01c6d61",
+    "flavor": "고대의 트롤은 축복을 받아들였네 큰 힘이 담겨 있는 칠흑의 보석 보석을 지닌 자는 단검을 휘둘러 동료를 모두 베고 고고하게 홀로 섰네",
+    "nativeTags": [
+      {
+        "id": 3,
+        "name": "효과 수치 2",
+        "value": 3
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 5
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 7
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 217,
+        "name": "죽음의 메아리",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 6
+      }
+    ],
+    "nativeRawText": "무작위 적 하수인을 처치합니다.\n@<i>(<b>죽음의 메아리</b> 카드를 3회 내면 강화됩니다.)</i>",
+    "nativeTextBuilder": 13,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "SHADOW"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": true,
+  "relatedIds": [
+    46297,
+    46295
+  ],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,1 +1,93 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_286t3","dbfId":45778,"name":"축복받은 망치","type":"WEAPON","cardClass":"PALADIN","rarity":"RARE","collectible":false,"cost":3,"text":"<b>전투의 함성:</b>\n내 하수인들에게 공격력을 +1 부여합니다.","attack":2,"health":0,"durability":2,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-002c_W.psd:6f10b379dfeb16a4e906b8c65cd8afd0","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":2},{"id":47,"name":"공격력","value":2},{"id":48,"name":"마나 비용","value":3},{"id":199,"name":"직업","value":5},{"id":202,"name":"카드 유형","value":7},{"id":203,"name":"희귀도","value":3},{"id":218,"name":"전투의 함성","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_286t3.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-002c_W.psd:6f10b379dfeb16a4e906b8c65cd8afd0","goldenMaterial":"LOOT_286t3_PremiumCard.mat:4663c1f8eedaad04ebcacf49feb6bd65","goldenAnimation":"LOOT_286t3_PremiumCard.asset:8a457e095e4a2ba46bef2c0469cf0d93"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Blessed Maul",
+  "card": {
+    "id": "LOOT_286t3",
+    "dbfId": 45778,
+    "name": "축복받은 망치",
+    "text": "<b>전투의 함성:</b>\n내 하수인들에게 공격력을 +1 부여합니다.",
+    "type": "WEAPON",
+    "cardClass": "PALADIN",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 2,
+    "health": 0,
+    "armor": 0,
+    "durability": 2,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-002c_W.psd:6f10b379dfeb16a4e906b8c65cd8afd0",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 2
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 2
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 5
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 7
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 218,
+        "name": "전투의 함성",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>전투의 함성:</b>\n내 하수인들에게 공격력을 +1 부여합니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

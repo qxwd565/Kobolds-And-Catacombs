@@ -1,1 +1,108 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_383","dbfId":46082,"name":"굶주린 거인","type":"MINION","cardClass":"NEUTRAL","rarity":"RARE","collectible":true,"cost":6,"text":"<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다.","attack":4,"health":10,"durability":0,"armor":0,"flavor":"먹어도 먹어도 채워지지 않는 굶주림입니다.","spellSchool":"","portrait":"HS12-242_M.psd:77b2eac2c06668c4f86ee114844349c4","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":10},{"id":47,"name":"공격력","value":4},{"id":48,"name":"마나 비용","value":6},{"id":114,"name":"전설 속성","value":0},{"id":190,"name":"도발","value":1},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":3},{"id":218,"name":"전투의 함성","value":1},{"id":321,"name":"수집 가능","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_383.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-242_M.psd:77b2eac2c06668c4f86ee114844349c4","goldenMaterial":"LOOT_383_PremiumCard.mat:1442bec1a1abe104ca524abceb53746c","goldenAnimation":"LOOT_383_PremiumCard.asset:087143ed452047b4cb7a0d78d7e9c065"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Hungry Ettin",
+  "card": {
+    "id": "LOOT_383",
+    "dbfId": 46082,
+    "name": "굶주린 거인",
+    "text": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다.",
+    "type": "MINION",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 6,
+    "attack": 4,
+    "health": 10,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-242_M.psd:77b2eac2c06668c4f86ee114844349c4",
+    "flavor": "먹어도 먹어도 채워지지 않는 굶주림입니다.",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 10
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 4
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 6
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 190,
+        "name": "도발",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 218,
+        "name": "전투의 함성",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

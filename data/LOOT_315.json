@@ -1,1 +1,103 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_315","dbfId":45837,"name":"트로그 버섯먹보","type":"MINION","cardClass":"NEUTRAL","rarity":"COMMON","collectible":true,"cost":5,"text":"<b>도발</b>\n<b>독성</b>","attack":1,"health":5,"durability":0,"armor":0,"flavor":"트로그의 입에서는 고통과 비탄의 향이 풍겼다. 다른 트로그보다는 나은 악취였다.","spellSchool":"","portrait":"HS12-239_M.psd:d9fe648abfe35ea4a9856b5802bfd8ed","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":5},{"id":47,"name":"공격력","value":1},{"id":48,"name":"마나 비용","value":5},{"id":190,"name":"도발","value":1},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":1},{"id":321,"name":"수집 가능","value":1},{"id":363,"name":"독성","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_315.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-239_M.psd:d9fe648abfe35ea4a9856b5802bfd8ed","goldenMaterial":"LOOT_315_PremiumCard.mat:104e95370ccd29647abeae4bf12b8dcf","goldenAnimation":"LOOT_315_PremiumCard.asset:1b2be4430d29eea4c9795bf9e595d25c"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Trogg Gloomeater",
+  "card": {
+    "id": "LOOT_315",
+    "dbfId": 45837,
+    "name": "트로그 버섯먹보",
+    "text": "<b>도발</b>\n<b>독성</b>",
+    "type": "MINION",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "COMMON",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 5,
+    "attack": 1,
+    "health": 5,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-239_M.psd:d9fe648abfe35ea4a9856b5802bfd8ed",
+    "flavor": "트로그의 입에서는 고통과 비탄의 향이 풍겼다. 다른 트로그보다는 나은 악취였다.",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 5
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 1
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 5
+      },
+      {
+        "id": 190,
+        "name": "도발",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 363,
+        "name": "독성",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>도발</b>\n<b>독성</b>",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,1 +1,97 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_047","dbfId":43282,"name":"나무 껍질","type":"SPELL","cardClass":"DRUID","rarity":"COMMON","collectible":true,"cost":1,"text":"하수인에게 생명력을\n+3 부여합니다.\n방어도를 +3 얻습니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"아낌없이 주는 나무에게 받았습니다.","spellSchool":"NATURE","portrait":"W13_105_S.psd:c0dbd51af28c7c147ac96615bd69debc","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":1},{"id":199,"name":"직업","value":2},{"id":202,"name":"카드 유형","value":5},{"id":203,"name":"희귀도","value":1},{"id":321,"name":"수집 가능","value":1},{"id":1635,"name":"주문 속성","value":4}],"races":[],"race":"","classes":[],"art":"art/LOOT_047.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"W13_105_S.psd:c0dbd51af28c7c147ac96615bd69debc","goldenMaterial":"LOOT_047_PremiumCard.mat:995ba7b98385b2c48aa42464f6eb479b","goldenAnimation":"LOOT_047_PremiumCard.asset:a5a35d06943bac14098011b84d0e543e"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Barkskin",
+  "card": {
+    "id": "LOOT_047",
+    "dbfId": 43282,
+    "name": "나무 껍질",
+    "text": "하수인에게 생명력을\n+3 부여합니다.\n방어도를 +3 얻습니다.",
+    "type": "SPELL",
+    "cardClass": "DRUID",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "COMMON",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 1,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "W13_105_S.psd:c0dbd51af28c7c147ac96615bd69debc",
+    "flavor": "아낌없이 주는 나무에게 받았습니다.",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 2
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 4
+      }
+    ],
+    "nativeRawText": "[x]하수인에게 생명력을\n+3 부여합니다.\n방어도를 +3 얻습니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "NATURE"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

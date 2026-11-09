@@ -1,1 +1,72 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_998h","dbfId":43178,"name":"톨린의 술잔","type":"SPELL","cardClass":"NEUTRAL","collectible":false,"cost":3,"text":"카드를 뽑습니다. 그 카드를 복사하여\n내 손을 가득 채웁니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"","portrait":"HS12-251_S.psd:20e1097d755261c4a92192db51ddcce1","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":3},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":5}],"races":[],"race":"","classes":[],"art":"art/LOOT_998h.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-251_S.psd:20e1097d755261c4a92192db51ddcce1","goldenMaterial":"LOOT_998h_PremiumCard.mat:8cd9aee0e5a09d242b6091b0937317fe","goldenAnimation":"LOOT_998h_PremiumCard.asset:b630ba9378dfc3646873041ef60752f4"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Tolin's Goblet",
+  "card": {
+    "id": "LOOT_998h",
+    "dbfId": 43178,
+    "name": "톨린의 술잔",
+    "text": "카드를 뽑습니다. 그 카드를 복사하여\n내 손을 가득 채웁니다.",
+    "type": "SPELL",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-251_S.psd:20e1097d755261c4a92192db51ddcce1",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      }
+    ],
+    "nativeRawText": "카드를 뽑습니다. 그 카드를 복사하여\n내 손을 가득 채웁니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "timezone": "Asia/Seoul",
+  "default": {
+    "date": "2017-12-08",
+    "status": "verified"
+  },
+  "prefixes": {},
+  "cards": {},
+  "sources": {
+    "main": "https://hearthstone.blizzard.com/ko-kr/expansions-adventures/kobolds-and-catacombs"
+  }
+}

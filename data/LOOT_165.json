@@ -1,1 +1,103 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_165","dbfId":45263,"name":"소냐 섀도댄서","type":"MINION","cardClass":"ROGUE","rarity":"LEGENDARY","collectible":true,"cost":3,"text":"아군 하수인이 죽은 후에,\n그 하수인을 비용이 (1)인\n1/1 하수인으로 복사하여\n내 손으로 가져옵니다.","attack":2,"health":2,"durability":0,"armor":0,"flavor":"사랑하라, 한 번도 상처받지 않은 것처럼. 춤춰라, 1/1 하수인이 지켜보는 것처럼.","spellSchool":"","portrait":"HS12-181_M.psd:45ba7fa402fd39544b3bb27c2a219725","set":"LOOTAPALOOZA","nativeTags":[{"id":32,"name":"발동 효과 표시","value":1},{"id":45,"name":"생명력","value":2},{"id":47,"name":"공격력","value":2},{"id":48,"name":"마나 비용","value":3},{"id":114,"name":"전설 속성","value":1},{"id":199,"name":"직업","value":7},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":5},{"id":321,"name":"수집 가능","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_165.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-181_M.psd:45ba7fa402fd39544b3bb27c2a219725","goldenMaterial":"LOOT_165_PremiumCard_2.mat:df83d85798967254fb6ce420efff031d","goldenAnimation":"LOOT_165_PremiumCard_2.asset:65afad1c62a0c5e43a41981101679e85"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Sonya Shadowdancer",
+  "card": {
+    "id": "LOOT_165",
+    "dbfId": 45263,
+    "name": "소냐 섀도댄서",
+    "text": "아군 하수인이 죽은 후에,\n그 하수인을 비용이 (1)인\n1/1 하수인으로 복사하여\n내 손으로 가져옵니다.",
+    "type": "MINION",
+    "cardClass": "ROGUE",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "LEGENDARY",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 2,
+    "health": 2,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-181_M.psd:45ba7fa402fd39544b3bb27c2a219725",
+    "flavor": "사랑하라, 한 번도 상처받지 않은 것처럼. 춤춰라, 1/1 하수인이 지켜보는 것처럼.",
+    "nativeTags": [
+      {
+        "id": 32,
+        "name": "발동 효과 표시",
+        "value": 1
+      },
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 2
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 2
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 7
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 5
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "[x]아군 하수인이 죽은 후에,\n그 하수인을 비용이 (1)인\n1/1 하수인으로 복사하여\n내 손으로 가져옵니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

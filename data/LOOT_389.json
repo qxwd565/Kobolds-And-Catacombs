@@ -1,1 +1,103 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_389","dbfId":46088,"name":"뒤적거리는 코볼트","type":"MINION","cardClass":"NEUTRAL","rarity":"EPIC","collectible":true,"cost":3,"text":"<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.","attack":1,"health":3,"durability":0,"armor":0,"flavor":"\"장검이 부러지니 그로 말미암아 새로운 단검이 생기더라.\" - 코볼트복음 10장 1절","spellSchool":"","portrait":"HS12-209_M.psd:88a7d0d293be6344cb5b2850cc7ac1a0","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":3},{"id":47,"name":"공격력","value":1},{"id":48,"name":"마나 비용","value":3},{"id":114,"name":"전설 속성","value":0},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":4},{"id":218,"name":"전투의 함성","value":1},{"id":321,"name":"수집 가능","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_389.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-209_M.psd:88a7d0d293be6344cb5b2850cc7ac1a0","goldenMaterial":"LOOT_389_PremiumCard.mat:bc04e1e21dd75e8419b46909b5b45b4e","goldenAnimation":"LOOT_389_PremiumCard.asset:5260ecdbd67ca634ba1461e90fa050cc"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Rummaging Kobold",
+  "card": {
+    "id": "LOOT_389",
+    "dbfId": 46088,
+    "name": "뒤적거리는 코볼트",
+    "text": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
+    "type": "MINION",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "EPIC",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 3,
+    "attack": 1,
+    "health": 3,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-209_M.psd:88a7d0d293be6344cb5b2850cc7ac1a0",
+    "flavor": "\"장검이 부러지니 그로 말미암아 새로운 단검이 생기더라.\" - 코볼트복음 10장 1절",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 3
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 1
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 3
+      },
+      {
+        "id": 114,
+        "name": "전설 속성",
+        "value": 0
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 4
+      },
+      {
+        "id": 218,
+        "name": "전투의 함성",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

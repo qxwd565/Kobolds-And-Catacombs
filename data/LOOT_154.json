@@ -1,1 +1,98 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_154","dbfId":43528,"name":"자갈주둥이 기사","type":"MINION","cardClass":"NEUTRAL","rarity":"RARE","collectible":true,"cost":1,"text":"<b>전투의 함성:</b> 상대편에게 비용이 1인 무작위 하수인을 소환해 줍니다.","attack":2,"health":3,"durability":0,"armor":0,"flavor":"두더지 1종 대형 운전면허 소유자입니다.","spellSchool":"","portrait":"HS12-103_M.psd:782cd4178dd7aec41be7fd95c5e7c58f","set":"LOOTAPALOOZA","nativeTags":[{"id":45,"name":"생명력","value":3},{"id":47,"name":"공격력","value":2},{"id":48,"name":"마나 비용","value":1},{"id":199,"name":"직업","value":12},{"id":202,"name":"카드 유형","value":4},{"id":203,"name":"희귀도","value":3},{"id":218,"name":"전투의 함성","value":1},{"id":321,"name":"수집 가능","value":1}],"races":[],"race":"","classes":[],"art":"art/LOOT_154.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-103_M.psd:782cd4178dd7aec41be7fd95c5e7c58f","goldenMaterial":"LOOT_154_PremiumCard.mat:3bb10b7e3f45cb044b21d872af44864c","goldenAnimation":"LOOT_154_PremiumCard.asset:78c4c74ede66afc478f81507e2bf7b46"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "Gravelsnout Knight",
+  "card": {
+    "id": "LOOT_154",
+    "dbfId": 43528,
+    "name": "자갈주둥이 기사",
+    "text": "<b>전투의 함성:</b> 상대편에게 비용이 1인 무작위 하수인을 소환해 줍니다.",
+    "type": "MINION",
+    "cardClass": "NEUTRAL",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "rarity": "RARE",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 1,
+    "attack": 2,
+    "health": 3,
+    "armor": 0,
+    "durability": 0,
+    "collectible": true,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-103_M.psd:782cd4178dd7aec41be7fd95c5e7c58f",
+    "flavor": "두더지 1종 대형 운전면허 소유자입니다.",
+    "nativeTags": [
+      {
+        "id": 45,
+        "name": "생명력",
+        "value": 3
+      },
+      {
+        "id": 47,
+        "name": "공격력",
+        "value": 2
+      },
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 1
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 12
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 4
+      },
+      {
+        "id": 203,
+        "name": "희귀도",
+        "value": 3
+      },
+      {
+        "id": 218,
+        "name": "전투의 함성",
+        "value": 1
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 1
+      }
+    ],
+    "nativeRawText": "<b>전투의 함성:</b> 상대편에게 비용이 1인 무작위 하수인을 소환해 줍니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [],
+    "initialSpecStatus": "unverified",
+    "patchSources": {}
+  },
+  "root": true,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}

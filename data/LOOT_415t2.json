@@ -1,1 +1,91 @@
-{"schemaVersion":1,"mode":"constructed","card":{"id":"LOOT_415t2","dbfId":46038,"name":"두 번째 인장","type":"SPELL","cardClass":"WARLOCK","collectible":false,"cost":5,"text":"3/3 악마를 소환합니다.\n'세 번째 인장'을\n내 손으로 가져옵니다.","attack":0,"health":0,"durability":0,"armor":0,"flavor":"","spellSchool":"SHADOW","portrait":"HS12-197b_S.psd:16e883317ed6774418445d5f19fff4d7","set":"LOOTAPALOOZA","nativeTags":[{"id":48,"name":"마나 비용","value":5},{"id":199,"name":"직업","value":9},{"id":202,"name":"카드 유형","value":5},{"id":321,"name":"수집 가능","value":0},{"id":1635,"name":"주문 속성","value":6}],"races":[],"race":"","classes":[],"art":"art/LOOT_415t2.png"},"artworkProvenance":{"source":"installed Hearthstone native assets","portrait":"HS12-197b_S.psd:16e883317ed6774418445d5f19fff4d7","goldenMaterial":"LOOT_415t2_PremiumCard.mat:6bfc40f59585a244a8fc20e9281df927","goldenAnimation":"LOOT_415t2_PremiumCard.asset:97a8dcdddc2264a428c3dbe0aaa0fd7e"}}
+{
+  "schemaVersion": 1,
+  "mode": "constructed",
+  "englishName": "The Second Seal",
+  "card": {
+    "id": "LOOT_415t2",
+    "dbfId": 46038,
+    "name": "두 번째 인장",
+    "text": "3/3 악마를 소환합니다.\n'세 번째 인장'을\n내 손으로 가져옵니다.",
+    "type": "SPELL",
+    "cardClass": "WARLOCK",
+    "classes": [],
+    "nativeSetId": 1004,
+    "set": "LOOTAPALOOZA",
+    "race": "",
+    "races": [],
+    "spellSchool": "",
+    "cost": 5,
+    "attack": 0,
+    "health": 0,
+    "armor": 0,
+    "durability": 0,
+    "collectible": false,
+    "chooseOne": false,
+    "installed": true,
+    "portrait": "HS12-197b_S.psd:16e883317ed6774418445d5f19fff4d7",
+    "flavor": "",
+    "nativeTags": [
+      {
+        "id": 48,
+        "name": "마나 비용",
+        "value": 5
+      },
+      {
+        "id": 199,
+        "name": "직업",
+        "value": 9
+      },
+      {
+        "id": 202,
+        "name": "카드 유형",
+        "value": 5
+      },
+      {
+        "id": 321,
+        "name": "수집 가능",
+        "value": 0
+      },
+      {
+        "id": 1635,
+        "name": "주문 속성",
+        "value": 6
+      }
+    ],
+    "nativeRawText": "[x]3/3 악마를 소환합니다.\n'세 번째 인장'을\n내 손으로 가져옵니다.",
+    "nativeTextBuilder": 0,
+    "releasedAt": "2017-12-08",
+    "releaseStatus": "verified",
+    "patches": [
+      {
+        "date": "2021-03-26",
+        "changes": {
+          "spellSchool": "SHADOW"
+        }
+      }
+    ],
+    "initialSpecStatus": "unverified",
+    "patchSources": {
+      "2021-03-26": "taxonomy introduction"
+    }
+  },
+  "root": false,
+  "relatedIds": [],
+  "expansion": {
+    "id": 1004,
+    "slug": "kobolds-and-catacombs",
+    "name": "코볼트와 지하 미궁",
+    "type": "expansion",
+    "englishName": "Kobolds And Catacombs"
+  },
+  "setOrder": 32,
+  "formats": [
+    "wild"
+  ],
+  "provenance": {
+    "source": "Installed Hearthstone dbf.unity3d",
+    "gameVersion": "6000.3.11.3145967",
+    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+    "locale": "koKR"
+  }
+}
