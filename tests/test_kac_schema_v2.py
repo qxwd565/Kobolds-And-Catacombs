@@ -154,10 +154,13 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(self.sources["LOOT_375"]["_meta"]["currentPrimaryRace"]["value"],2)
         self.assertEqual(self.records["LOOT_111"]["race"],"기계, 야수")
         self.assertEqual(self.records["LOOT_111"]["races"],["MECHANICAL","BEAST"])
+        self.assertEqual(self.sources["LOOT_111"]["_meta"]["currentCanonicalRaces"],["MECHANICAL","BEAST"])
         self.assertEqual(self.records["LOOT_209t"]["race"],"언데드, 용족")
         self.assertEqual(self.records["LOOT_209t"]["races"],["UNDEAD","DRAGON"])
+        self.assertEqual(self.sources["LOOT_209t"]["_meta"]["currentCanonicalRaces"],["DRAGON","UNDEAD"])
         self.assertEqual(self.records["LOOT_313"]["race"],"정령, 야수")
         self.assertEqual(self.records["LOOT_313"]["races"],["ELEMENTAL","BEAST"])
+        self.assertEqual(self.sources["LOOT_313"]["_meta"]["currentCanonicalRaces"],["BEAST","ELEMENTAL"])
 
     def test_current_repairs_and_linebreaks_are_preserved(self):
         self.assertEqual(sum("<br></br>" in c.get("text","") for c in self.records.values()),97)
