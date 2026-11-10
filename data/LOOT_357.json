@@ -75,7 +75,7 @@
     ],
     "nativeRawText": "<b>전투의 함성:</b> 상대편에게 0/8 보물 상자를 소환해 줍니다. <i>(상자를 부수고 멋진 전리품을 획득하세요!)</i>",
     "nativeTextBuilder": 0,
-    "releasedAt": "2017-12-08",
+    "releasedAt": "2017-11-07",
     "releaseStatus": "verified",
     "patches": [],
     "initialSpecStatus": "unverified",
