@@ -145,7 +145,7 @@ def launch_state(entity, cid):
     if text.get("present"):
         raw = text.get("nativeRawText", text.get("xmlText"))
         state["nativeRawText"] = raw
-        state["text"] = raw.replace("[x]","").replace("\\n","<br></br>") if raw is not None else ""
+        state["text"] = raw.replace("[x]","").replace("\\n","<br></br>").replace("\n","<br></br>") if raw is not None else ""
     if 183 in tags:
         state["nativeTextBuilder"] = tags[183]
     # Canonical type rules: no zero placeholders for fields that do not apply.
@@ -196,11 +196,16 @@ def main():
     launch_main=read_xml(Path(args.main_launch),wanted-marine_ids)
     current_xml=read_xml(Path(args.current),wanted)
     changed=0
+    corrections_applied=set()
     for cid,record in records.items():
         path=ROOT/"data"/(cid+".json")
         source=read(path)
+        if source.get("schemaVersion")==2:
+            if source.get("current",{}).get("id")!=cid or source.get("_meta",{}).get("schemaVersion")!=2:
+                raise ValueError(f"{cid}: invalid existing schema v2 source")
+            continue
         old=source.get("card",{})
-        if source.get("schemaVersion") not in (1,2):
+        if source.get("schemaVersion")!=1:
             raise ValueError(f"{cid}: unsupported schemaVersion {source.get('schemaVersion')}")
         launch=(launch_marine if cid in marine_ids else launch_main)[cid]
         state=launch_state(launch,cid)
@@ -217,6 +222,7 @@ def main():
             for correction in policy.get("dateCorrections",[]):
                 if correction["cardId"]==cid and day==correction["from"]:
                     day=correction["to"]
+                    corrections_applied.add(correction["cardId"])
             merge_event(events,day,event["changes"],source=old.get("patchSources",{}).get(event["date"]))
         for event in policy.get("events",[]):
             if event["cardId"]==cid:
@@ -261,6 +267,9 @@ def main():
         doc.update(dates)
         if write(path,doc):
             changed+=1
+    missing_corrections=[c["cardId"] for c in policy.get("dateCorrections",[]) if c["cardId"] not in corrections_applied]
+    if missing_corrections:
+        raise ValueError(f"Expected existing patch date corrections were not found: {missing_corrections}")
     print(json.dumps({"cards":len(records),"schemaVersion":2,"changedFiles":changed,"marineLaunch":len(marine_ids),"mainLaunch":len(wanted-marine_ids),"eventsAddedOrMerged":len(policy["events"]),"dateCorrections":len(policy["dateCorrections"]),"wordingObservations":len(policy.get("wordingObservations",[]))},ensure_ascii=False))
 
 if __name__=="__main__":
