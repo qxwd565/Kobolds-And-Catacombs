@@ -245,20 +245,23 @@ def main():
         # Preserve the curated current display fields verbatim, including race label
         # and races array order. Canonical Tag 200 is stored separately in _meta.
         current_card=copy.deepcopy(record)
-        # Compare the latest dated raw string with the approved current raw string
-        # for every card in this one migration pass. Unknown transitions stay
+        # Compare latest dated display/raw strings with approved current values
+        # for all 204 cards in this one migration pass. Unknown transitions stay
         # explicitly undated; neither side is copied over the other.
         latest_raw=state.get("nativeRawText")
+        latest_text=state.get("text")
         for event in events:
             changes=event["changes"]
             if "nativeRawText" in changes:
                 latest_raw=changes["nativeRawText"]
             elif "text" in changes:
-                latest_raw=changes["text"].replace("<br></br>","\n")
+                latest_raw=changes["text"].replace("<br></br>","\\n")
+            if "text" in changes:
+                latest_text=changes["text"]
         current_raw=old.get("nativeRawText")
-        undated_text_observation=None
+        undated_text_observations=[]
         if latest_raw != current_raw:
-            undated_text_observation={
+            undated_text_observations.append({
                 "topic":"native-raw-text-current-vs-dated",
                 "fields":["nativeRawText"],
                 "before":latest_raw,
@@ -266,7 +269,17 @@ def main():
                 "date":None,
                 "sourceCommits":[policy["snapshotSources"]["launchMarine" if cid in marine_ids else "launchMain"]["commit"],policy["snapshotSources"]["current"]["commit"]],
                 "note":"Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
-            }
+            })
+        if latest_text != record.get("text"):
+            undated_text_observations.append({
+                "topic":"display-text-current-vs-dated",
+                "fields":["text"],
+                "before":latest_text,
+                "after":record.get("text"),
+                "date":None,
+                "sourceCommits":[policy["snapshotSources"]["launchMarine" if cid in marine_ids else "launchMain"]["commit"],policy["snapshotSources"]["current"]["commit"]],
+                "note":"Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+            })
         stable={key:copy.deepcopy(source[key]) for key in STABLE}
         owner_ids={tag["id"] for tag in current_xml[cid]["owned"]}
         names={tag["id"]:tag.get("name",TAG_NAMES.get(tag["id"],f"Tag {tag['id']}")) for tag in old.get("nativeTags",[])}
@@ -280,7 +293,7 @@ def main():
                 set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|
                 ({"nativeRawText"} if any("text" in event.get("changes",{}) and "nativeRawText" not in event.get("changes",{}) for event in old.get("patches",[])) else set())|
                 ({"name"} if "name" in state and record.get("name")!=state["name"] else set())|
-                ({"nativeRawText"} if undated_text_observation else set())|
+                ({field for observation in undated_text_observations for field in observation["fields"]})|
                 {field for observation in policy.get("undatedObservations",[]) if cid in observation.get("cardIds",[]) for field in observation.get("fields",[])}
             ),
             "launchStringEvidence":launch["strings"],
@@ -290,7 +303,7 @@ def main():
             "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
             "tagHistoryStatus":"snapshot synchronization pending; see tag-observation source manifest",
             "wordingObservations":[x for x in policy.get("wordingObservations",[]) if x["cardId"]==cid],
-            "undatedObservations":[x for x in policy.get("undatedObservations",[]) if cid in x.get("cardIds",[])] + ([undated_text_observation] if undated_text_observation else []),
+            "undatedObservations":[x for x in policy.get("undatedObservations",[]) if cid in x.get("cardIds",[])] + undated_text_observations,
             "editorialSuggestions":[x for x in policy.get("editorialSuggestions",[]) if x["cardId"]==cid],
             "functionalEvents":[x for x in policy.get("events",[]) if x["cardId"]==cid and x.get("eventType")=="functional-rule-change"],
         }
