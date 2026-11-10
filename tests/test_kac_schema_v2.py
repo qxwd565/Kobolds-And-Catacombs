@@ -129,6 +129,10 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(raw_l_2026,"[x]카드를 3장 뽑습니다.\\n그 카드들의 비용을\\n1로 만듭니다.")
         self.assertFalse(self.sources["LOOT_998l"]["2024-10-18"]["changes"]["text"].startswith("[x]"))
         self.assertFalse(self.sources["LOOT_998l"]["2026-03-11"]["changes"]["text"].startswith("[x]"))
+        self.assertEqual(self.sources["LOOT_998k"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_k)
+        self.assertEqual(self.sources["LOOT_998l"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_l_2024)
+        self.assertEqual(self.sources["LOOT_998l"]["2026-03-11"]["nativeRawTextChanges"]["after"],raw_l_2026)
+        self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["nativeRawTextChanges"]["after"],exact)
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["functionalEvents"][0]["date"],"2022-04-06")
 
     def test_undated_loot013_raw_text_observation_is_exact_and_not_dated(self):
