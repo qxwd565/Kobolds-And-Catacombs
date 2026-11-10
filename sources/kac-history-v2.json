@@ -147,25 +147,6 @@
       "source": "https://hearthstone.blizzard.com/ko-kr/news/23784368/23-0-patch-notes"
     },
     {
-      "cardId": "LOOT_516",
-      "date": "2022-04-06",
-      "changes": {
-        "races": [
-          "NAGA"
-        ]
-      },
-      "source": "https://hearthstone.blizzard.com/ko-kr/news/23784368/23-0-patch-notes"
-    },
-    {
-      "cardId": "LOOT_504",
-      "date": "2022-04-27",
-      "changes": {
-        "text": "<b>잔상</b>, 아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
-      },
-      "eventType": "wording",
-      "source": "https://hearthstone.blizzard.com/ko-kr/news/23797160"
-    },
-    {
       "cardId": "LOOT_412",
       "date": "2022-08-17",
       "changes": {
@@ -294,5 +275,91 @@
       },
       "source": "https://hearthstone.blizzard.com/ko-kr/news/24307311"
     }
-  ]
+  ],
+  "wordingObservations": [
+    {
+      "cardId": "LOOT_504",
+      "date": "2022-04-27",
+      "changes": {
+        "text": "<b>잔상</b>, 아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
+      },
+      "eventType": "wording",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23797160",
+      "category": "expression-only",
+      "note": "Text reflects the 2022-04-06 functional rule change; do not count as a second gameplay event."
+    }
+  ],
+  "initialAssertions": {
+    "LOOT_056": {
+      "races": []
+    },
+    "LOOT_111": {
+      "races": [
+        "MECHANICAL"
+      ]
+    },
+    "LOOT_137": {
+      "attack": 4
+    },
+    "LOOT_211": {
+      "health": 2
+    },
+    "LOOT_231": {
+      "health": 2
+    },
+    "LOOT_313": {
+      "races": []
+    },
+    "LOOT_329": {
+      "races": [
+        "ELEMENTAL"
+      ]
+    },
+    "LOOT_392": {
+      "text": "<b>죽음의 메아리:</b>\n마나 수정을 10개 얻습니다."
+    },
+    "LOOT_412": {
+      "cost": 4
+    },
+    "LOOT_417": {
+      "cost": 4,
+      "text": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 모두 버립니다."
+    },
+    "LOOT_504": {
+      "text": "아군 하수인 하나를 비용이 (1) 높은 하수인으로 변신시킵니다. 이번 턴에 반복할 수 있습니다."
+    },
+    "LOOT_998k": {
+      "text": "<b>도발</b>, <b>전투의 함성:</b>\n내 손에 있는 <b>모든</b> 카드를 <b>전설</b> 하수인으로 교체합니다."
+    },
+    "LOOT_998l": {
+      "text": "카드를 3장 뽑습니다. 그 카드들의 비용이 (0)이 됩니다."
+    }
+  },
+  "snapshotSources": {
+    "launchMarine": {
+      "commit": "c623eb10a6fed4a214cf27923e749da9cb52c226",
+      "version": "9.4.0.22115",
+      "sha256": "632aa9cbbb8ce8815fa80173bcbcc5c21af6e0ecbe2558c164b8e6504b84f94a"
+    },
+    "launchMain": {
+      "commit": "d399871096675e4186c1c2d35b9c410464a4ffbf",
+      "version": "10.0.0.22611",
+      "sha256": "c42c99ca2216802a072eac484bd221706349e4ed278dae93d252f8a503e380a"
+    },
+    "current": {
+      "commit": "31b034c26f24b8a66ece845ffd03c1ca397b9a02",
+      "version": "37.0.2.256589",
+      "sha256": "420224a8c02eeea4ce7d3f1b39f50d5754b2b869118d4d215ef7c5ca1526594c"
+    },
+    "historicalCommits": [
+      "87826d798af6dc58dace839774a708e0cd1e46ca",
+      "beaa46cc24c1332ad91d4f7ae096024f6ff7d394",
+      "54141c4a6bf3efeedaf69d7510b987f216ff00e6",
+      "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+      "fdad346dc49ebb5465f548a0a2b58b59edcbe087",
+      "0a387d653f339297339625710e4df91f0c62b67b",
+      "132c8a94327896bbd9b911d7ee26086df7089290",
+      "48d8f26b3a9a?"
+    ]
+  }
 }
