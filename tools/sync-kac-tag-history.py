@@ -194,15 +194,15 @@ def main():
                 raise ValueError(f"{cid}: expected schema v2 before observation synchronization")
             attach_observation(source,cid,group,card)
             if day and fid in dated_types:
-                entry=source.get(day)
-                if entry is None:
-                    raise ValueError(f"{cid}: dated observation {fid} missing timeline date {day}")
                 fields=card.get("fields",{})
+                # Create/merge the confirmed observation boundary first. A
+                # wording-only date need not already exist in the gameplay timeline.
+                sync_event(source,cid,day,group,{"nativeTags":{str(k):v for k,v in fields.items() if k.isdigit()}},fid,dated_types[fid])
+                entry=source[day]
                 raw=fields.get("rawText",{}).get("after")
                 if raw is not None:
                     entry.setdefault("changes",{})["nativeRawText"]=raw
                     entry["changes"]["text"]=display_text(raw)
-                sync_event(source,cid,day,group,{"nativeTags":{str(k):v for k,v in fields.items() if k.isdigit()}},fid,dated_types[fid])
                 # sync_event has already merged tag changes for D008; preserve exact
                 # raw/enUS strings and before/after evidence in _meta.observations.
             if fid=="KNC-D004" and cid=="LOOT_504":
