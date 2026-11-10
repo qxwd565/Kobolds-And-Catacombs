@@ -25,19 +25,24 @@ def main():
         cid = card["id"]
         assert rendered[cid]["text"] == card.get("text"), f"{cid}: current render text drift"
         source = read(ROOT / "data" / f"{cid}.json")
-        assert source["card"]["id"] == cid
-        assert source["card"]["dbfId"] == card["dbfId"]
+        meta = source.get("_meta", source)
+        current = source.get("current", source.get("card", {}))
+        assert current["id"] == cid
+        assert current["dbfId"] == card["dbfId"]
         for key in STABLE:
-            assert key in source, f"{cid}: missing stable metadata {key}"
+            assert key in meta, f"{cid}: missing stable metadata {key}"
     # The two explicitly approved current-data corrections.
-    illusionist = read(ROOT / "data" / "LOOT_412.json")["card"]
+    illusionist_source = read(ROOT / "data" / "LOOT_412.json")
+    illusionist = illusionist_source.get("current", illusionist_source.get("card", {}))
     expected_text = "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.<br></br>그 하수인의 능력치가 1/1이 됩니다."
     expected_raw = "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.\n그 하수인의 능력치가 1/1이 됩니다."
     assert illusionist["text"] == expected_text
-    assert illusionist["nativeRawText"] == expected_raw
+    assert illusionist_source.get("nativeRawText", illusionist.get("nativeRawText")) == expected_raw
     assert rendered["LOOT_412"]["text"] == expected_text
-    crushing = read(ROOT / "data" / "LOOT_060.json")["card"]
-    tag = next(item for item in crushing["nativeTags"] if item["id"] == 215)
+    crushing_source = read(ROOT / "data" / "LOOT_060.json")
+    crushing = crushing_source.get("current", crushing_source.get("card", {}))
+    tags = crushing_source.get("nativeTags", crushing.get("nativeTags", []))
+    tag = next(item for item in tags if item["id"] == 215)
     assert tag == {"id": 215, "name": "과부하", "value": 3}
     for location in (cards, render["cards"]):
         card = next(item for item in location if item["id"] == "LOOT_060")
