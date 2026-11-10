@@ -206,6 +206,14 @@ def main():
         if source.get("schemaVersion")==2:
             if source.get("current",{}).get("id")!=cid or source.get("_meta",{}).get("schemaVersion")!=2:
                 raise ValueError(f"{cid}: invalid existing schema v2 source")
+            expected_release=policy.get("releaseOverrides",{}).get(cid,source.get("_meta",{}).get("releasedAt"))
+            if source.get("_meta",{}).get("releasedAt")!=expected_release:
+                raise ValueError(f"{cid}: existing schema v2 release date is not stable")
+            for correction in policy.get("dateCorrections",[]):
+                if correction["cardId"]==cid:
+                    if correction["to"] not in source or correction["from"] in source:
+                        raise ValueError(f"{cid}: existing schema v2 does not contain the corrected date boundary")
+                    corrections_applied.add(cid)
             continue
         old=source.get("card",{})
         if source.get("schemaVersion")!=1:
