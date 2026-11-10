@@ -13,10 +13,12 @@ def main():
     catalog = read(ROOT / "cards.json")
     render = read(ROOT / "render.json")
     history = read(ROOT / "history.json")
-    assert catalog["schema"] == render["schema"] == history["schema"] == 1
+    legacy = read(ROOT / "legacy.json")
+    assert catalog["schema"] == render["schema"] == history["schema"] == legacy["schema"] == 1
     cards = catalog["cards"]
     rendered = {card["id"]: card for card in render["cards"]}
     assert len(cards) == 204 and len(rendered) == 204
+    assert len(history["cards"]) == len(legacy["cards"]) == 204
     assert len(list((ROOT / "data").glob("LOOT_*.json"))) == 204
     assert len({card["id"] for card in cards}) == 204
     linebreak_cards = sum("<br></br>" in card.get("text", "") for card in cards)
@@ -29,6 +31,11 @@ def main():
         current = source.get("current", source.get("card", {}))
         assert current["id"] == cid
         assert current["dbfId"] == card["dbfId"]
+        assert meta.get("tagHistoryStatus") == "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive"
+        legacy_card = legacy["cards"][str(card["dbfId"])]
+        assert legacy_card["id"] == cid
+        assert isinstance(legacy_card["initialSpec"].get("nativeTags"), list)
+        assert isinstance(legacy_card["initialSpec"].get("referencedTags"), list)
         for key in STABLE:
             assert key in meta, f"{cid}: missing stable metadata {key}"
     # The two explicitly approved current-data corrections.
@@ -56,6 +63,7 @@ def main():
         "illusionistText": "correct",
         "crushingHandOwnedTag215": 3,
         "historyCards": len(history["cards"]),
+        "legacyInitialSpecs": len(legacy["cards"]),
     }, ensure_ascii=False))
 
 if __name__ == "__main__":
