@@ -287,6 +287,33 @@
       "source": "https://hearthstone.blizzard.com/ko-kr/news/23797160",
       "category": "expression-only",
       "note": "Text reflects the 2022-04-06 functional rule change; do not count as a second gameplay event."
+    },
+    {
+      "cardId": "LOOT_026e",
+      "date": "2018-10-03",
+      "changes": {
+        "text": "<b>뽑을 때 시전</b><br></br>4/4 거미를 소환합니다."
+      },
+      "eventType": "wording",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22546493"
+    },
+    {
+      "cardId": "LOOT_106t",
+      "date": "2018-10-03",
+      "changes": {
+        "text": "<b>뽑을 때 시전</b><br></br>무작위 주문을 시전합니다."
+      },
+      "eventType": "wording",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22546493"
+    },
+    {
+      "cardId": "LOOT_526t",
+      "date": "2018-10-03",
+      "changes": {
+        "text": "<b>뽑을 때 시전</b><br></br>양초를 끕니다."
+      },
+      "eventType": "wording",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22546493"
     }
   ],
   "initialAssertions": {
@@ -368,5 +395,213 @@
       "880a9c120d53c05432593e9b3007ecf29f3ccb88",
       "fc67953f6f6eee064badde3f4a7bd07011508642"
     ]
-  }
+  },
+  "undatedObservations": [
+    {
+      "topic": "choice-cost-tag-absence",
+      "cardIds": [
+        "LOOT_054b",
+        "LOOT_054c",
+        "LOOT_054d"
+      ],
+      "field": "cost",
+      "before": "absent",
+      "after": 4,
+      "date": null,
+      "sourceCommits": [
+        "8d75b318f31f3d4d1faf06f666cde029f0d140ac",
+        "1a884ec23e99e4daa26637df99433c6e17bba63c"
+      ],
+      "note": "선택지의 미리보기 비용. 실제 부모 LOOT_054 비용 변화가 아니며 0으로 채우지 않음."
+    },
+    {
+      "topic": "weapon-durability-tag-storage",
+      "cardIds": [
+        "LOOT_044",
+        "LOOT_085",
+        "LOOT_108",
+        "LOOT_209",
+        "LOOT_222",
+        "LOOT_285t4t",
+        "LOOT_286",
+        "LOOT_286t1",
+        "LOOT_286t2",
+        "LOOT_286t3",
+        "LOOT_286t4",
+        "LOOT_380",
+        "LOOT_392",
+        "LOOT_420",
+        "LOOT_500",
+        "LOOT_506",
+        "LOOT_542"
+      ],
+      "field": "durability",
+      "beforeTag": 187,
+      "afterTag": 45,
+      "date": null,
+      "sourceCommits": [
+        "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+        "fdad346dc49ebb5465f548a0a2b58b59edcbe087"
+      ],
+      "note": "논리 내구도 동일; health 별칭과 혼동하지 않음."
+    },
+    {
+      "topic": "imp-internal-tag",
+      "cardIds": [
+        "LOOT_013",
+        "LOOT_136"
+      ],
+      "date": "2021-03-26",
+      "tagId": 1965,
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23642550",
+      "sourceCommit": "132c8a94327896bbd9b911d7ee26086df7089290",
+      "note": "표시 종족 또는 밸런스 사건으로 승격하지 않음."
+    },
+    {
+      "topic": "elusive-internal-tag",
+      "cardIds": [
+        "LOOT_193"
+      ],
+      "date": null,
+      "tagName": "ELUSIVE",
+      "sourceCommits": [
+        "59c1e1229b3e48ecbc4436fda2fb0a22030d3808",
+        "cc80e8aa220f39632c9c742f8587265f7569c5ef"
+      ],
+      "note": "상대 턴 조건 문구를 대체하지 않음."
+    },
+    {
+      "topic": "kingbane-wording",
+      "cardIds": [
+        "LOOT_542"
+      ],
+      "date": null,
+      "sourceCommits": [
+        "242423aeeeccda4c86a9aed57780d682faf6d044",
+        "0565689bc30e7fe550053066d033958f1f90033f"
+      ],
+      "note": "강화 유지 엔진 동작 변경 근거 없음."
+    },
+    {
+      "topic": "wand-cost-macro",
+      "cardIds": [
+        "LOOT_998l"
+      ],
+      "date": null,
+      "sourceCommits": [
+        "552bca16aca965b882c1614b4673afa0f93d3f6e",
+        "8616eadbbd159acd6009e50bce099b806d1467e1"
+      ],
+      "fields": [
+        "text",
+        "nativeRawText"
+      ],
+      "note": "비용 1 설정 효과 동일. 2026-03-11 밸런스 사건으로 중복 집계하지 않음."
+    },
+    {
+      "topic": "sleep-keyword-display",
+      "cardIds": [
+        "LOOT_526"
+      ],
+      "date": null,
+      "sourceCommits": [
+        "880a9c120d53c05432593e9b3007ecf29f3ccb88",
+        "fc67953f6f6eee064badde3f4a7bd07011508642"
+      ],
+      "note": "휴면 효과는 출시 때부터 존재."
+    },
+    {
+      "topic": "candle-arrow-target-wording",
+      "cardIds": [
+        "LOOT_222"
+      ],
+      "date": "2018-02-07",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/21507224",
+      "note": "내 영웅 대상 명시. 면역 수치 사건 아님."
+    },
+    {
+      "topic": "kindly-spirit-missing-number-sign",
+      "cardIds": [
+        "LOOT_398"
+      ],
+      "date": null,
+      "note": "플레이버의 #1/#2/#3 원문 기호 차이. 자동 복원 금지."
+    },
+    {
+      "topic": "mounted-keyword-wording",
+      "cardIds": [
+        "LOOT_193",
+        "LOOT_382"
+      ],
+      "date": "2024-03-12",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24064735/29-0",
+      "note": "모면 키워드 문구 정리; 런타임 전체 상호작용은 미검증."
+    },
+    {
+      "topic": "oak-summons-wording",
+      "cardIds": [
+        "LOOT_309"
+      ],
+      "date": "2024-03-12",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24064735/29-0",
+      "note": "소집 용어 제거; 기능 변경 아님."
+    }
+  ],
+  "editorialSuggestions": [
+    {
+      "cardId": "LOOT_013",
+      "field": "flavor",
+      "suggestion": "갯수 → 개수"
+    },
+    {
+      "cardId": "LOOT_062",
+      "field": "flavor",
+      "suggestion": "수 년간 → 수년간"
+    },
+    {
+      "cardId": "LOOT_080",
+      "field": "flavor",
+      "suggestion": "사그러드니 → 사그라드니"
+    },
+    {
+      "cardId": "LOOT_088",
+      "field": "flavor",
+      "suggestion": "마음 속 → 마음속"
+    },
+    {
+      "cardId": "LOOT_091",
+      "field": "flavor",
+      "suggestion": "줄테니 → 줄 테니"
+    },
+    {
+      "cardId": "LOOT_125",
+      "field": "flavor",
+      "suggestion": "들여다 본 → 들여다본"
+    },
+    {
+      "cardId": "LOOT_218",
+      "field": "flavor",
+      "suggestion": "처음하신다고요 → 처음 하신다고요"
+    },
+    {
+      "cardId": "LOOT_278",
+      "field": "flavor",
+      "suggestion": "목 말라 → 목말라"
+    },
+    {
+      "cardId": "LOOT_363",
+      "field": "flavor",
+      "suggestion": "봐야합니다 → 봐야 합니다"
+    },
+    {
+      "cardId": "LOOT_364",
+      "field": "text",
+      "suggestion": "소모한만큼 → 소모한 만큼"
+    },
+    {
+      "cardId": "LOOT_535",
+      "field": "text",
+      "suggestion": "시전한만큼 → 시전한 만큼"
+    }
+  ]
 }
