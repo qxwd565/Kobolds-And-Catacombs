@@ -229,6 +229,49 @@ def main():
             raw="<b>잔상</b>\n아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
             item["changes"]={"nativeRawText":raw,"text":display_text(raw)}
     if write(policy_path,policy): changed+=1
+    # Keep later current-string revisions distinct from the last dated
+    # snapshot. If the transition date is not in the evidence, record only an
+    # exact undated before/after observation; never move current text backwards.
+    latest_commit_by_card={}
+    for group in evidence["tagEvents"]+evidence["observations"]:
+        for card in group.get("cards",[]):
+            cid=card.get("id") or card.get("originalCardId")
+            if card.get("rawText") or card.get("fields",{}).get("rawText"):
+                latest_commit_by_card[cid]=group["after"]["commit"]
+    for cid in records:
+        path=ROOT/"data"/(cid+".json")
+        source=read(path)
+        dates=sorted(k for k in source if re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}",k))
+        if not dates:
+            continue
+        latest_state=copy.deepcopy(source[dates[0]].get("state",{}))
+        for day in dates[1:]:
+            event=source[day]
+            latest_state.update(copy.deepcopy(event.get("changes",{})))
+            for field in event.get("removedFields",[]):
+                latest_state.pop(field,None)
+        meta=source["_meta"]
+        observations_list=meta.setdefault("undatedObservations",[])
+        for field,topic,current_value in (
+            ("nativeRawText","native-raw-text-current-vs-dated",source.get("nativeRawText")),
+            ("text","display-text-current-vs-dated",source.get("current",{}).get("text")),
+        ):
+            if field not in latest_state or latest_state[field]==current_value:
+                continue
+            before=latest_state[field]
+            item={
+                "topic":topic,"fields":[field],"before":copy.deepcopy(before),
+                "after":copy.deepcopy(current_value),"date":None,
+                "sourceCommits":[latest_commit_by_card.get(cid,""),"31b034c26f24b8a66ece845ffd03c1ca397b9a02"],
+                "note":"The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
+            }
+            item["sourceCommits"]=[x for x in item["sourceCommits"] if x]
+            observations_list[:]=[x for x in observations_list if x.get("topic")!=topic]
+            observations_list.append(item)
+            meta.setdefault("historyIncompleteFields",[])
+            if field not in meta["historyIncompleteFields"]:
+                meta["historyIncompleteFields"].append(field)
+        if write(path,source): changed+=1
     # Every current card name is present in the current cache. Do not confuse it
     # with the sparse launch baseline's CARDNAME evidence.
     for cid in records:
