@@ -236,6 +236,20 @@ def main():
                     changes["text"]=changes["text"].replace("\n","<br></br>")
                 merge_event(events,event["date"],changes,event.get("source"),event.get("eventType","gameplay-change"))
         events.sort(key=lambda x:x["date"])
+        # A dated race-array event also records the primary Tag 200 label when
+        # that primary tribe first appears. Secondary-only additions must not
+        # rewrite the primary label.
+        current_primary_enum=tags_by_id(current_xml[cid]).get(200)
+        current_primary=RACE.get(current_primary_enum)
+        current_primary_label=RACE_KO.get(current_primary,current_primary or "") if current_primary else ""
+        primary_at_date=state.get("race","")
+        for event in events:
+            changes=event["changes"]
+            if "race" in changes:
+                primary_at_date=changes["race"]
+            elif "races" in changes and current_primary in changes["races"] and primary_at_date!=current_primary_label:
+                changes["race"]=current_primary_label
+                primary_at_date=current_primary_label
         dates={}
         dates[release]={"state":state,"ownedTags":launch["owned"],"referencedTags":launch["referenced"]}
         for event in events:
