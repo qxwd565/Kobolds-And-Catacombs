@@ -24,7 +24,9 @@ jobs:
           git init /tmp/hsdata
           git -C /tmp/hsdata remote add origin https://github.com/HearthSim/hsdata.git
           COMMITS="c623eb10a6fed4a214cf27923e749da9cb52c226 d399871096675e4186c1c2d35b9c410464a4ffbf 31b034c26f24b8a66ece845ffd03c1ca397b9a02 87826d798af6dc58dace839774a708e0cd1e46ca beaa46cc24c1332ad91d4f7ae096024f6ff7d394 da8f2db996f1e7191e501ebe2943af5636697e06 37797c6c5e9af546306299ade90189454f2b16ac 0a5a61e3867ae9eea535bdbd4df714671ff87910 54141c4a6bf3efeedaf69d7510b987f216ff00e6 0a387d653f339297339625710e4df91f0c62b67b 8d75b318f31f3d4d1faf06f666cde029f0d140ac 1a884ec23e99e4daa26637df99433c6e17bba63c 48d8f8261c56e0b5109f5e363cd47c000585857f 9016168146cc3ce0369e8cbc54eb8395afba75a0 62cc0f00dbed73f2d48ccefca6f611e6f8898986 fdad346dc49ebb5465f548a0a2b58b59edcbe087 132c8a94327896bbd9b911d7ee26086df7089290 59c1e1229b3e48ecbc4436fda2fb0a22030d3808 cc80e8aa220f39632c9c742f8587265f7569c5ef 242423aeeeccda4c86a9aed57780d682faf6d044 0565689bc30e7fe550053066d033958f1f90033f 552bca16aca965b882c1614b4673afa0f93d3f6e 8616eadbbd159acd6009e50bce099b806d1467e1 880a9c120d53c05432593e9b3007ecf29f3ccb88 fc67953f6f6eee064badde3f4a7bd07011508642"
+          EVIDENCE_COMMITS="0238602958c2a3f362858704e07db42e078dc193 0445fcab2b98505c8afa69370ef78d349593e27a 0565689bc30e7fe550053066d033958f1f90033f 08bac5520bd01f1c4d9493debc9b3e5b26197153 0a387d653f339297339625710e4df91f0c62b67b 0a5a61e3867ae9eea535bdbd4df714671ff87910 132c8a94327896bbd9b911d7ee26086df7089290 1a0dcda07394c622066630e4d09817aca8ff9fbf 1a69a81aa9bbe99d9fc6ee7048fc32614b5fe44d 1a884ec23e99e4daa26637df99433c6e17bba63c 242423aeeeccda4c86a9aed57780d682faf6d044 31b034c26f24b8a66ece845ffd03c1ca397b9a02 37797c6c5e9af546306299ade90189454f2b16ac 382ab7f189586f73a4fab4e11a3bc4e1d6827a08 48d8f8261c56e0b5109f5e363cd47c000585857f 54141c4a6bf3efeedaf69d7510b987f216ff00e6 552bca16aca965b882c1614b4673afa0f93d3f6e 59c1e1229b3e48ecbc4436fda2fb0a22030d3808 60ceb7f7842724699adb79bee462d870b841de09 62cc0f00dbed73f2d48ccefca6f611e6f8898986 63bdc035f2d50bc3857d01f88ad13d79b235a0c0 6ebd160cc0c685b10265f4d6bfe2ef69c3a0f226 8616eadbbd159acd6009e50bce099b806d1467e1 87826d798af6dc58dace839774a708e0cd1e46ca 880a9c120d53c05432593e9b3007ecf29f3ccb88 8bfb29fa4064a213262beb5a8941203f6aa7434c 8d75b318f31f3d4d1faf06f666cde029f0d140ac 9016168146cc3ce0369e8cbc54eb8395afba75a0 98f5d9349a8d993ca01c049734a0ec25707140f0 9b76feb3155f6416239b5bc13c8977974b5225eb 9bb8141a10a96678a8377dc94856a709ba6bcfdb 9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62 a770d899b7ea12594f2edfc7d097f6ee0a858eb8 aeffaf09cdbba14654c4543792558fab68cee363 b0d06776272138cab032979722d18ca4de6545f0 b378113a0d83405eab56db202a697c9875e0d421 beaa46cc24c1332ad91d4f7ae096024f6ff7d394 cc80e8aa220f39632c9c742f8587265f7569c5ef cf08a2eee9159a63ff589cfe2deabc4035673871 d399871096675e4186c1c2d35b9c410464a4ffbf d48f0a5642df703653cfe141e94310dfb78b5642 da8f2db996f1e7191e501ebe2943af5636697e06 e072e5d302a93dc6fb33542e7c528ae4d39560f0 e24c11b27da20a2b3515c63543b397f9e530db5b e6b9c5e51678d5035d1188f63c246326bb221c60 e6f83dcccd27eebb11dfa9bd0b35f93d31da61fe ef8297aadee616ea2ffbc941a7b55a84b6cfc819 f9d936096897c6fd4d723102381769efd8b9be89 fa264cc2d1267d71a8de6f5163f3e0b6550bba4a fc67953f6f6eee064badde3f4a7bd07011508642 fdad346dc49ebb5465f548a0a2b58b59edcbe087"
           git -C /tmp/hsdata fetch --depth=1 origin $COMMITS
+          git -C /tmp/hsdata fetch --depth=1 origin $EVIDENCE_COMMITS
           git -C /tmp/hsdata show c623eb10a6fed4a214cf27923e749da9cb52c226:CardDefs.xml > /tmp/CardDefs-marine-launch.xml
           git -C /tmp/hsdata show d399871096675e4186c1c2d35b9c410464a4ffbf:CardDefs.xml > /tmp/CardDefs-main-launch.xml
           git -C /tmp/hsdata show 31b034c26f24b8a66ece845ffd03c1ca397b9a02:CardDefs.xml > /tmp/CardDefs-current.xml
@@ -34,12 +36,17 @@ jobs:
           for commit in $COMMITS; do
             git -C /tmp/hsdata show "$commit:CardDefs.xml" > "/tmp/CardDefs-$commit.xml"
           done
+          for commit in $EVIDENCE_COMMITS; do
+            git -C /tmp/hsdata show "$commit:CardDefs.xml" > "/tmp/CardDefs-$commit.xml"
+          done
       - name: Migrate all 204 cards from immutable launch XML
         run: |
           python tools/migrate-kac-schema-v2.py \
             --marine-launch /tmp/CardDefs-marine-launch.xml \
             --main-launch /tmp/CardDefs-main-launch.xml \
             --current /tmp/CardDefs-current.xml
+      - name: Synchronize confirmed raw Tag and observation history
+        run: python tools/sync-kac-tag-history.py
       - name: Build legacy schema-1 compatibility endpoints from schema-2 history
         run: python tools/build-api.py
       - name: Run schema, history-boundary, and current-data regression tests
@@ -50,7 +57,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cards.json render.json history.json data/*.json
+          git add cards.json render.json history.json legacy.json data/*.json
           if git diff --cached --quiet; then
             echo "No card source changes."
           else
