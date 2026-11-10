@@ -115,8 +115,6 @@ def launch_state(entity, cid):
     if kind is None:
         raise ValueError(f"{cid}: unsupported or absent launch card type {tags.get(202)!r}")
     state = {"type":kind}
-    if 185 in tags:
-        raise ValueError(f"{cid}: CARDNAME unexpectedly parsed as numeric")
     # CARDNAME and CARDTEXT_INHAND are localized string Tags, not numeric Tag values.
     # Their presence and exact locale values are retained separately in _meta.launchStrings.
     if 199 in tags and tags[199] in CLASS:
@@ -232,13 +230,16 @@ def main():
             dates[event["date"]]={"changes":event["changes"],"sources":event.get("sources",[]),"eventTypes":event.get("eventTypes",[])}
         current_card=copy.deepcopy(record)
         stable={key:copy.deepcopy(source[key]) for key in STABLE}
+        owner_ids={tag["id"] for tag in current_xml[cid]["owned"]}
+        names={tag["id"]:tag.get("name",TAG_NAMES.get(tag["id"],f"Tag {tag['id']}")) for tag in old.get("nativeTags",[])}
+        reference_tags=[{"id":tag["id"],"name":names.get(tag["id"],TAG_NAMES.get(tag["id"],f"Tag {tag['id']}")),"value":tag.get("value")} for tag in current_xml[cid]["referenced"]]
         meta={
             **stable,
             "schemaVersion":2,
             "releaseStatus":old.get("releaseStatus","verified"),
             "historyIncompleteFields":sorted(set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}),
             "launchStringEvidence":launch["strings"],
-            "currentTagOrigins":[{"id":t["id"],"source":"owned" if t in current_xml[cid]["owned"] else "referenced"} for t in old.get("nativeTags",[])],
+            "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
             "tagHistoryStatus":"snapshot synchronization pending; see tag-observation source manifest",
             "wordingObservations":[x for x in policy.get("wordingObservations",[]) if x["cardId"]==cid],
             "functionalEvents":[x for x in policy.get("events",[]) if x["cardId"]==cid and x.get("eventType")=="functional-rule-change"],
@@ -250,7 +251,7 @@ def main():
             "_meta":meta,
             "current":current_card,
             "nativeTags":copy.deepcopy(old.get("nativeTags",[])),
-            "referencedTags":current_xml[cid]["referenced"],
+            "referencedTags":reference_tags,
             "nativeRawText":old.get("nativeRawText"),
             "nativeTextBuilder":old.get("nativeTextBuilder"),
         }
