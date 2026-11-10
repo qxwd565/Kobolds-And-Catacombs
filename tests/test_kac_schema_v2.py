@@ -86,11 +86,16 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
             revisions,details=BUILD.replay_v2(source,self.records[cid],cid)
             for revision in revisions:
                 target=dict(next(state for day,state in forward if day==revision["from"]))
-                recovered=copy.deepcopy(self.records[cid])
-                if self.sources[cid].get("nativeRawText") is not None:
-                    recovered["nativeRawText"]=self.sources[cid]["nativeRawText"]
-                if self.sources[cid].get("nativeTextBuilder") is not None:
-                    recovered["nativeTextBuilder"]=self.sources[cid]["nativeTextBuilder"]
+                # Restrict this source-state round trip to the documented card
+                # state fields; the public-render test separately checks the
+                # full current record and its actual date overrides.
+                recovered={field:copy.deepcopy(self.records[cid][field])
+                           for field in BUILD.STATE_FIELDS if field in self.records[cid]}
+                recovered.update({field:copy.deepcopy(value) for field,value in details["currentState"].items()
+                                  if field in ("race","races","mechanics")})
+                for field in ("nativeRawText","nativeTextBuilder"):
+                    if self.sources[cid].get(field) is not None:
+                        recovered[field]=copy.deepcopy(self.sources[cid][field])
                 recovered.update(copy.deepcopy(revision["changes"]))
                 for field in revision.get("removedFields",[]):
                     recovered.pop(field,None)
@@ -99,8 +104,8 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                         continue
                     actual=recovered.get(field,BUILD.MISSING)
                     self.assertEqual(actual,value,f"{cid}:{revision['from']}:{field}")
-                for field in recovered:
-                    if field not in target and field not in details["incomplete"]:
+                for field in BUILD.STATE_FIELDS:
+                    if field in recovered and field not in target and field not in details["incomplete"]:
                         self.assertIn(field,revision.get("removedFields",[]),f"{cid}:{revision['from']}:{field}")
 
     def test_known_release_and_patch_corrections(self):
@@ -117,8 +122,6 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(len(self.policy["dateCorrections"]),5)
         self.assertIn("2022-04-06",dates(self.sources["LOOT_504"]))
         self.assertIn("2022-04-27",dates(self.sources["LOOT_504"]))
-        self.assertIn("\\n",exact)
-        self.assertNotIn("\\\\n",exact)
         self.assertNotIn("2022-04-06",dates(self.sources["LOOT_504t"]))
         self.assertNotIn("2022-04-27",dates(self.sources["LOOT_504t"]))
         raw_k=self.sources["LOOT_998k"]["2024-10-18"]["changes"]["nativeRawText"]
@@ -132,7 +135,6 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(self.sources["LOOT_998k"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_k)
         self.assertEqual(self.sources["LOOT_998l"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_l_2024)
         self.assertEqual(self.sources["LOOT_998l"]["2026-03-11"]["nativeRawTextChanges"]["after"],raw_l_2026)
-        self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["nativeRawTextChanges"]["after"],exact)
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["functionalEvents"][0]["date"],"2022-04-06")
 
     def test_undated_loot013_raw_text_observation_is_exact_and_not_dated(self):
@@ -216,6 +218,9 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(self.sources["LOOT_504"]["2022-04-06"]["nativeTagChanges"]["1114"],
                          {"before":{"present":True,"value":1},"after":{"present":False}})
         exact="<b>잔상</b>\n아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
+        self.assertIn("\\n",exact)
+        self.assertNotIn("\\\\n",exact)
+        self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["nativeRawTextChanges"]["after"],exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["nativeRawText"],exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["text"],
                          "<b>잔상</b><br></br>아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다.")
