@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
@@ -46,27 +46,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           python tools/validate-kac-current.py
-      - name: Re-run full pipeline in independent hash-seeded Python processes
-        run: |
-          run_pipeline() {
-            seed="$1"
-            env PYTHONHASHSEED="$seed" python tools/migrate-kac-schema-v2.py --marine-launch /tmp/CardDefs-marine-launch.xml --main-launch /tmp/CardDefs-main-launch.xml --current /tmp/CardDefs-current.xml
-            env PYTHONHASHSEED="$seed" python tools/build-api.py
-            env PYTHONHASHSEED="$seed" python -m unittest discover -s tests -v
-            env PYTHONHASHSEED="$seed" python tools/validate-kac-current.py
-          }
-          if ! git diff --quiet; then
-            echo "Generated schema v2 sources or compatibility indexes differ from HEAD; replay proof deferred to the resulting commit's workflow run."
-          else
-            run_pipeline 1
-            git diff --exit-code
-            test -z "$(git status --porcelain --untracked-files=no)"
-            echo "PYTHONHASHSEED=1: git diff --exit-code clean"
-            run_pipeline 8675309
-            git diff --exit-code
-            test -z "$(git status --porcelain --untracked-files=no)"
-            echo "PYTHONHASHSEED=8675309: git diff --exit-code clean"
-          fi
       - name: Commit migrated card sources and compatibility indexes
         run: |
           git config user.name "github-actions[bot]"
@@ -74,7 +53,23 @@ jobs:
           git add cards.json render.json history.json data/*.json
           if git diff --cached --quiet; then
             echo "No card source changes."
-            exit 0
+          else
+            git commit -m "Migrate Kobolds cards to date-keyed schema v2"
+            git push origin HEAD:main
           fi
-          git commit -m "Migrate Kobolds cards to date-keyed schema v2"
-          git push origin HEAD:main
+          echo "Verified checkout SHA after generated-source commit: $(git rev-parse HEAD)"
+      - name: Re-run full pipeline in independent hash-seeded Python processes
+        run: |
+          run_pipeline() {
+            seed="$1"
+            echo "PYTHONHASHSEED=$seed source SHA: $(git rev-parse HEAD)"
+            env PYTHONHASHSEED="$seed" python tools/migrate-kac-schema-v2.py --marine-launch /tmp/CardDefs-marine-launch.xml --main-launch /tmp/CardDefs-main-launch.xml --current /tmp/CardDefs-current.xml
+            env PYTHONHASHSEED="$seed" python tools/build-api.py
+            env PYTHONHASHSEED="$seed" python -m unittest discover -s tests -v
+            env PYTHONHASHSEED="$seed" python tools/validate-kac-current.py
+            git diff --exit-code
+            test -z "$(git status --porcelain --untracked-files=no)"
+            echo "PYTHONHASHSEED=$seed: git diff --exit-code clean at $(git rev-parse HEAD)"
+          }
+          run_pipeline 1
+          run_pipeline 8675309
