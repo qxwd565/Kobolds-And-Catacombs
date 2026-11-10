@@ -1,0 +1,298 @@
+{
+  "schema": 1,
+  "timezone": "Asia/Seoul",
+  "releaseOverrides": {
+    "LOOT_357": "2017-11-07",
+    "LOOT_357l": "2017-11-07",
+    "LOOT_998h": "2017-11-07",
+    "LOOT_998j": "2017-11-07",
+    "LOOT_998k": "2017-11-07",
+    "LOOT_998l": "2017-11-07"
+  },
+  "dateCorrections": [
+    {
+      "cardId": "LOOT_091t",
+      "from": "2022-11-30",
+      "to": "2023-02-15",
+      "field": "races",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4"
+    },
+    {
+      "cardId": "LOOT_091t1t",
+      "from": "2022-11-30",
+      "to": "2023-02-15",
+      "field": "races",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4"
+    },
+    {
+      "cardId": "LOOT_091t2t",
+      "from": "2022-11-30",
+      "to": "2023-02-15",
+      "field": "races",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4"
+    },
+    {
+      "cardId": "LOOT_209t",
+      "from": "2022-11-30",
+      "to": "2023-02-15",
+      "field": "races",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4"
+    },
+    {
+      "cardId": "LOOT_516",
+      "from": "2022-04-13",
+      "to": "2022-04-06",
+      "field": "races",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23784368/23-0-patch-notes"
+    }
+  ],
+  "events": [
+    {
+      "cardId": "LOOT_539",
+      "date": "2018-05-23",
+      "changes": {
+        "cost": 7
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5"
+    },
+    {
+      "cardId": "LOOT_306",
+      "date": "2018-05-23",
+      "changes": {
+        "cost": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5"
+    },
+    {
+      "cardId": "LOOT_329",
+      "date": "2018-08-03",
+      "changes": {
+        "races": []
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/21964710"
+    },
+    {
+      "cardId": "LOOT_333",
+      "date": "2018-12-20",
+      "changes": {
+        "cost": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22817529"
+    },
+    {
+      "cardId": "LOOT_080",
+      "date": "2019-02-06",
+      "changes": {
+        "cost": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22882146"
+    },
+    {
+      "cardId": "LOOT_080t2",
+      "date": "2019-02-06",
+      "changes": {
+        "cost": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22882146"
+    },
+    {
+      "cardId": "LOOT_080t3",
+      "date": "2019-02-06",
+      "changes": {
+        "cost": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/22882146"
+    },
+    {
+      "cardId": "LOOT_080",
+      "date": "2020-03-18",
+      "changes": {
+        "cost": 5
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23319440"
+    },
+    {
+      "cardId": "LOOT_080t2",
+      "date": "2020-03-18",
+      "changes": {
+        "cost": 5
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23319440"
+    },
+    {
+      "cardId": "LOOT_080t3",
+      "date": "2020-03-18",
+      "changes": {
+        "cost": 5
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23319440"
+    },
+    {
+      "cardId": "LOOT_539",
+      "date": "2020-03-18",
+      "changes": {
+        "cost": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23319440"
+    },
+    {
+      "cardId": "LOOT_504",
+      "date": "2022-04-06",
+      "changes": {
+        "mechanics": [
+          "ECHO"
+        ]
+      },
+      "eventType": "functional-rule-change",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23784368/23-0-patch-notes"
+    },
+    {
+      "cardId": "LOOT_516",
+      "date": "2022-04-06",
+      "changes": {
+        "races": [
+          "NAGA"
+        ]
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23784368/23-0-patch-notes"
+    },
+    {
+      "cardId": "LOOT_504",
+      "date": "2022-04-27",
+      "changes": {
+        "text": "<b>잔상</b>, 아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
+      },
+      "eventType": "wording",
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23797160"
+    },
+    {
+      "cardId": "LOOT_412",
+      "date": "2022-08-17",
+      "changes": {
+        "cost": 5
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23840665/24-0-3"
+    },
+    {
+      "cardId": "LOOT_056",
+      "date": "2022-11-30",
+      "changes": {
+        "races": [
+          "BEAST"
+        ]
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23882860/25-0-patch-notes"
+    },
+    {
+      "cardId": "LOOT_111",
+      "date": "2023-02-15",
+      "changes": {
+        "races": [
+          "MECHANICAL",
+          "BEAST"
+        ]
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4"
+    },
+    {
+      "cardId": "LOOT_417",
+      "date": "2023-03-03",
+      "changes": {
+        "cost": 5,
+        "text": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다."
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23921492/25-4-3"
+    },
+    {
+      "cardId": "LOOT_333",
+      "date": "2023-04-05",
+      "changes": {
+        "cost": 5
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23934449"
+    },
+    {
+      "cardId": "LOOT_211",
+      "date": "2023-04-05",
+      "changes": {
+        "health": 3
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23934449"
+    },
+    {
+      "cardId": "LOOT_392",
+      "date": "2023-04-28",
+      "changes": {
+        "text": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다."
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4"
+    },
+    {
+      "cardId": "LOOT_231",
+      "date": "2023-04-28",
+      "changes": {
+        "health": 3
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4"
+    },
+    {
+      "cardId": "LOOT_137",
+      "date": "2024-03-12",
+      "changes": {
+        "attack": 6
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24064735/29-0"
+    },
+    {
+      "cardId": "LOOT_998k",
+      "date": "2024-10-18",
+      "changes": {
+        "text": "<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다."
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24149104"
+    },
+    {
+      "cardId": "LOOT_998l",
+      "date": "2024-10-18",
+      "changes": {
+        "text": "카드를 3장 뽑습니다.\n그 카드들의 비용을\n(3) 감소시킵니다."
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24149104"
+    },
+    {
+      "cardId": "LOOT_313",
+      "date": "2026-02-10",
+      "changes": {
+        "races": [
+          "BEAST",
+          "ELEMENTAL"
+        ]
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24242740/34-6"
+    },
+    {
+      "cardId": "LOOT_306",
+      "date": "2026-03-11",
+      "changes": {
+        "cost": 5
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24267727"
+    },
+    {
+      "cardId": "LOOT_998l",
+      "date": "2026-03-11",
+      "changes": {
+        "text": "카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다."
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24267727"
+    },
+    {
+      "cardId": "LOOT_412",
+      "date": "2026-11-04",
+      "changes": {
+        "text": "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.\n그 하수인의 능력치가 1/1이 됩니다."
+      },
+      "source": "https://hearthstone.blizzard.com/ko-kr/news/24307311"
+    }
+  ]
+}
