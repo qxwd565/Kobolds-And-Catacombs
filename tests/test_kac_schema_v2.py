@@ -151,6 +151,8 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
 
     def test_primary_race_enum_and_current_display_are_separate(self):
         self.assertEqual(self.sources["LOOT_516"]["_meta"]["currentPrimaryRace"]["value"],92)
+        self.assertEqual(self.sources["LOOT_056"]["2022-11-30"]["changes"]["race"],"야수")
+        self.assertEqual(self.sources["LOOT_313"]["2026-02-10"]["changes"]["race"],"야수")
         self.assertEqual(self.sources["LOOT_375"]["_meta"]["currentPrimaryRace"]["value"],2)
         self.assertEqual(self.records["LOOT_111"]["race"],"기계, 야수")
         self.assertEqual(self.records["LOOT_111"]["races"],["MECHANICAL","BEAST"])
