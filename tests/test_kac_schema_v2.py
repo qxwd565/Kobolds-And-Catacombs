@@ -277,6 +277,7 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         for cid,source in self.sources.items():
             card=rendered[cid]
             revisions=card.get("history",[])
+            _,details=BUILD.replay_v2(source,self.records[cid],cid)
             for day,state in replay_forward(source):
                 applicable=next((x for x in revisions if x["from"]<=day and
                                  (x.get("before") is None or day<x["before"])),None)
@@ -291,6 +292,9 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                         continue
                     self.assertEqual(public.get(field,BUILD.MISSING),state.get(field,BUILD.MISSING),
                                      f"{cid}:{day}:{field}")
+                expected_tags=details["tagStatesByDay"][day]
+                self.assertEqual(public.get("nativeTags",[]),expected_tags["nativeTags"],f"{cid}:{day}:nativeTags")
+                self.assertEqual(public.get("referencedTags",[]),expected_tags["referencedTags"],f"{cid}:{day}:referencedTags")
             legacy=self.legacy["cards"][str(self.records[cid]["dbfId"])]
             self.assertEqual(legacy["id"],cid)
             initial=legacy["initialSpec"]
@@ -348,7 +352,10 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                          {"before":{"present":False},"after":{"present":True,"value":6}})
         l093=legacy_by_id["LOOT_093"]
         initial_093={x["id"]:x["value"] for x in l093["initialSpec"]["nativeTags"]}
-        self.assertEqual(initial_093[48],5)
+        self.assertEqual(initial_093[48],4)
+        patch_093_2018=next(x for x in l093["patches"] if x["date"]=="2018-05-23")
+        self.assertEqual(patch_093_2018["nativeTagChanges"]["48"],
+                         {"before":{"present":True,"value":4},"after":{"present":True,"value":5}})
         patch_093=next(x for x in l093["patches"] if x["date"]=="2021-03-26")
         self.assertEqual(patch_093["nativeTagChanges"]["48"],
                          {"before":{"present":True,"value":5},"after":{"present":True,"value":4}})
