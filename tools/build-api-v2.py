@@ -62,9 +62,11 @@ def replay_v2(source,record,cid):
  current_state={}
  for field in latest:
   if field=="nativeRawText":
-   if "nativeRawText" in source: current_state[field]=copy.deepcopy(source["nativeRawText"])
+   if source.get("nativeRawText") is not None: current_state[field]=copy.deepcopy(source["nativeRawText"])
+   else: incomplete.add(field)
   elif field=="nativeTextBuilder":
-   if "nativeTextBuilder" in source: current_state[field]=copy.deepcopy(source["nativeTextBuilder"])
+   if source.get("nativeTextBuilder") is not None: current_state[field]=copy.deepcopy(source["nativeTextBuilder"])
+   else: incomplete.add(field)
   elif field=="mechanics" and field not in current and "currentMechanics" in meta:
    current_state[field]=copy.deepcopy(meta["currentMechanics"])
   elif field in current:
@@ -72,8 +74,13 @@ def replay_v2(source,record,cid):
   else:
    incomplete.add(field)
  for field,value in latest.items():
-  if field in current_state and current_state[field]!=value and field not in incomplete:
-   raise ValueError(f"{cid}: current cache {field}={current_state[field]!r} differs from dated replay {value!r}")
+  if field not in current_state or field in incomplete or current_state[field]==value:
+   continue
+  if field=="races" and isinstance(value,list) and isinstance(current_state[field],list) and set(value)==set(current_state[field]):
+   continue
+  if field=="race" and isinstance(latest.get("races"),list) and isinstance(current_state.get("races"),list) and set(latest["races"])==set(current_state["races"]):
+   continue
+  raise ValueError(f"{cid}: current cache {field}={current_state[field]!r} differs from dated replay {value!r}")
  # A current value may have appeared after an absent launch field. Preserve the
  # absence and mark it explicitly rather than inventing a launch default.
  for field in STATE_FIELDS:
@@ -85,6 +92,10 @@ def replay_v2(source,record,cid):
   removed=[]
   for field,value in state.items():
    if field not in current_state or current_state[field]!=value:
+    if field=="races" and isinstance(value,list) and isinstance(current_state.get(field),list) and set(value)==set(current_state[field]):
+     continue
+    if field=="race" and isinstance(state.get("races"),list) and isinstance(current_state.get("races"),list) and set(state["races"])==set(current_state["races"]):
+     continue
     changes[field]=copy.deepcopy(value)
   for field in current_state:
    if field not in state:
