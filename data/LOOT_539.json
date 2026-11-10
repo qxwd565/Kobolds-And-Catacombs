@@ -1,31 +1,192 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Spiteful Summoner",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Spiteful Summoner",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeRawText",
+      "nativeTags",
+      "referencedTags",
+      "text"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "원한 맺힌 소환사",
+            "nativeRawText": "원한 맺힌 소환사"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Spiteful Summoner",
+            "nativeRawText": "Spiteful Summoner"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "[x]<b>전투의 함성:</b> 내 덱의 주문\n하나를 공개해, 같은 비용의\n무작위 하수인을 하나\n소환합니다.",
+            "nativeRawText": "[x]<b>전투의 함성:</b> 내 덱의 주문\n하나를 공개해, 같은 비용의\n무작위 하수인을 하나\n소환합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "[x]<b>Battlecry:</b> Reveal a spell\nfrom your deck. Summon\n a random minion with\nthe same Cost.",
+            "nativeRawText": "[x]<b>Battlecry:</b> Reveal a spell\nfrom your deck. Summon\n a random minion with\nthe same Cost."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "referenced"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 201,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 218,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      },
+      {
+        "id": 330,
+        "source": "referenced"
+      },
+      {
+        "id": 331,
+        "source": "referenced"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "[x]<b>전투의 함성:</b> 내 덱의 주문\n하나를 공개해, 같은 비용의\n무작위 하수인을 하나\n소환합니다.",
+        "after": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "<b>전투의 함성:</b> 내 덱의 주문<br></br>하나를 공개해, 같은 비용의<br></br>무작위 하수인을 하나<br></br>소환합니다.",
+        "after": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_539",
     "dbfId": 46551,
     "name": "원한 맺힌 소환사",
-    "text": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "EPIC",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 6,
+    "text": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
     "attack": 4,
     "health": 4,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-071_M.psd:1c305a675204e46439b764453d089f2e",
+    "armor": 0,
     "flavor": "대부분의 이들은 살아있는 것에 대해 감사할 줄 모릅니다. 그래서 파멸의 예언자를 소환하기도 하죠.",
+    "spellSchool": "",
+    "portrait": "HS12-071_M.psd:1c305a675204e46439b764453d089f2e",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -88,31 +249,173 @@
         "value": 0
       }
     ],
-    "nativeRawText": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_539.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 4
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 4
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 6
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 0
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 201,
+      "name": "진영",
+      "value": 3
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 4
+    },
+    {
+      "id": 218,
+      "name": "전투의 함성",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    },
+    {
+      "id": 330,
+      "name": "효과 생성 시각 효과",
+      "value": 0
+    },
+    {
+      "id": 331,
+      "name": "효과 지속 시각 효과",
+      "value": 0
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "EPIC",
+      "collectible": true,
+      "cost": 6,
+      "attack": 4,
+      "health": 4,
+      "races": [],
+      "race": "",
+      "name": "원한 맺힌 소환사",
+      "nativeRawText": "[x]<b>전투의 함성:</b> 내 덱의 주문\n하나를 공개해, 같은 비용의\n무작위 하수인을 하나\n소환합니다.",
+      "text": "<b>전투의 함성:</b> 내 덱의 주문<br></br>하나를 공개해, 같은 비용의<br></br>무작위 하수인을 하나<br></br>소환합니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 4
+      },
+      {
+        "id": 47,
+        "value": 4
+      },
+      {
+        "id": 48,
+        "value": 6
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 201,
+        "value": 3
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 4
+      },
+      {
+        "id": 218,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
+  },
+  "2018-05-23": {
+    "changes": {
+      "cost": 7
+    },
+    "sources": [
+      "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5"
+    ],
+    "eventTypes": [
+      "gameplay-change"
+    ]
+  },
+  "2020-03-18": {
+    "changes": {
+      "cost": 6
+    },
+    "sources": [
+      "https://hearthstone.blizzard.com/ko-kr/news/23319440"
+    ],
+    "eventTypes": [
+      "gameplay-change"
+    ]
   }
 }

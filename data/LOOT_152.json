@@ -1,31 +1,149 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Boisterous Bard",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Boisterous Bard",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "활기찬 음유시인",
+            "nativeRawText": "활기찬 음유시인"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Boisterous Bard",
+            "nativeRawText": "Boisterous Bard"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다.",
+            "nativeRawText": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Battlecry:</b> Give your other minions +1 Health.",
+            "nativeRawText": "<b>Battlecry:</b> Give your other minions +1 Health."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 201,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 218,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_152",
     "dbfId": 43523,
     "name": "활기찬 음유시인",
-    "text": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 3,
+    "text": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다.",
     "attack": 3,
     "health": 2,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-095_M.psd:d0bc03cb9a62aa54f9c682a1170f52af",
+    "armor": 0,
     "flavor": "\"록\" 음악이 삶의 \"락\"이라고 합니다.",
+    "spellSchool": "",
+    "portrait": "HS12-095_M.psd:d0bc03cb9a62aa54f9c682a1170f52af",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -73,31 +191,136 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다.",
-    "nativeTextBuilder": 10,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_152.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 2
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 3
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 3
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 201,
+      "name": "진영",
+      "value": 2
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 218,
+      "name": "전투의 함성",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다.",
+  "nativeTextBuilder": 10,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "COMMON",
+      "collectible": true,
+      "cost": 3,
+      "attack": 3,
+      "health": 2,
+      "races": [],
+      "race": "",
+      "name": "활기찬 음유시인",
+      "nativeRawText": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다.",
+      "text": "<b>전투의 함성: </b>내 다른 하수인들에게 생명력을 +1 부여합니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 2
+      },
+      {
+        "id": 47,
+        "value": 3
+      },
+      {
+        "id": 48,
+        "value": 3
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 201,
+        "value": 2
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 1
+      },
+      {
+        "id": 218,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

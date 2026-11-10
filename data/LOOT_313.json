@@ -1,34 +1,197 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Crystal Lion",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [
+      1652
+    ],
+    "englishName": "Crystal Lion",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeRawText",
+      "nativeTags",
+      "referencedTags",
+      "text"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "수정 사자",
+            "nativeRawText": "수정 사자"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Crystal Lion",
+            "nativeRawText": "Crystal Lion"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>천상의 보호막</b>, 내 전장에 있는 은빛 성기사단 신병 하나당 비용이 (1)씩 감소합니다.",
+            "nativeRawText": "<b>천상의 보호막</b>, 내 전장에 있는 은빛 성기사단 신병 하나당 비용이 (1)씩 감소합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "[x]<b>Divine Shield</b>\nCosts (1) less for each Silver\nHand Recruit you control.",
+            "nativeRawText": "[x]<b>Divine Shield</b>\nCosts (1) less for each Silver\nHand Recruit you control."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "[x]<b>천상의 보호막</b>\n내 은빛 성기사단 신병\n하나당 비용이 (1)씩\n감소합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": 20,
+      "race": "야수"
+    },
+    "currentCanonicalRaces": [
+      "BEAST",
+      "ELEMENTAL"
+    ],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 194,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 200,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      },
+      {
+        "id": 1452,
+        "source": "owned"
+      },
+      {
+        "id": 1584,
+        "source": "owned"
+      },
+      {
+        "id": 2540,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "<b>천상의 보호막</b>, 내 전장에 있는 은빛 성기사단 신병 하나당 비용이 (1)씩 감소합니다.",
+        "after": "[x]<b>천상의 보호막</b>\n내 은빛 성기사단 신병\n하나당 비용이 (1)씩\n감소합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "<b>천상의 보호막</b>, 내 전장에 있는 은빛 성기사단 신병 하나당 비용이 (1)씩 감소합니다.",
+        "after": "<b>천상의 보호막</b><br></br>내 은빛 성기사단 신병<br></br>하나당 비용이 (1)씩<br></br>감소합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_313",
     "dbfId": 45833,
     "name": "수정 사자",
-    "text": "<b>천상의 보호막</b><br></br>내 은빛 성기사단 신병<br></br>하나당 비용이 (1)씩<br></br>감소합니다.",
     "type": "MINION",
     "cardClass": "PALADIN",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "RARE",
-    "race": "정령, 야수",
-    "races": [
-      "ELEMENTAL",
-      "BEAST"
-    ],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 6,
+    "text": "<b>천상의 보호막</b><br></br>내 은빛 성기사단 신병<br></br>하나당 비용이 (1)씩<br></br>감소합니다.",
     "attack": 5,
     "health": 5,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-153_M.psd:64c7b61a5e604f044b72691ff5568379",
+    "armor": 0,
     "flavor": "신병 기본 지급 물품: 은빛 검 1자루, 로데론 인장 1개, 수정 두레박이 든 가방 2개.",
+    "spellSchool": "",
+    "portrait": "HS12-153_M.psd:64c7b61a5e604f044b72691ff5568379",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -91,33 +254,165 @@
         "value": 1
       }
     ],
-    "nativeRawText": "[x]<b>천상의 보호막</b>\n내 은빛 성기사단 신병\n하나당 비용이 (1)씩\n감소합니다.",
-    "nativeTextBuilder": 0,
+    "races": [
+      "ELEMENTAL",
+      "BEAST"
+    ],
+    "race": "정령, 야수",
+    "classes": [],
+    "art": "art/LOOT_313.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [
-    1652
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 5
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 5
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 6
+    },
+    {
+      "id": 194,
+      "name": "천상의 보호막",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 5
+    },
+    {
+      "id": 200,
+      "name": "종족",
+      "value": 20
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 3
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    },
+    {
+      "id": 1452,
+      "name": "수집품 관련 카드 데이터베이스 ID",
+      "value": 1652
+    },
+    {
+      "id": 1584,
+      "name": "게임 태그 1584",
+      "value": 1
+    },
+    {
+      "id": 2540,
+      "name": "게임 태그 2540",
+      "value": 1
+    }
   ],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
+  "referencedTags": [],
+  "nativeRawText": "[x]<b>천상의 보호막</b>\n내 은빛 성기사단 신병\n하나당 비용이 (1)씩\n감소합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "PALADIN",
+      "rarity": "RARE",
+      "collectible": true,
+      "cost": 6,
+      "attack": 5,
+      "health": 5,
+      "races": [],
+      "race": "",
+      "name": "수정 사자",
+      "nativeRawText": "<b>천상의 보호막</b>, 내 전장에 있는 은빛 성기사단 신병 하나당 비용이 (1)씩 감소합니다.",
+      "text": "<b>천상의 보호막</b>, 내 전장에 있는 은빛 성기사단 신병 하나당 비용이 (1)씩 감소합니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 5
+      },
+      {
+        "id": 47,
+        "value": 5
+      },
+      {
+        "id": 48,
+        "value": 6
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 194,
+        "value": 1
+      },
+      {
+        "id": 199,
+        "value": 5
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 3
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   },
-  "setOrder": 32,
-  "formats": [
-    "wild"
-  ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "2026-02-10": {
+    "changes": {
+      "races": [
+        "BEAST",
+        "ELEMENTAL"
+      ],
+      "race": "야수"
+    },
+    "sources": [
+      "https://hearthstone.blizzard.com/ko-kr/news/24242740/34-6"
+    ],
+    "eventTypes": [
+      "gameplay-change"
+    ]
   }
 }

@@ -1,31 +1,181 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Twig of the World Tree",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Twig of the World Tree",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "세계수의 가지",
+            "nativeRawText": "세계수의 가지"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Twig of the World Tree",
+            "nativeRawText": "Twig of the World Tree"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>죽음의 메아리:</b>\n마나 수정을 10개 획득합니다.",
+            "nativeRawText": "<b>죽음의 메아리:</b>\n마나 수정을 10개 획득합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Deathrattle:</b> Gain 10 Mana Crystals.",
+            "nativeRawText": "<b>Deathrattle:</b> Gain 10 Mana Crystals."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 217,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "weapon-durability-tag-storage",
+        "cardIds": [
+          "LOOT_044",
+          "LOOT_085",
+          "LOOT_108",
+          "LOOT_209",
+          "LOOT_222",
+          "LOOT_285t4t",
+          "LOOT_286",
+          "LOOT_286t1",
+          "LOOT_286t2",
+          "LOOT_286t3",
+          "LOOT_286t4",
+          "LOOT_380",
+          "LOOT_392",
+          "LOOT_420",
+          "LOOT_500",
+          "LOOT_506",
+          "LOOT_542"
+        ],
+        "field": "durability",
+        "beforeTag": 187,
+        "afterTag": 45,
+        "date": null,
+        "sourceCommits": [
+          "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+          "fdad346dc49ebb5465f548a0a2b58b59edcbe087"
+        ],
+        "note": "논리 내구도 동일; health 별칭과 혼동하지 않음."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_392",
     "dbfId": 46107,
     "name": "세계수의 가지",
-    "text": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다.",
     "type": "WEAPON",
     "cardClass": "DRUID",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "LEGENDARY",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 4,
+    "text": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다.",
     "attack": 1,
     "health": 0,
-    "armor": 0,
     "durability": 5,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-049_W.psd:547b22eff94f2224e906450937a78fcb",
+    "armor": 0,
     "flavor": "세계로 뻗어 나가는 우수한 드루이드를 위한 가지입니다.",
+    "spellSchool": "",
+    "portrait": "HS12-049_W.psd:547b22eff94f2224e906450937a78fcb",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -73,31 +223,146 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_392.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 5
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 1
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 4
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 2
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 7
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 5
+    },
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "WEAPON",
+      "cardClass": "DRUID",
+      "rarity": "LEGENDARY",
+      "collectible": true,
+      "cost": 4,
+      "durability": 5,
+      "attack": 1,
+      "name": "세계수의 가지",
+      "nativeRawText": "<b>죽음의 메아리:</b>\n마나 수정을 10개 획득합니다.",
+      "text": "<b>죽음의 메아리:</b><br></br>마나 수정을 10개 획득합니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 47,
+        "value": 1
+      },
+      {
+        "id": 48,
+        "value": 4
+      },
+      {
+        "id": 114,
+        "value": 1
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 187,
+        "value": 5
+      },
+      {
+        "id": 199,
+        "value": 2
+      },
+      {
+        "id": 202,
+        "value": 7
+      },
+      {
+        "id": 203,
+        "value": 5
+      },
+      {
+        "id": 217,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
+  },
+  "2023-04-28": {
+    "changes": {
+      "text": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다.",
+      "nativeRawText": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다."
+    },
+    "sources": [
+      "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4"
+    ],
+    "eventTypes": [
+      "gameplay-change"
+    ]
   }
 }

@@ -1,31 +1,184 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Hungry Ettin",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Hungry Ettin",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeRawText",
+      "nativeTags",
+      "referencedTags",
+      "text"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "굶주린 거인",
+            "nativeRawText": "굶주린 거인"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Hungry Ettin",
+            "nativeRawText": "Hungry Ettin"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 하수인 하나를 무작위로 소환해 줍니다.",
+            "nativeRawText": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 하수인 하나를 무작위로 소환해 줍니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Taunt</b>\n<b>Battlecry:</b> Summon a random 2-Cost minion for your opponent.",
+            "nativeRawText": "<b>Taunt</b>\n<b>Battlecry:</b> Summon a random 2-Cost minion for your opponent."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "referenced"
+      },
+      {
+        "id": 190,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 218,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 하수인 하나를 무작위로 소환해 줍니다.",
+        "after": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 하수인 하나를 무작위로 소환해 줍니다.",
+        "after": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을<br></br>소환해 줍니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_383",
     "dbfId": 46082,
     "name": "굶주린 거인",
-    "text": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을<br></br>소환해 줍니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "RARE",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 6,
+    "text": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을<br></br>소환해 줍니다.",
     "attack": 4,
     "health": 10,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-242_M.psd:77b2eac2c06668c4f86ee114844349c4",
+    "armor": 0,
     "flavor": "먹어도 먹어도 채워지지 않는 굶주림입니다.",
+    "spellSchool": "",
+    "portrait": "HS12-242_M.psd:77b2eac2c06668c4f86ee114844349c4",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -78,31 +231,141 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_383.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 10
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 4
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 6
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 0
+    },
+    {
+      "id": 190,
+      "name": "도발",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 3
+    },
+    {
+      "id": 218,
+      "name": "전투의 함성",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 무작위 하수인을\n소환해 줍니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "RARE",
+      "collectible": true,
+      "cost": 6,
+      "attack": 4,
+      "health": 10,
+      "races": [],
+      "race": "",
+      "name": "굶주린 거인",
+      "nativeRawText": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 하수인 하나를 무작위로 소환해 줍니다.",
+      "text": "<b>도발</b>, <b>전투의 함성:</b> 상대편에게 비용이 2인 하수인 하나를 무작위로 소환해 줍니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 10
+      },
+      {
+        "id": 47,
+        "value": 4
+      },
+      {
+        "id": 48,
+        "value": 6
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 190,
+        "value": 1
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 3
+      },
+      {
+        "id": 218,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

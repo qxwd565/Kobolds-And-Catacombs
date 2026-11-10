@@ -1,31 +1,137 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Sudden Betrayal",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Sudden Betrayal",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "갑작스러운 배신",
+            "nativeRawText": "갑작스러운 배신"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Sudden Betrayal",
+            "nativeRawText": "Sudden Betrayal"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다.",
+            "nativeRawText": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Secret:</b> When a minion attacks your hero, instead it attacks one of_its neighbors.",
+            "nativeRawText": "<b>Secret:</b> When a minion attacks your hero, instead it attacks one of_its neighbors."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 219,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_210",
     "dbfId": 45529,
     "name": "갑작스러운 배신",
-    "text": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다.",
     "type": "SPELL",
     "cardClass": "ROGUE",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 2,
+    "text": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다.",
     "attack": 0,
     "health": 0,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-052_S.psd:1b2c009b96a139e4b9bd9e1d1c0bbc4d",
+    "armor": 0,
     "flavor": "믿는 도끼에 발등 찍힌다는 게 뭔지 확실히 보여줄 수 있습니다.",
+    "spellSchool": "",
+    "portrait": "HS12-052_S.psd:1b2c009b96a139e4b9bd9e1d1c0bbc4d",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 48,
@@ -58,31 +164,105 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_210.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 2
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 7
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 5
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 219,
+      "name": "비밀",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "SPELL",
+      "cardClass": "ROGUE",
+      "rarity": "COMMON",
+      "collectible": true,
+      "cost": 2,
+      "name": "갑작스러운 배신",
+      "nativeRawText": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다.",
+      "text": "<b>비밀:</b> 내 영웅을 공격하는 하수인이 자신의 양옆에 있는 하수인 중 하나를 공격하게 됩니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 48,
+        "value": 2
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 7
+      },
+      {
+        "id": 202,
+        "value": 5
+      },
+      {
+        "id": 203,
+        "value": 1
+      },
+      {
+        "id": 219,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

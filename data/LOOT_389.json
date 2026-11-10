@@ -1,31 +1,149 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Rummaging Kobold",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Rummaging Kobold",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "뒤적거리는 코볼트",
+            "nativeRawText": "뒤적거리는 코볼트"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Rummaging Kobold",
+            "nativeRawText": "Rummaging Kobold"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
+            "nativeRawText": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Battlecry:</b> Return one of your destroyed weapons to your hand.",
+            "nativeRawText": "<b>Battlecry:</b> Return one of your destroyed weapons to your hand."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "referenced"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 218,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_389",
     "dbfId": 46088,
     "name": "뒤적거리는 코볼트",
-    "text": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "EPIC",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 3,
+    "text": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
     "attack": 1,
     "health": 3,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-209_M.psd:88a7d0d293be6344cb5b2850cc7ac1a0",
+    "armor": 0,
     "flavor": "\"장검이 부러지니 그로 말미암아 새로운 단검이 생기더라.\" - 코볼트복음 10장 1절",
+    "spellSchool": "",
+    "portrait": "HS12-209_M.psd:88a7d0d293be6344cb5b2850cc7ac1a0",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -73,31 +191,132 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_389.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 3
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 1
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 3
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 0
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 4
+    },
+    {
+      "id": 218,
+      "name": "전투의 함성",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "EPIC",
+      "collectible": true,
+      "cost": 3,
+      "attack": 1,
+      "health": 3,
+      "races": [],
+      "race": "",
+      "name": "뒤적거리는 코볼트",
+      "nativeRawText": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다.",
+      "text": "<b>전투의 함성:</b> 파괴된 내 무기 중 하나를 내 손으로 다시 가져옵니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 3
+      },
+      {
+        "id": 47,
+        "value": 1
+      },
+      {
+        "id": 48,
+        "value": 3
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 4
+      },
+      {
+        "id": 218,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

@@ -1,31 +1,149 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Kobold Apprentice",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Kobold Apprentice",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "코볼트 수습생",
+            "nativeRawText": "코볼트 수습생"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Kobold Apprentice",
+            "nativeRawText": "Kobold Apprentice"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다.",
+            "nativeRawText": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Battlecry:</b> Deal 3 damage randomly split among all_enemies.",
+            "nativeRawText": "<b>Battlecry:</b> Deal 3 damage randomly split among all_enemies."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "referenced"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 218,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_347",
     "dbfId": 45929,
     "name": "코볼트 수습생",
-    "text": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 3,
+    "text": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다.",
     "attack": 2,
     "health": 1,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-207_H.psd:77d4b1f8911aeea41ba4295072a483bc",
+    "armor": 0,
     "flavor": "끔찍한 비밀: 어둠의 존재는 신비한 화살에 면역입니다.",
+    "spellSchool": "",
+    "portrait": "HS12-207_H.psd:77d4b1f8911aeea41ba4295072a483bc",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -73,31 +191,132 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_347.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 1
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 2
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 3
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 0
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 218,
+      "name": "전투의 함성",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "COMMON",
+      "collectible": true,
+      "cost": 3,
+      "attack": 2,
+      "health": 1,
+      "races": [],
+      "race": "",
+      "name": "코볼트 수습생",
+      "nativeRawText": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다.",
+      "text": "<b>전투의 함성:</b> 모든 적에게 3의 피해를 무작위로 나누어 입힙니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 1
+      },
+      {
+        "id": 47,
+        "value": 2
+      },
+      {
+        "id": 48,
+        "value": 3
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 1
+      },
+      {
+        "id": 218,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

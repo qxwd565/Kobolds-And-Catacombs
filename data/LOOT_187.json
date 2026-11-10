@@ -1,31 +1,149 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Twilight's Call",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Twilight's Call",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "황혼의 부름",
+            "nativeRawText": "황혼의 부름"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Twilight's Call",
+            "nativeRawText": "Twilight's Call"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "[x]이번 게임에서 죽은 내\n<b>죽음의 메아리</b> 하수인 둘을\n복사하여 1/1 하수인으로\n소환합니다.",
+            "nativeRawText": "[x]이번 게임에서 죽은 내\n<b>죽음의 메아리</b> 하수인 둘을\n복사하여 1/1 하수인으로\n소환합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Summon 1/1 copies of 2 friendly <b>Deathrattle</b> minions\nthat died this game.",
+            "nativeRawText": "Summon 1/1 copies of 2 friendly <b>Deathrattle</b> minions\nthat died this game."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "[x]이번 게임에서 죽은 내\n<b>죽음의 메아리</b> 하수인 둘을\n복사하여 1/1 하수인으로\n소환합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 201,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 217,
+        "source": "referenced"
+      },
+      {
+        "id": 251,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      },
+      {
+        "id": 1635,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_187",
     "dbfId": 45353,
     "name": "황혼의 부름",
-    "text": "이번 게임에서 죽은 내<br></br><b>죽음의 메아리</b> 하수인 둘을<br></br>복사하여 1/1 하수인으로<br></br>소환합니다.",
     "type": "SPELL",
     "cardClass": "PRIEST",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "RARE",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 3,
+    "text": "이번 게임에서 죽은 내<br></br><b>죽음의 메아리</b> 하수인 둘을<br></br>복사하여 1/1 하수인으로<br></br>소환합니다.",
     "attack": 0,
     "health": 0,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-192_S.psd:a3adee4d8dfc43948af376be74a73c3b",
+    "armor": 0,
     "flavor": "갑자기 부활해서 많이 당황하셨죠? 도움이 필요하시다면 1번을 누르세요.",
+    "spellSchool": "SHADOW",
+    "portrait": "HS12-192_S.psd:a3adee4d8dfc43948af376be74a73c3b",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 48,
@@ -73,40 +191,139 @@
         "value": 6
       }
     ],
-    "nativeRawText": "[x]이번 게임에서 죽은 내\n<b>죽음의 메아리</b> 하수인 둘을\n복사하여 1/1 하수인으로\n소환합니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_187.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [
+    "releaseStatus": "verified"
+  },
+  "nativeTags": [
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 3
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 6
+    },
+    {
+      "id": 201,
+      "name": "진영",
+      "value": 3
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 5
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 3
+    },
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    },
+    {
+      "id": 251,
+      "name": "게임 태그 251",
+      "value": 6
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    },
+    {
+      "id": 1635,
+      "name": "주문 속성",
+      "value": 6
+    }
+  ],
+  "referencedTags": [
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    }
+  ],
+  "nativeRawText": "[x]이번 게임에서 죽은 내\n<b>죽음의 메아리</b> 하수인 둘을\n복사하여 1/1 하수인으로\n소환합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "SPELL",
+      "cardClass": "PRIEST",
+      "rarity": "RARE",
+      "collectible": true,
+      "cost": 3,
+      "name": "황혼의 부름",
+      "nativeRawText": "[x]이번 게임에서 죽은 내\n<b>죽음의 메아리</b> 하수인 둘을\n복사하여 1/1 하수인으로\n소환합니다.",
+      "text": "이번 게임에서 죽은 내<br></br><b>죽음의 메아리</b> 하수인 둘을<br></br>복사하여 1/1 하수인으로<br></br>소환합니다."
+    },
+    "ownedTags": [
       {
-        "date": "2021-03-26",
-        "changes": {
-          "spellSchool": "SHADOW"
-        }
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 48,
+        "value": 3
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 6
+      },
+      {
+        "id": 201,
+        "value": 3
+      },
+      {
+        "id": 202,
+        "value": 5
+      },
+      {
+        "id": 203,
+        "value": 3
+      },
+      {
+        "id": 251,
+        "value": 6
+      },
+      {
+        "id": 321,
+        "value": 1
       }
     ],
-    "initialSpecStatus": "unverified",
-    "patchSources": {
-      "2021-03-26": "taxonomy introduction"
-    }
+    "referencedTags": []
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
-  ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "2021-03-26": {
+    "changes": {
+      "spellSchool": "SHADOW"
+    },
+    "sources": [
+      "taxonomy introduction"
+    ],
+    "eventTypes": []
   }
 }

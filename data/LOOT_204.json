@@ -1,31 +1,137 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Cheat Death",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Cheat Death",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "구사일생",
+            "nativeRawText": "구사일생"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Cheat Death",
+            "nativeRawText": "Cheat Death"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다.",
+            "nativeRawText": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Secret:</b> When a friendly minion dies, return it to your hand.\nIt costs (2) less.",
+            "nativeRawText": "<b>Secret:</b> When a friendly minion dies, return it to your hand.\nIt costs (2) less."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 219,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_204",
     "dbfId": 45520,
     "name": "구사일생",
-    "text": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다.",
     "type": "SPELL",
     "cardClass": "ROGUE",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 2,
+    "text": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다.",
     "attack": 0,
     "health": 0,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-053_S.psd:d983e6dabd59fc14899c010e2c52ff54",
+    "armor": 0,
     "flavor": "목숨이 두 개라니! 이거 완전 사기 아닌가요?",
+    "spellSchool": "",
+    "portrait": "HS12-053_S.psd:d983e6dabd59fc14899c010e2c52ff54",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 48,
@@ -58,31 +164,105 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_204.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 2
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 7
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 5
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 219,
+      "name": "비밀",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "SPELL",
+      "cardClass": "ROGUE",
+      "rarity": "COMMON",
+      "collectible": true,
+      "cost": 2,
+      "name": "구사일생",
+      "nativeRawText": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다.",
+      "text": "<b>비밀:</b> 아군 하수인이 죽으면, 그 하수인을 내 손으로 다시 가져오고 비용을 (2) 감소시킵니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 48,
+        "value": 2
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 7
+      },
+      {
+        "id": 202,
+        "value": 5
+      },
+      {
+        "id": 203,
+        "value": 1
+      },
+      {
+        "id": 219,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

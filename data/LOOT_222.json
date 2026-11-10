@@ -1,31 +1,216 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Candleshot",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Candleshot",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeRawText",
+      "nativeTags",
+      "referencedTags",
+      "text"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "양초 화살",
+            "nativeRawText": "양초 화살"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Candleshot",
+            "nativeRawText": "Candleshot"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "공격할 때 <b>면역</b>\n상태가 됩니다.",
+            "nativeRawText": "공격할 때 <b>면역</b>\n상태가 됩니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Immune</b> while attacking.",
+            "nativeRawText": "<b>Immune</b> while attacking."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 240,
+        "source": "referenced"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "weapon-durability-tag-storage",
+        "cardIds": [
+          "LOOT_044",
+          "LOOT_085",
+          "LOOT_108",
+          "LOOT_209",
+          "LOOT_222",
+          "LOOT_285t4t",
+          "LOOT_286",
+          "LOOT_286t1",
+          "LOOT_286t2",
+          "LOOT_286t3",
+          "LOOT_286t4",
+          "LOOT_380",
+          "LOOT_392",
+          "LOOT_420",
+          "LOOT_500",
+          "LOOT_506",
+          "LOOT_542"
+        ],
+        "field": "durability",
+        "beforeTag": 187,
+        "afterTag": 45,
+        "date": null,
+        "sourceCommits": [
+          "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+          "fdad346dc49ebb5465f548a0a2b58b59edcbe087"
+        ],
+        "note": "논리 내구도 동일; health 별칭과 혼동하지 않음."
+      },
+      {
+        "topic": "candle-arrow-target-wording",
+        "cardIds": [
+          "LOOT_222"
+        ],
+        "date": "2018-02-07",
+        "source": "https://hearthstone.blizzard.com/ko-kr/news/21507224",
+        "note": "내 영웅 대상 명시. 면역 수치 사건 아님."
+      },
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "공격할 때 <b>면역</b>\n상태가 됩니다.",
+        "after": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "공격할 때 <b>면역</b><br></br>상태가 됩니다.",
+        "after": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_222",
     "dbfId": 45537,
     "name": "양초 화살",
-    "text": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
     "type": "WEAPON",
     "cardClass": "HUNTER",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 1,
+    "text": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
     "attack": 1,
     "health": 0,
-    "armor": 0,
     "durability": 3,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-075_W.psd:a1693f7cd14d2c04e921d3d7e832b9d0",
+    "armor": 0,
     "flavor": "귀족식 명칭은 고대 수염수염 가문의 명예로운 단궁, 양초 드 화사르.",
+    "spellSchool": "",
+    "portrait": "HS12-075_W.psd:a1693f7cd14d2c04e921d3d7e832b9d0",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -68,31 +253,127 @@
         "value": 1
       }
     ],
-    "nativeRawText": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_222.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 3
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 1
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 3
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 7
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 240,
+      "name": "면역",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [
+    {
+      "id": 240,
+      "name": "면역",
+      "value": 1
+    }
+  ],
+  "nativeRawText": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "WEAPON",
+      "cardClass": "HUNTER",
+      "rarity": "COMMON",
+      "collectible": true,
+      "cost": 1,
+      "durability": 3,
+      "attack": 1,
+      "name": "양초 화살",
+      "nativeRawText": "공격할 때 <b>면역</b>\n상태가 됩니다.",
+      "text": "공격할 때 <b>면역</b><br></br>상태가 됩니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 47,
+        "value": 1
+      },
+      {
+        "id": 48,
+        "value": 1
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 187,
+        "value": 3
+      },
+      {
+        "id": 199,
+        "value": 3
+      },
+      {
+        "id": 202,
+        "value": 7
+      },
+      {
+        "id": 203,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

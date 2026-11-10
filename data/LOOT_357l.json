@@ -1,30 +1,144 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Master Chest",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": false,
+    "relatedIds": [],
+    "englishName": "Master Chest",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-11-07",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "보물 상자",
+            "nativeRawText": "보물 상자"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Master Chest",
+            "nativeRawText": "Master Chest"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!",
+            "nativeRawText": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Deathrattle:</b> Give your opponent a fantastic Treasure.",
+            "nativeRawText": "<b>Deathrattle:</b> Give your opponent a fantastic Treasure."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!"
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 217,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "referenced"
+      },
+      {
+        "id": 375,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_357l",
     "dbfId": 45999,
     "name": "보물 상자",
-    "text": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": false,
     "cost": 3,
+    "text": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!",
     "attack": 0,
     "health": 8,
-    "armor": 0,
     "durability": 0,
-    "collectible": false,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-257_M.psd:21fe24832107ac04a8cd8acbeb15da65",
+    "armor": 0,
     "flavor": "",
+    "spellSchool": "",
+    "portrait": "HS12-257_M.psd:21fe24832107ac04a8cd8acbeb15da65",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -67,31 +181,112 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_357l.png",
     "releasedAt": "2017-11-07",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": false,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 8
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 3
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 0
+    },
+    {
+      "id": 375,
+      "name": "효과 수치 곱하기",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!",
+  "nativeTextBuilder": 0,
+  "2017-11-07": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "cost": 3,
+      "health": 8,
+      "races": [],
+      "race": "",
+      "name": "보물 상자",
+      "nativeRawText": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!",
+      "text": "<b>죽음의 메아리:</b> 상대편에게 환상적인 보물을 줍니다!"
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 8
+      },
+      {
+        "id": 48,
+        "value": 3
+      },
+      {
+        "id": 114,
+        "value": 1
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 217,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

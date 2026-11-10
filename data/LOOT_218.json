@@ -1,31 +1,167 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Feral Gibberer",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Feral Gibberer",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "name",
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "떠버리 야수",
+            "nativeRawText": "떠버리 야수"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Feral Gibberer",
+            "nativeRawText": "Feral Gibberer"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다.",
+            "nativeRawText": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "After this minion attacks a hero, add a copy of it to_your hand.",
+            "nativeRawText": "After this minion attacks a hero, add a copy of it to_your hand."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 32,
+        "source": "owned"
+      },
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "card-name-current-vs-dated",
+        "fields": [
+          "name"
+        ],
+        "before": "떠버리 야수",
+        "after": "야생 떠버리",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable CARDNAME launch value compared with the approved current name; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [
+      {
+        "cardId": "LOOT_218",
+        "field": "flavor",
+        "suggestion": "처음하신다고요 → 처음 하신다고요"
+      }
+    ],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_218",
     "dbfId": 45547,
     "name": "야생 떠버리",
-    "text": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "RARE",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 1,
+    "text": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다.",
     "attack": 1,
     "health": 1,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-247_M.psd:d87c5341ae0ca8041ab3a0432109809a",
+    "armor": 0,
     "flavor": "하스스톤을 처음하신다고요? 그런 당신을 위해 준비했습니다! 500RPM 떠버리 덱!",
+    "spellSchool": "",
+    "portrait": "HS12-247_M.psd:d87c5341ae0ca8041ab3a0432109809a",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 32,
@@ -68,31 +204,127 @@
         "value": 1
       }
     ],
-    "nativeRawText": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_218.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 32,
+      "name": "발동 효과 표시",
+      "value": 1
+    },
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 1
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 1
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 3
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "RARE",
+      "collectible": true,
+      "cost": 1,
+      "attack": 1,
+      "health": 1,
+      "races": [],
+      "race": "",
+      "name": "떠버리 야수",
+      "nativeRawText": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다.",
+      "text": "이 하수인은 영웅을 공격한 후에, 이 카드를 복사하여 내 손으로 가져옵니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 32,
+        "value": 1
+      },
+      {
+        "id": 45,
+        "value": 1
+      },
+      {
+        "id": 47,
+        "value": 1
+      },
+      {
+        "id": 48,
+        "value": 1
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 3
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }

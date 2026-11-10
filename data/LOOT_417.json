@@ -1,31 +1,145 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Cataclysm",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Cataclysm",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "대격변",
+            "nativeRawText": "대격변"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Cataclysm",
+            "nativeRawText": "Cataclysm"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 모두 버립니다.",
+            "nativeRawText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 모두 버립니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Destroy all minions. Discard your hand.",
+            "nativeRawText": "Destroy all minions. Discard your hand."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "referenced"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      },
+      {
+        "id": 890,
+        "source": "owned"
+      },
+      {
+        "id": 1635,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_417",
     "dbfId": 46286,
     "name": "대격변",
-    "text": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다.",
     "type": "SPELL",
     "cardClass": "WARLOCK",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "EPIC",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 5,
+    "text": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다.",
     "attack": 0,
     "health": 0,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-078_S.psd:293ccc1667aa45d46a1d1d254bfb04e9",
+    "armor": 0,
     "flavor": "하늘에서 떨어지는 일억 개의 양초! 일억 배 뜨거워요! 도망가세요!",
+    "spellSchool": "FIRE",
+    "portrait": "HS12-078_S.psd:293ccc1667aa45d46a1d1d254bfb04e9",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 48,
@@ -68,40 +182,137 @@
         "value": 2
       }
     ],
-    "nativeRawText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_417.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [
+    "releaseStatus": "verified"
+  },
+  "nativeTags": [
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 5
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 0
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 9
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 5
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 4
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    },
+    {
+      "id": 890,
+      "name": "게임 태그 890",
+      "value": 10
+    },
+    {
+      "id": 1635,
+      "name": "주문 속성",
+      "value": 2
+    }
+  ],
+  "referencedTags": [],
+  "nativeRawText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "SPELL",
+      "cardClass": "WARLOCK",
+      "rarity": "EPIC",
+      "collectible": true,
+      "cost": 4,
+      "name": "대격변",
+      "nativeRawText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 모두 버립니다.",
+      "text": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 모두 버립니다."
+    },
+    "ownedTags": [
       {
-        "date": "2021-03-26",
-        "changes": {
-          "spellSchool": "FIRE"
-        }
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 48,
+        "value": 4
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 9
+      },
+      {
+        "id": 202,
+        "value": 5
+      },
+      {
+        "id": 203,
+        "value": 4
+      },
+      {
+        "id": 321,
+        "value": 1
+      },
+      {
+        "id": 890,
+        "value": 10
       }
     ],
-    "initialSpecStatus": "unverified",
-    "patchSources": {
-      "2021-03-26": "taxonomy introduction"
-    }
+    "referencedTags": []
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
+  "2021-03-26": {
+    "changes": {
+      "spellSchool": "FIRE"
+    },
+    "sources": [
+      "taxonomy introduction"
+    ],
+    "eventTypes": []
   },
-  "setOrder": 32,
-  "formats": [
-    "wild"
-  ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "2023-03-03": {
+    "changes": {
+      "cost": 5,
+      "text": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다.",
+      "nativeRawText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다."
+    },
+    "sources": [
+      "https://hearthstone.blizzard.com/ko-kr/news/23921492/25-4-3"
+    ],
+    "eventTypes": [
+      "gameplay-change"
+    ]
   }
 }

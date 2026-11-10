@@ -1,31 +1,153 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Ixlid, Fungal Lord",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [],
+    "englishName": "Ixlid, Fungal Lord",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "곰팡이 군주 익슬리드",
+            "nativeRawText": "곰팡이 군주 익슬리드"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Ixlid, Fungal Lord",
+            "nativeRawText": "Ixlid, Fungal Lord"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다.",
+            "nativeRawText": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "After you play a minion, summon a copy of it.",
+            "nativeRawText": "After you play a minion, summon a copy of it."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": 18,
+      "race": "정령"
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 32,
+        "source": "owned"
+      },
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      },
+      {
+        "id": 717,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_329",
     "dbfId": 45859,
     "name": "곰팡이 군주 익슬리드",
-    "text": "내가 하수인을 낸 후에,<br></br>그 하수인을 복사하여 소환합니다.",
     "type": "MINION",
     "cardClass": "DRUID",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "LEGENDARY",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 5,
+    "text": "내가 하수인을 낸 후에,<br></br>그 하수인을 복사하여 소환합니다.",
     "attack": 2,
     "health": 4,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-173_M.psd:079761517acccc24396ecb1e2bd1fcd0",
+    "armor": 0,
     "flavor": "익슬리드를 직접 만들어 보십시오. 곰팡이가 나인지 내가 곰팡이인지 모를 곰팡지몽의 경지에 이를 것입니다.",
+    "spellSchool": "",
+    "portrait": "HS12-173_M.psd:079761517acccc24396ecb1e2bd1fcd0",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 32,
@@ -78,31 +200,163 @@
         "value": 1
       }
     ],
-    "nativeRawText": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_329.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
+  "nativeTags": [
+    {
+      "id": 32,
+      "name": "발동 효과 표시",
+      "value": 1
+    },
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 4
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 2
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 5
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 1
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 2
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 5
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    },
+    {
+      "id": 717,
+      "name": "게임 태그 717",
+      "value": 1
+    }
   ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "DRUID",
+      "rarity": "LEGENDARY",
+      "collectible": true,
+      "cost": 5,
+      "attack": 2,
+      "health": 4,
+      "races": [
+        "ELEMENTAL"
+      ],
+      "race": "정령",
+      "name": "곰팡이 군주 익슬리드",
+      "nativeRawText": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다.",
+      "text": "내가 하수인을 낸 후에,<br></br>그 하수인을 복사하여 소환합니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 32,
+        "value": 1
+      },
+      {
+        "id": 45,
+        "value": 4
+      },
+      {
+        "id": 47,
+        "value": 2
+      },
+      {
+        "id": 48,
+        "value": 5
+      },
+      {
+        "id": 114,
+        "value": 1
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 2
+      },
+      {
+        "id": 200,
+        "value": 18
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 5
+      },
+      {
+        "id": 321,
+        "value": 1
+      },
+      {
+        "id": 717,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
+  },
+  "2018-08-03": {
+    "changes": {
+      "races": [],
+      "race": ""
+    },
+    "sources": [
+      "https://hearthstone.blizzard.com/ko-kr/news/21964710"
+    ],
+    "eventTypes": [
+      "gameplay-change"
+    ]
   }
 }

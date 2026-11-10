@@ -1,31 +1,149 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Onyx Spellstone",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": false,
+    "relatedIds": [],
+    "englishName": "Onyx Spellstone",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeTags",
+      "referencedTags"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "흑마노 주문석",
+            "nativeRawText": "흑마노 주문석"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Onyx Spellstone",
+            "nativeRawText": "Onyx Spellstone"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "무작위 적 하수인을 최대 둘 처치합니다. @",
+            "nativeRawText": "무작위 적 하수인을 최대 둘 처치합니다. @"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Destroy up to 2 random enemy minions.\n@",
+            "nativeRawText": "Destroy up to 2 random enemy minions.\n@"
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "무작위 적 하수인을 최대 둘 처치합니다. @"
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 3,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 114,
+        "source": "referenced"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 217,
+        "source": "referenced"
+      },
+      {
+        "id": 321,
+        "source": "referenced"
+      },
+      {
+        "id": 1635,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_503t",
     "dbfId": 46297,
     "name": "흑마노 주문석",
-    "text": "무작위 적 하수인을 최대 둘 처치합니다. @",
     "type": "SPELL",
     "cardClass": "ROGUE",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "RARE",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": false,
     "cost": 5,
+    "text": "무작위 적 하수인을 최대 둘 처치합니다. @",
     "attack": 0,
     "health": 0,
-    "armor": 0,
     "durability": 0,
-    "collectible": false,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-017_S.psd:8bb7e6f54f76a3d479e99931d57dff5f",
+    "armor": 0,
     "flavor": "",
+    "spellSchool": "SHADOW",
+    "portrait": "HS12-017_S.psd:8bb7e6f54f76a3d479e99931d57dff5f",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 3,
@@ -73,40 +191,131 @@
         "value": 6
       }
     ],
-    "nativeRawText": "무작위 적 하수인을 최대 둘 처치합니다. @",
-    "nativeTextBuilder": 13,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_503t.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [
+    "releaseStatus": "verified"
+  },
+  "nativeTags": [
+    {
+      "id": 3,
+      "name": "효과 수치 2",
+      "value": 3
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 5
+    },
+    {
+      "id": 114,
+      "name": "전설 속성",
+      "value": 0
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 7
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 5
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 3
+    },
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 0
+    },
+    {
+      "id": 1635,
+      "name": "주문 속성",
+      "value": 6
+    }
+  ],
+  "referencedTags": [
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    }
+  ],
+  "nativeRawText": "무작위 적 하수인을 최대 둘 처치합니다. @",
+  "nativeTextBuilder": 13,
+  "2017-12-08": {
+    "state": {
+      "type": "SPELL",
+      "cardClass": "ROGUE",
+      "rarity": "RARE",
+      "cost": 5,
+      "name": "흑마노 주문석",
+      "nativeRawText": "무작위 적 하수인을 최대 둘 처치합니다. @",
+      "text": "무작위 적 하수인을 최대 둘 처치합니다. @"
+    },
+    "ownedTags": [
       {
-        "date": "2021-03-26",
-        "changes": {
-          "spellSchool": "SHADOW"
-        }
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 3,
+        "value": 3
+      },
+      {
+        "id": 48,
+        "value": 5
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 7
+      },
+      {
+        "id": 202,
+        "value": 5
+      },
+      {
+        "id": 203,
+        "value": 3
       }
     ],
-    "initialSpecStatus": "unverified",
-    "patchSources": {
-      "2021-03-26": "taxonomy introduction"
-    }
+    "referencedTags": [
+      {
+        "id": 217,
+        "value": 1
+      }
+    ]
   },
-  "root": false,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
-  ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "2021-03-26": {
+    "changes": {
+      "spellSchool": "SHADOW"
+    },
+    "sources": [
+      "taxonomy introduction"
+    ],
+    "eventTypes": []
   }
 }

@@ -1,31 +1,164 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Elixir of Purity",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": false,
+    "relatedIds": [],
+    "englishName": "Elixir of Purity",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeRawText",
+      "nativeTags",
+      "referencedTags",
+      "text"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "정화의 비약",
+            "nativeRawText": "정화의 비약"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Elixir of Purity",
+            "nativeRawText": "Elixir of Purity"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "하수인 하나에게 +2/+2와 <b>천상의_보호막</b>을 부여합니다.",
+            "nativeRawText": "하수인 하나에게 +2/+2와 <b>천상의_보호막</b>을 부여합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Give a minion +2/+2 and <b>Divine Shield</b>.",
+            "nativeRawText": "Give a minion +2/+2 and <b>Divine Shield</b>."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "[x]하수인에게 +2/+2와\n<b>천상의_보호막</b>을\n부여합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 1635,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "하수인 하나에게 +2/+2와 <b>천상의_보호막</b>을 부여합니다.",
+        "after": "[x]하수인에게 +2/+2와\n<b>천상의_보호막</b>을\n부여합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "하수인 하나에게 +2/+2와 <b>천상의_보호막</b>을 부여합니다.",
+        "after": "하수인에게 +2/+2와<br></br><b>천상의 보호막</b>을<br></br>부여합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_278t2",
     "dbfId": 45753,
     "name": "정화의 비약",
-    "text": "하수인에게 +2/+2와<br></br><b>천상의 보호막</b>을<br></br>부여합니다.",
     "type": "SPELL",
     "cardClass": "PRIEST",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": false,
     "cost": 3,
+    "text": "하수인에게 +2/+2와<br></br><b>천상의 보호막</b>을<br></br>부여합니다.",
     "attack": 0,
     "health": 0,
-    "armor": 0,
     "durability": 0,
-    "collectible": false,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-063d_S.psd:df2223a9700c5194ebe2e47240ecb08e",
+    "armor": 0,
     "flavor": "",
+    "spellSchool": "HOLY",
+    "portrait": "HS12-063d_S.psd:df2223a9700c5194ebe2e47240ecb08e",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 48,
@@ -53,40 +186,96 @@
         "value": 5
       }
     ],
-    "nativeRawText": "[x]하수인에게 +2/+2와\n<b>천상의_보호막</b>을\n부여합니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_278t2.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [
+    "releaseStatus": "verified"
+  },
+  "nativeTags": [
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 3
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 6
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 5
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 1635,
+      "name": "주문 속성",
+      "value": 5
+    }
+  ],
+  "referencedTags": [],
+  "nativeRawText": "[x]하수인에게 +2/+2와\n<b>천상의_보호막</b>을\n부여합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "SPELL",
+      "cardClass": "PRIEST",
+      "rarity": "COMMON",
+      "cost": 3,
+      "name": "정화의 비약",
+      "nativeRawText": "하수인 하나에게 +2/+2와 <b>천상의_보호막</b>을 부여합니다.",
+      "text": "하수인 하나에게 +2/+2와 <b>천상의_보호막</b>을 부여합니다."
+    },
+    "ownedTags": [
       {
-        "date": "2021-03-26",
-        "changes": {
-          "spellSchool": "HOLY"
-        }
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 48,
+        "value": 3
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 6
+      },
+      {
+        "id": 202,
+        "value": 5
+      },
+      {
+        "id": 203,
+        "value": 1
       }
     ],
-    "initialSpecStatus": "unverified",
-    "patchSources": {
-      "2021-03-26": "taxonomy introduction"
-    }
+    "referencedTags": []
   },
-  "root": false,
-  "relatedIds": [],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
-  ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "2021-03-26": {
+    "changes": {
+      "spellSchool": "HOLY"
+    },
+    "sources": [
+      "taxonomy introduction"
+    ],
+    "eventTypes": []
   }
 }

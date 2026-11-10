@@ -1,31 +1,182 @@
 {
-  "schemaVersion": 1,
-  "mode": "constructed",
-  "englishName": "Cursed Disciple",
-  "card": {
+  "schemaVersion": 2,
+  "_meta": {
+    "root": true,
+    "relatedIds": [
+      45592
+    ],
+    "englishName": "Cursed Disciple",
+    "expansion": {
+      "id": 1004,
+      "slug": "kobolds-and-catacombs",
+      "name": "코볼트와 지하 미궁",
+      "type": "expansion",
+      "englishName": "Kobolds And Catacombs"
+    },
+    "setOrder": 32,
+    "formats": [
+      "wild"
+    ],
+    "provenance": {
+      "source": "Installed Hearthstone dbf.unity3d",
+      "gameVersion": "6000.3.11.3145967",
+      "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
+      "locale": "koKR"
+    },
+    "mode": "constructed",
+    "schemaVersion": 2,
+    "releaseStatus": "verified",
+    "releasedAt": "2017-12-08",
+    "historyIncompleteFields": [
+      "nativeRawText",
+      "nativeTags",
+      "referencedTags",
+      "text"
+    ],
+    "launchStringEvidence": {
+      "185": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "저주받은 사도",
+            "nativeRawText": "저주받은 사도"
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "Cursed Disciple",
+            "nativeRawText": "Cursed Disciple"
+          }
+        }
+      },
+      "184": {
+        "tagPresent": true,
+        "locales": {
+          "koKR": {
+            "present": true,
+            "xmlText": "<b>죽음의 메아리:</b>\n5/1 망령을\n하나 소환합니다.",
+            "nativeRawText": "<b>죽음의 메아리:</b>\n5/1 망령을\n하나 소환합니다."
+          },
+          "enUS": {
+            "present": true,
+            "xmlText": "<b>Deathrattle:</b> Summon a 5/1 Revenant.",
+            "nativeRawText": "<b>Deathrattle:</b> Summon a 5/1 Revenant."
+          }
+        }
+      }
+    },
+    "currentStringEvidence": {
+      "name": {
+        "present": false,
+        "value": null
+      },
+      "nativeRawText": {
+        "present": true,
+        "value": "<b>죽음의 메아리:</b>\n5/1 망령을 소환합니다."
+      }
+    },
+    "launchPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentPrimaryRace": {
+      "tagId": 200,
+      "value": null,
+      "race": ""
+    },
+    "currentCanonicalRaces": [],
+    "currentTagOrigins": [
+      {
+        "id": 45,
+        "source": "owned"
+      },
+      {
+        "id": 47,
+        "source": "owned"
+      },
+      {
+        "id": 48,
+        "source": "owned"
+      },
+      {
+        "id": 199,
+        "source": "owned"
+      },
+      {
+        "id": 202,
+        "source": "owned"
+      },
+      {
+        "id": 203,
+        "source": "owned"
+      },
+      {
+        "id": 217,
+        "source": "owned"
+      },
+      {
+        "id": 321,
+        "source": "owned"
+      },
+      {
+        "id": 1452,
+        "source": "owned"
+      }
+    ],
+    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "wordingObservations": [],
+    "undatedObservations": [
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "<b>죽음의 메아리:</b>\n5/1 망령을\n하나 소환합니다.",
+        "after": "<b>죽음의 메아리:</b>\n5/1 망령을 소환합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "<b>죽음의 메아리:</b><br></br>5/1 망령을<br></br>하나 소환합니다.",
+        "after": "<b>죽음의 메아리:</b><br></br>5/1 망령을 소환합니다.",
+        "date": null,
+        "sourceCommits": [
+          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+      }
+    ],
+    "editorialSuggestions": [],
+    "functionalEvents": []
+  },
+  "current": {
     "id": "LOOT_233",
     "dbfId": 45594,
     "name": "저주받은 사도",
-    "text": "<b>죽음의 메아리:</b><br></br>5/1 망령을 소환합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
-    "classes": [],
-    "nativeSetId": 1004,
-    "set": "LOOTAPALOOZA",
     "rarity": "COMMON",
-    "race": "",
-    "races": [],
-    "spellSchool": "",
+    "collectible": true,
     "cost": 4,
+    "text": "<b>죽음의 메아리:</b><br></br>5/1 망령을 소환합니다.",
     "attack": 5,
     "health": 1,
-    "armor": 0,
     "durability": 0,
-    "collectible": true,
-    "chooseOne": false,
-    "installed": true,
-    "portrait": "HS12-093_M.psd:6fdb979378ab72142bef7271549d359d",
+    "armor": 0,
     "flavor": "참고로, 그의 형은 저주하는 사도입니다. 형보다는 예의 바르지만, 더 사악하다고 합니다.",
+    "spellSchool": "",
+    "portrait": "HS12-093_M.psd:6fdb979378ab72142bef7271549d359d",
+    "set": "LOOTAPALOOZA",
     "nativeTags": [
       {
         "id": 45,
@@ -73,33 +224,132 @@
         "value": 45592
       }
     ],
-    "nativeRawText": "<b>죽음의 메아리:</b>\n5/1 망령을 소환합니다.",
-    "nativeTextBuilder": 0,
+    "races": [],
+    "race": "",
+    "classes": [],
+    "art": "art/LOOT_233.png",
     "releasedAt": "2017-12-08",
-    "releaseStatus": "verified",
-    "patches": [],
-    "initialSpecStatus": "unverified",
-    "patchSources": {}
+    "releaseStatus": "verified"
   },
-  "root": true,
-  "relatedIds": [
-    45592
+  "nativeTags": [
+    {
+      "id": 45,
+      "name": "생명력",
+      "value": 1
+    },
+    {
+      "id": 47,
+      "name": "공격력",
+      "value": 5
+    },
+    {
+      "id": 48,
+      "name": "마나 비용",
+      "value": 4
+    },
+    {
+      "id": 199,
+      "name": "직업",
+      "value": 12
+    },
+    {
+      "id": 202,
+      "name": "카드 유형",
+      "value": 4
+    },
+    {
+      "id": 203,
+      "name": "희귀도",
+      "value": 1
+    },
+    {
+      "id": 217,
+      "name": "죽음의 메아리",
+      "value": 1
+    },
+    {
+      "id": 321,
+      "name": "수집 가능",
+      "value": 1
+    },
+    {
+      "id": 1452,
+      "name": "수집품 관련 카드 데이터베이스 ID",
+      "value": 45592
+    }
   ],
-  "expansion": {
-    "id": 1004,
-    "slug": "kobolds-and-catacombs",
-    "name": "코볼트와 지하 미궁",
-    "type": "expansion",
-    "englishName": "Kobolds And Catacombs"
-  },
-  "setOrder": 32,
-  "formats": [
-    "wild"
-  ],
-  "provenance": {
-    "source": "Installed Hearthstone dbf.unity3d",
-    "gameVersion": "6000.3.11.3145967",
-    "dbfSha256": "40d9a232262d33eb670848ce3f87e58f5b4fd084632d9876216478a8b21e9456",
-    "locale": "koKR"
+  "referencedTags": [],
+  "nativeRawText": "<b>죽음의 메아리:</b>\n5/1 망령을 소환합니다.",
+  "nativeTextBuilder": 0,
+  "2017-12-08": {
+    "state": {
+      "type": "MINION",
+      "cardClass": "NEUTRAL",
+      "rarity": "COMMON",
+      "collectible": true,
+      "cost": 4,
+      "attack": 5,
+      "health": 1,
+      "races": [],
+      "race": "",
+      "name": "저주받은 사도",
+      "nativeRawText": "<b>죽음의 메아리:</b>\n5/1 망령을\n하나 소환합니다.",
+      "text": "<b>죽음의 메아리:</b><br></br>5/1 망령을<br></br>하나 소환합니다."
+    },
+    "ownedTags": [
+      {
+        "id": 185,
+        "value": null
+      },
+      {
+        "id": 184,
+        "value": null
+      },
+      {
+        "id": 351,
+        "value": null
+      },
+      {
+        "id": 342,
+        "value": null
+      },
+      {
+        "id": 45,
+        "value": 1
+      },
+      {
+        "id": 47,
+        "value": 5
+      },
+      {
+        "id": 48,
+        "value": 4
+      },
+      {
+        "id": 183,
+        "value": 1004
+      },
+      {
+        "id": 199,
+        "value": 12
+      },
+      {
+        "id": 202,
+        "value": 4
+      },
+      {
+        "id": 203,
+        "value": 1
+      },
+      {
+        "id": 217,
+        "value": 1
+      },
+      {
+        "id": 321,
+        "value": 1
+      }
+    ],
+    "referencedTags": []
   }
 }
