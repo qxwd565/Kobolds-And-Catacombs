@@ -69,7 +69,7 @@
     ],
     "nativeRawText": "[x]<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다.",
     "nativeTextBuilder": 0,
-    "releasedAt": "2017-12-08",
+    "releasedAt": "2017-11-07",
     "releaseStatus": "verified",
     "patches": [],
     "initialSpecStatus": "unverified",

@@ -44,7 +44,7 @@
     ],
     "nativeRawText": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n(1)|1(으로,로) 만듭니다.",
     "nativeTextBuilder": 0,
-    "releasedAt": "2017-12-08",
+    "releasedAt": "2017-11-07",
     "releaseStatus": "verified",
     "patches": [],
     "initialSpecStatus": "unverified",
