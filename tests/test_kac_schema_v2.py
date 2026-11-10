@@ -143,6 +143,11 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(observation["before"],launch)
         self.assertEqual(observation["after"],current)
         self.assertIn("nativeRawText",source["_meta"]["historyIncompleteFields"])
+        text_observation=next(x for x in source["_meta"]["undatedObservations"] if x["topic"]=="display-text-current-vs-dated")
+        self.assertIsNone(text_observation["date"])
+        self.assertEqual(text_observation["before"],"전투의 함성: 카드를 1장 뽑습니다. 내 영웅에게 피해를 2 줍니다.")
+        self.assertEqual(text_observation["after"],"전투의 함성: 카드를 뽑습니다. 내 영웅에게 피해를 2 줍니다.")
+        self.assertIn("text",source["_meta"]["historyIncompleteFields"])
 
     def test_primary_race_enum_and_current_display_are_separate(self):
         self.assertEqual(self.sources["LOOT_516"]["_meta"]["currentPrimaryRace"]["value"],92)
