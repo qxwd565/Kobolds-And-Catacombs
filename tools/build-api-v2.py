@@ -257,6 +257,8 @@ def main():
   history[str(record["dbfId"])]={"id":cid,"history":revisions,"historyIncompleteFields":details["incomplete"],
                                  "initialSpec":initial_spec,"patches":patches}
   render_card={field:copy.deepcopy(record[field]) for field in RENDER_FIELDS if field in record}
+  if "referencedTags" not in render_card:
+   render_card["referencedTags"]=copy.deepcopy(source.get("referencedTags",[]))
   if "mechanics" not in render_card and "currentMechanics" in source.get("_meta",{}):
    render_card["mechanics"]=copy.deepcopy(source["_meta"]["currentMechanics"])
   if revisions: render_card["history"]=revisions
