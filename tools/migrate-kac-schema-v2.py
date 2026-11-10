@@ -18,7 +18,7 @@ STABLE = ("root", "relatedIds", "englishName", "expansion", "setOrder", "formats
 CLASS = {2:"DRUID",3:"HUNTER",4:"MAGE",5:"PALADIN",6:"PRIEST",7:"ROGUE",8:"SHAMAN",9:"WARLOCK",10:"WARRIOR",12:"NEUTRAL",14:"DEMONHUNTER",16:"DEATHKNIGHT"}
 TYPE = {3:"HERO",4:"MINION",5:"SPELL",7:"WEAPON",10:"HERO_POWER",39:"LOCATION"}
 RARITY = {0:"INVALID",1:"COMMON",2:"FREE",3:"RARE",4:"EPIC",5:"LEGENDARY"}
-RACE = {14:"MURLOC",15:"DEMON",17:"MECHANICAL",18:"ELEMENTAL",20:"BEAST",21:"TOTEM",22:"QUILBOAR",23:"PIRATE",24:"DRAGON",25:"ALL",26:"NAGA",11:"UNDEAD",27:"DRAENEI"}
+RACE = {2:"DRAENEI",11:"UNDEAD",14:"MURLOC",15:"DEMON",17:"MECHANICAL",18:"ELEMENTAL",20:"BEAST",21:"TOTEM",22:"QUILBOAR",23:"PIRATE",24:"DRAGON",25:"ALL",92:"NAGA"}
 RACE_KO = {"MURLOC":"멀록","DEMON":"악마","MECHANICAL":"기계","ELEMENTAL":"정령","BEAST":"야수","TOTEM":"토템","QUILBOAR":"가시멧돼지","PIRATE":"해적","DRAGON":"용족","NAGA":"나가","UNDEAD":"언데드","DRAENEI":"드레나이"}
 SCHOOL = {1:"ARCANE",2:"FIRE",3:"FROST",4:"NATURE",5:"HOLY",6:"SHADOW",7:"FEL"}
 TAG_NAMES = {45:"생명력",47:"공격력",48:"마나 비용",187:"내구도",200:"종족",215:"과부하",1635:"주문 속성",2540:"보조 종족 정령",2542:"보조 종족 야수",2534:"보조 종족 언데드"}
@@ -242,12 +242,31 @@ def main():
             if event["date"] <= release:
                 raise ValueError(f"{cid}: event {event['date']} is not after release {release}")
             dates[event["date"]]={"changes":event["changes"],"sources":event.get("sources",[]),"eventTypes":event.get("eventTypes",[])}
+        # Preserve the curated current display fields verbatim, including race label
+        # and races array order. Canonical Tag 200 is stored separately in _meta.
         current_card=copy.deepcopy(record)
-        if current_card.get("type") == "MINION":
-            # The singular race label is strictly CARDRACE/Tag 200. Secondary
-            # tribes remain in races and are never promoted into the primary slot.
-            current_card["races"] = race_list(current_xml[cid])
-            current_card["race"] = primary_race_label(current_xml[cid])
+        # Compare the latest dated raw string with the approved current raw string
+        # for every card in this one migration pass. Unknown transitions stay
+        # explicitly undated; neither side is copied over the other.
+        latest_raw=state.get("nativeRawText")
+        for event in events:
+            changes=event["changes"]
+            if "nativeRawText" in changes:
+                latest_raw=changes["nativeRawText"]
+            elif "text" in changes:
+                latest_raw=changes["text"].replace("<br></br>","\\n")
+        current_raw=old.get("nativeRawText")
+        undated_text_observation=None
+        if latest_raw != current_raw:
+            undated_text_observation={
+                "topic":"native-raw-text-current-vs-dated",
+                "fields":["nativeRawText"],
+                "before":latest_raw,
+                "after":current_raw,
+                "date":None,
+                "sourceCommits":[policy["snapshotSources"]["launchMarine" if cid in marine_ids else "launchMain"]["commit"],policy["snapshotSources"]["current"]["commit"]],
+                "note":"Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+            }
         stable={key:copy.deepcopy(source[key]) for key in STABLE}
         owner_ids={tag["id"] for tag in current_xml[cid]["owned"]}
         names={tag["id"]:tag.get("name",TAG_NAMES.get(tag["id"],f"Tag {tag['id']}")) for tag in old.get("nativeTags",[])}
@@ -261,13 +280,17 @@ def main():
                 set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|
                 ({"nativeRawText"} if any("text" in event.get("changes",{}) and "nativeRawText" not in event.get("changes",{}) for event in old.get("patches",[])) else set())|
                 ({"name"} if "name" in state and record.get("name")!=state["name"] else set())|
+                ({"nativeRawText"} if undated_text_observation else set())|
                 {field for observation in policy.get("undatedObservations",[]) if cid in observation.get("cardIds",[]) for field in observation.get("fields",[])}
             ),
             "launchStringEvidence":launch["strings"],
+            "currentStringEvidence":{"nativeRawText":{"present":"nativeRawText" in old,"value":current_raw}},
+            "launchPrimaryRace":{"tagId":200,"value":tags_by_id(launch).get(200),"race":primary_race_label(launch)},
+            "currentPrimaryRace":{"tagId":200,"value":tags_by_id(current_xml[cid]).get(200),"race":primary_race_label(current_xml[cid])},
             "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
             "tagHistoryStatus":"snapshot synchronization pending; see tag-observation source manifest",
             "wordingObservations":[x for x in policy.get("wordingObservations",[]) if x["cardId"]==cid],
-            "undatedObservations":[x for x in policy.get("undatedObservations",[]) if cid in x.get("cardIds",[])],
+            "undatedObservations":[x for x in policy.get("undatedObservations",[]) if cid in x.get("cardIds",[])] + ([undated_text_observation] if undated_text_observation else []),
             "editorialSuggestions":[x for x in policy.get("editorialSuggestions",[]) if x["cardId"]==cid],
             "functionalEvents":[x for x in policy.get("events",[]) if x["cardId"]==cid and x.get("eventType")=="functional-rule-change"],
         }
