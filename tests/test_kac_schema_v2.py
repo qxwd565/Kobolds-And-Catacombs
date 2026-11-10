@@ -108,8 +108,8 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         source=self.sources["LOOT_013"]
         launch=source["2017-12-08"]["state"]["nativeRawText"]
         current=source["nativeRawText"]
-        self.assertEqual(launch,"<b>도발</b>, <b>전투의 함성:</b>\\n내 영웅에게\\n피해를 2 줍니다.")
-        self.assertEqual(current,"<b>도발</b>, <b>전투의 함성</b>:&\\n내 영웅에게\\n피해를 2 줍니다.")
+        self.assertEqual(launch,"<b>도발</b>, <b>전투의 함성:</b>\n내 영웅에게\n피해를 2 줍니다.")
+        self.assertEqual(current,"<b>도발</b>, <b>전투의 함성</b>:&\n내 영웅에게\n피해를 2 줍니다.")
         self.assertEqual(source["current"]["text"],"<b>도발</b>, <b>전투의 함성</b>:<br></br>내 영웅에게<br></br>피해를 2 줍니다.")
         observation=next(x for x in source["_meta"]["undatedObservations"] if x["topic"]=="loot013-battlecry-markup")
         self.assertIsNone(observation["date"])
