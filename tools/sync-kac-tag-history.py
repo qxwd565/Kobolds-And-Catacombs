@@ -135,7 +135,10 @@ def attach_observation(source,cid,group,card):
 
 def sync_event(source,cid,day,group,card,finding_id=None,event_type=None):
     if day not in source:
-        raise ValueError(f"{cid}: confirmed event date {day} missing from schema-v2 timeline")
+        release=source.get("_meta",{}).get("releasedAt")
+        if release and day<=release:
+            raise ValueError(f"{cid}: observation date {day} is not after release {release}")
+        source[day]={"changes":{},"sources":[],"eventTypes":[]}
     entry=source[day]
     for key in ("nativeTags","referencedTags"):
         if card.get(key):
