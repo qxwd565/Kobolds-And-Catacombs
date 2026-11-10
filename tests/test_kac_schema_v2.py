@@ -132,6 +132,28 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         for cid,doc in self.sources.items():
             self.assertNotIn("nativeTextBuilder",doc[dates(doc)[0]]["state"],cid)
 
+    def test_undated_raw_text_differences_are_captured_for_all_cards(self):
+        source=self.sources["LOOT_014"]
+        launch=source["2017-12-08"]["state"]["nativeRawText"]
+        current=source["nativeRawText"]
+        observation=next(x for x in source["_meta"]["undatedObservations"] if x["topic"]=="native-raw-text-current-vs-dated")
+        self.assertEqual(launch,"<b>전투의 함성:</b> 카드를 1장 뽑습니다. 내 영웅에게 피해를 2 줍니다.")
+        self.assertEqual(current,"<b>전투의 함성:</b> 카드를 뽑습니다. 내 영웅에게 피해를 2 줍니다.")
+        self.assertIsNone(observation["date"])
+        self.assertEqual(observation["before"],launch)
+        self.assertEqual(observation["after"],current)
+        self.assertIn("nativeRawText",source["_meta"]["historyIncompleteFields"])
+
+    def test_primary_race_enum_and_current_display_are_separate(self):
+        self.assertEqual(self.sources["LOOT_516"]["_meta"]["currentPrimaryRace"]["value"],92)
+        self.assertEqual(self.sources["LOOT_375"]["_meta"]["currentPrimaryRace"]["value"],2)
+        self.assertEqual(self.records["LOOT_111"]["race"],"기계, 야수")
+        self.assertEqual(self.records["LOOT_111"]["races"],["MECHANICAL","BEAST"])
+        self.assertEqual(self.records["LOOT_209t"]["race"],"언데드, 용족")
+        self.assertEqual(self.records["LOOT_209t"]["races"],["UNDEAD","DRAGON"])
+        self.assertEqual(self.records["LOOT_313"]["race"],"정령, 야수")
+        self.assertEqual(self.records["LOOT_313"]["races"],["ELEMENTAL","BEAST"])
+
     def test_current_repairs_and_linebreaks_are_preserved(self):
         self.assertEqual(sum("<br></br>" in c.get("text","") for c in self.records.values()),97)
         illusionist=self.records["LOOT_412"]
