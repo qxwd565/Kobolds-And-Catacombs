@@ -83,6 +83,10 @@ def verify_tag_groups(evidence,parsed):
                 for key,kind in (("nativeTags","nativeTags"),("referencedTags","referencedTags")):
                     for tag_id,delta in card.get(key,{}).items():
                         verify_tag(entity,tag_id,delta[side],kind,f"{group['day']} {cid} {side}")
+                if card.get("rawText"):
+                    verify_text(entity,"koKR",card["rawText"][side],f"{group['day']} {cid} {side}")
+                if card.get("enText"):
+                    verify_text(entity,"enUS",card["enText"][side],f"{group['day']} {cid} {side}")
     for group in evidence["observations"]:
         for side in ("before","after"):
             snap=parsed[group[side]["commit"]]
@@ -173,6 +177,11 @@ def main():
             if source.get("schemaVersion")!=2:
                 raise ValueError(f"{cid}: expected schema v2 before tag synchronization")
             sync_event(source,cid,event_day,group,card)
+            if card.get("rawText"):
+                raw=card["rawText"]["after"]
+                entry=source[event_day]
+                entry.setdefault("changes",{})["nativeRawText"]=raw
+                entry["changes"]["text"]=display_text(raw)
             if write(path,source): changed+=1
             synced_events+=1
     # The 13 observation groups are retained individually. Only dated wording
