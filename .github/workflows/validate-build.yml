@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: kobolds-api-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate-build:
     runs-on: ubuntu-latest
