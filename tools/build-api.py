@@ -25,6 +25,11 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+if __name__ == "__main__":
+    import runpy
+    runpy.run_path(str(ROOT / "tools" / "build-api-v2.py"), run_name="__main__")
+    raise SystemExit(0)
 RENDER_FIELDS = (
     "id", "dbfId", "name", "type", "cardClass", "rarity", "collectible",
     "cost", "text", "attack", "health", "durability", "armor", "art",
