@@ -257,7 +257,7 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                          "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive")
         for source in self.sources.values():
             for day,entry in source.items():
-                if not isinstance(entry,dict) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}",day):
+                if not isinstance(entry,dict) or not BUILD.DATE_RE.fullmatch(day):
                     continue
                 if "tagSnapshotEvidence" in entry:
                     self.assertIsInstance(entry["tagSnapshotEvidence"],list)
