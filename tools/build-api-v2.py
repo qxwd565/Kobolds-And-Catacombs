@@ -159,6 +159,9 @@ def main():
   initial_spec=copy.deepcopy(first["state"])
   initial_spec["nativeTags"]=[copy.deepcopy(x) for x in first.get("ownedTags",[]) if x.get("value") is not None]
   initial_spec["referencedTags"]=[copy.deepcopy(x) for x in first.get("referencedTags",[]) if x.get("value") is not None]
+  initial_spec["ownedTagRecords"]=copy.deepcopy(first.get("ownedTags",[]))
+  initial_spec["referencedTagRecords"]=copy.deepcopy(first.get("referencedTags",[]))
+  initial_spec["launchStrings"]=copy.deepcopy(source.get("_meta",{}).get("launchStringEvidence",{}))
   patches=[]
   for patch_day in timeline[1:]:
    event=source[patch_day]
