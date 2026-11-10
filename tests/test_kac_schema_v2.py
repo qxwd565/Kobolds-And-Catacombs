@@ -127,9 +127,9 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         raw_k=self.sources["LOOT_998k"]["2024-10-18"]["changes"]["nativeRawText"]
         raw_l_2024=self.sources["LOOT_998l"]["2024-10-18"]["changes"]["nativeRawText"]
         raw_l_2026=self.sources["LOOT_998l"]["2026-03-11"]["changes"]["nativeRawText"]
-        self.assertEqual(raw_k,"[x]<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\\n교체합니다. 그 카드들의 비용이\\n(1) 감소합니다.")
-        self.assertEqual(raw_l_2024,"[x]카드 3장을 뽑습니다.\\n그 카드들의 비용을\\n(3) 감소시킵니다.")
-        self.assertEqual(raw_l_2026,"[x]카드를 3장 뽑습니다.\\n그 카드들의 비용을\\n1로 만듭니다.")
+        self.assertEqual(raw_k,"[x]<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다.")
+        self.assertEqual(raw_l_2024,"[x]카드 3장을 뽑습니다.\n그 카드들의 비용을\n(3) 감소시킵니다.")
+        self.assertEqual(raw_l_2026,"[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다.")
         self.assertFalse(self.sources["LOOT_998l"]["2024-10-18"]["changes"]["text"].startswith("[x]"))
         self.assertFalse(self.sources["LOOT_998l"]["2026-03-11"]["changes"]["text"].startswith("[x]"))
         self.assertEqual(self.sources["LOOT_998k"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_k)
@@ -232,6 +232,12 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertIn("\n",exact)
         self.assertNotIn("\\n",exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["nativeRawTextChanges"]["after"],exact)
+        loot504_gap=next(x for x in self.legacy["cards"][str(self.records["LOOT_504"]["dbfId"])]["patches"]
+                         if x["date"]=="2022-04-06")["tagHistoryGaps"]["nativeTags"]["1114"]
+        self.assertEqual(loot504_gap["lastKnownState"],{"present":False})
+        self.assertEqual(loot504_gap["observedBeforeState"],{"present":True,"value":1})
+        self.assertIsNone(loot504_gap["transitionDate"])
+        self.assertIsNone(loot504_gap["unknownInterval"]["start"])
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["nativeRawText"],exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["text"],
                          "<b>잔상</b><br></br>아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다.")
@@ -297,7 +303,12 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                     tag_id=int(tag_id); touched_native.add(tag_id)
                     before={"present":tag_id in native}
                     if tag_id in native: before["value"]=native[tag_id]
-                    self.assertEqual(delta["before"],before,f"{cid}:native-before:{tag_id}:{patch['date']}")
+                    if delta["before"]!=before:
+                        gap=patch.get("tagHistoryGaps",{}).get("nativeTags",{}).get(str(tag_id))
+                        self.assertIsNotNone(gap,f"{cid}:native-gap:{tag_id}:{patch['date']}")
+                        self.assertEqual(gap["lastKnownState"],before)
+                        self.assertEqual(gap["observedBeforeState"],delta["before"])
+                        self.assertIsNone(gap["transitionDate"])
                     if delta["after"].get("present"):
                         native[tag_id]=delta["after"].get("value")
                     else:
@@ -306,7 +317,12 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                     tag_id=int(tag_id); touched_referenced.add(tag_id)
                     before={"present":tag_id in referenced}
                     if tag_id in referenced: before["value"]=referenced[tag_id]
-                    self.assertEqual(delta["before"],before,f"{cid}:referenced-before:{tag_id}:{patch['date']}")
+                    if delta["before"]!=before:
+                        gap=patch.get("tagHistoryGaps",{}).get("referencedTags",{}).get(str(tag_id))
+                        self.assertIsNotNone(gap,f"{cid}:referenced-gap:{tag_id}:{patch['date']}")
+                        self.assertEqual(gap["lastKnownState"],before)
+                        self.assertEqual(gap["observedBeforeState"],delta["before"])
+                        self.assertIsNone(gap["transitionDate"])
                     if delta["after"].get("present"):
                         referenced[tag_id]=delta["after"].get("value")
                     else:
