@@ -34,6 +34,43 @@ def publish(path,value):
 def timeline_dates(source):
  return sorted(k for k in source if DATE_RE.fullmatch(k))
 
+def tag_history_gaps(source,cid):
+ dates=timeline_dates(source)
+ first=source[dates[0]]
+ states={
+  "nativeTags":{int(x["id"]):copy.deepcopy(x.get("value")) for x in first.get("ownedTags",[]) if x.get("value") is not None},
+  "referencedTags":{int(x["id"]):copy.deepcopy(x.get("value")) for x in first.get("referencedTags",[]) if x.get("value") is not None},
+ }
+ result={}
+ for day in dates[1:]:
+  entry=source[day]
+  day_gaps={}
+  for change_key,state_key in (("nativeTagChanges","nativeTags"),("referencedTagChanges","referencedTags")):
+   for raw_id,delta in entry.get(change_key,{}).items():
+    tag_id=int(raw_id)
+    known={"present":tag_id in states[state_key]}
+    if tag_id in states[state_key]:
+     known["value"]=copy.deepcopy(states[state_key][tag_id])
+    observed=copy.deepcopy(delta["before"])
+    if known!=observed:
+     evidence=entry.get("tagSnapshotEvidence",[])
+     if isinstance(evidence,dict): evidence=[evidence]
+     day_gaps.setdefault(state_key,{})[str(tag_id)]={
+      "lastKnownState":known,
+      "observedBeforeState":observed,
+      "transitionDate":None,
+      "unknownInterval":{"start":None,"end":day},
+      "beforeSnapshotCommits":[x.get("before",{}).get("commit") for x in evidence if x.get("before",{}).get("commit")],
+      "note":"The immutable before-snapshot has this state, but launch plus previously dated deltas do not establish when it entered that state. No intermediate date is inferred."
+     }
+    after=delta["after"]
+    if after.get("present"):
+     states[state_key][tag_id]=copy.deepcopy(after.get("value"))
+    else:
+     states[state_key].pop(tag_id,None)
+  if day_gaps: result[day]=day_gaps
+ return result
+
 def replay_v2(source,record,cid):
  dates=timeline_dates(source)
  if not dates:
@@ -109,6 +146,7 @@ def replay_v2(source,record,cid):
    public_baseline[field]=copy.deepcopy(source["nativeTextBuilder"])
   elif field=="mechanics" and "currentMechanics" in meta:
    public_baseline[field]=copy.deepcopy(meta["currentMechanics"])
+ gaps_by_day=tag_history_gaps(source,cid)
  revisions=[]
  for index,(day,state,entry) in enumerate(states):
   # Every public interval is a self-contained override of the current card.
@@ -125,13 +163,14 @@ def replay_v2(source,record,cid):
   if native_changes: revision["nativeTagChanges"]=copy.deepcopy(native_changes)
   if referenced_changes: revision["referencedTagChanges"]=copy.deepcopy(referenced_changes)
   if tag_evidence: revision["tagSnapshotEvidence"]=copy.deepcopy(tag_evidence)
+  if day in gaps_by_day: revision["tagHistoryGaps"]=copy.deepcopy(gaps_by_day[day])
   if entry.get("nativeRawTextChanges"): revision["nativeRawTextChanges"]=copy.deepcopy(entry["nativeRawTextChanges"])
   if entry.get("enTextChanges"): revision["enTextChanges"]=copy.deepcopy(entry["enTextChanges"])
   if entry.get("sources"): revision["sources"]=copy.deepcopy(entry["sources"])
   if entry.get("eventTypes"): revision["eventTypes"]=copy.deepcopy(entry["eventTypes"])
   if incomplete: revision["historyIncompleteFields"]=sorted(incomplete)
   revisions.append(revision)
- return revisions,{"currentState":current_state,"incomplete":sorted(incomplete),"datedStates":len(states)}
+ return revisions,{"currentState":current_state,"incomplete":sorted(incomplete),"datedStates":len(states),"tagHistoryGaps":gaps_by_day}
 
 def main():
  catalog=read(ROOT/"cards.json")
@@ -171,6 +210,7 @@ def main():
    if event.get("removedFields"): patch["removedFields"]=copy.deepcopy(event["removedFields"])
    for key in ("nativeTagChanges","referencedTagChanges","tagSnapshotEvidence","nativeRawTextChanges","enTextChanges","sources","eventTypes"):
     if event.get(key): patch[key]=copy.deepcopy(event[key])
+   if patch_day in details["tagHistoryGaps"]: patch["tagHistoryGaps"]=copy.deepcopy(details["tagHistoryGaps"][patch_day])
    if patch["changes"] or any(key in patch for key in ("removedFields","nativeTagChanges","referencedTagChanges","tagSnapshotEvidence","nativeRawTextChanges","enTextChanges")):
     patches.append(patch)
   legacy[str(record["dbfId"])]={"id":cid,"initialSpec":initial_spec,"patches":patches}
