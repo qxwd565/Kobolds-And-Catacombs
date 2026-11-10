@@ -81,10 +81,6 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                     if field in details["incomplete"]:
                         continue
                     actual=recovered.get(field,BUILD.MISSING)
-                    if field=="races" and isinstance(actual,list) and isinstance(value,list) and set(actual)==set(value):
-                        continue
-                    if field=="race" and set(target.get("races",[]))==set(recovered.get("races",[])):
-                        continue
                     self.assertEqual(actual,value,f"{cid}:{revision['from']}:{field}")
                 for field in recovered:
                     if field not in target and field not in details["incomplete"]:
@@ -107,6 +103,30 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertNotIn("2022-04-06",dates(self.sources["LOOT_504t"]))
         self.assertNotIn("2022-04-27",dates(self.sources["LOOT_504t"]))
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["functionalEvents"][0]["date"],"2022-04-06")
+
+    def test_undated_loot013_raw_text_observation_is_exact_and_not_dated(self):
+        source=self.sources["LOOT_013"]
+        launch=source["2017-12-08"]["state"]["nativeRawText"]
+        current=source["nativeRawText"]
+        self.assertEqual(launch,"<b>도발</b>, <b>전투의 함성:</b>\\n내 영웅에게\\n피해를 2 줍니다.")
+        self.assertEqual(current,"<b>도발</b>, <b>전투의 함성</b>:&\\n내 영웅에게\\n피해를 2 줍니다.")
+        observation=next(x for x in source["_meta"]["undatedObservations"] if x["topic"]=="loot013-battlecry-markup")
+        self.assertIsNone(observation["date"])
+        self.assertEqual(observation["before"],launch)
+        self.assertEqual(observation["after"],current)
+        revisions,details=BUILD.replay_v2(source,self.records["LOOT_013"],"LOOT_013")
+        self.assertIn("nativeRawText",details["incomplete"])
+        self.assertFalse(any("nativeRawText" in revision["changes"] for revision in revisions))
+
+    def test_card_set_tag_183_is_not_native_text_builder(self):
+        source=self.sources["LOOT_060"]
+        launch=source["2017-12-08"]
+        self.assertNotIn("nativeTextBuilder",launch["state"])
+        tag=next(x for x in launch["ownedTags"] if x["id"]==183)
+        self.assertEqual(tag["value"],1004)
+        self.assertEqual(source["nativeTextBuilder"],0)
+        for cid,doc in self.sources.items():
+            self.assertNotIn("nativeTextBuilder",doc[dates(doc)[0]]["state"],cid)
 
     def test_current_repairs_and_linebreaks_are_preserved(self):
         self.assertEqual(sum("<br></br>" in c.get("text","") for c in self.records.values()),97)

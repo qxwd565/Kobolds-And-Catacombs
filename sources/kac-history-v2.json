@@ -545,6 +545,23 @@
       "date": "2024-03-12",
       "source": "https://hearthstone.blizzard.com/ko-kr/news/24064735/29-0",
       "note": "소집 용어 제거; 기능 변경 아님."
+    },
+    {
+      "topic": "loot013-battlecry-markup",
+      "cardIds": [
+        "LOOT_013"
+      ],
+      "fields": [
+        "nativeRawText"
+      ],
+      "before": "<b>도발</b>, <b>전투의 함성:</b>\n내 영웅에게\n피해를 2 줍니다.",
+      "after": "<b>도발</b>, <b>전투의 함성</b>:&\n내 영웅에게\n피해를 2 줍니다.",
+      "date": null,
+      "sourceCommits": [
+        "d399871096675e4186c1c2d35b9c410464a4ffbf",
+        "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+      ],
+      "note": "출시와 현재 CardDefs의 원시 문구 차이. 전환일 미확정. 양쪽 문자열을 각각 보존하며 날짜 이력에 임의 배치하지 않음."
     }
   ],
   "editorialSuggestions": [

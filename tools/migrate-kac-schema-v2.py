@@ -134,7 +134,9 @@ def launch_state(entity, cid):
     if kind == "MINION":
         races = race_list(entity)
         state["races"] = races
-        state["race"] = RACE_KO.get(races[0], races[0]) if races else ""
+        primary = tags.get(200)
+        primary_race = RACE.get(primary) if primary is not None else None
+        state["race"] = RACE_KO.get(primary_race, primary_race) if primary_race else ""
     if kind == "SPELL" and 1635 in tags:
         state["spellSchool"] = SCHOOL.get(tags[1635], "")
     strings = entity["strings"]
@@ -146,8 +148,6 @@ def launch_state(entity, cid):
         raw = text.get("nativeRawText", text.get("xmlText"))
         state["nativeRawText"] = raw
         state["text"] = raw.replace("[x]","").replace("\\n","<br></br>").replace("\n","<br></br>") if raw is not None else ""
-    if 183 in tags:
-        state["nativeTextBuilder"] = tags[183]
     # Canonical type rules: no zero placeholders for fields that do not apply.
     if kind == "SPELL":
         for field in ("armor","attack","durability","health","race","races"):
@@ -252,7 +252,6 @@ def main():
             "historyIncompleteFields":sorted(
                 set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|
                 ({"nativeRawText"} if any("text" in event.get("changes",{}) and "nativeRawText" not in event.get("changes",{}) for event in old.get("patches",[])) else set())|
-                ({"nativeTextBuilder"} if "nativeTextBuilder" in state and old.get("nativeTextBuilder")!=state["nativeTextBuilder"] else set())|
                 ({"name"} if "name" in state and record.get("name")!=state["name"] else set())|
                 {field for observation in policy.get("undatedObservations",[]) if cid in observation.get("cardIds",[]) for field in observation.get("fields",[])}
             ),
