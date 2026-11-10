@@ -71,6 +71,19 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          REMOTE_HEAD="$(git rev-parse origin/main)"
+          CHECKOUT_HEAD="$(git rev-parse HEAD)"
+          if [ "$REMOTE_HEAD" != "$CHECKOUT_HEAD" ]; then
+            if git merge-base --is-ancestor "$CHECKOUT_HEAD" "$REMOTE_HEAD" && \
+               git diff --quiet "$REMOTE_HEAD" -- cards.json render.json history.json legacy.json data sources/kac-history-v2.json; then
+              echo "Remote main already contains identical generated card outputs; advancing checkout to $REMOTE_HEAD."
+              git reset --hard "$REMOTE_HEAD"
+            else
+              echo "Remote main advanced with different card outputs or diverged history; refusing a stale generated-source push." >&2
+              exit 1
+            fi
+          fi
           git add cards.json render.json history.json legacy.json data/*.json sources/kac-history-v2.json
           if git diff --cached --quiet; then
             echo "No card source changes."
