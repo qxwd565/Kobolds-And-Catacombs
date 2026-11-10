@@ -224,9 +224,14 @@ def main():
                     day=correction["to"]
                     corrections_applied.add(correction["cardId"])
             merge_event(events,day,event["changes"],source=old.get("patchSources",{}).get(event["date"]))
-        for event in policy.get("events",[]):
+        for event in policy.get("events",[])+[x for x in policy.get("wordingObservations",[]) if x.get("date") and x.get("changes")]:
             if event["cardId"]==cid:
-                merge_event(events,event["date"],event["changes"],event.get("source"),event.get("eventType"))
+                changes=copy.deepcopy(event["changes"])
+                if "text" in changes:
+                    raw_text=changes.get("nativeRawText",changes["text"].replace("<br></br>","\\n"))
+                    changes["nativeRawText"]=raw_text
+                    changes["text"]=changes["text"].replace("\\n","<br></br>")
+                merge_event(events,event["date"],changes,event.get("source"),event.get("eventType","gameplay-change"))
         events.sort(key=lambda x:x["date"])
         dates={}
         dates[release]={"state":state,"ownedTags":launch["owned"],"referencedTags":launch["referenced"]}
@@ -244,11 +249,17 @@ def main():
             "schemaVersion":2,
             "releaseStatus":old.get("releaseStatus","verified"),
             "releasedAt":release,
-            "historyIncompleteFields":sorted(set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|({"nativeRawText"} if any("text" in event["changes"] for event in events) else set())),
+            "historyIncompleteFields":sorted(
+                set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|
+                ({"nativeRawText"} if any("text" in event.get("changes",{}) and "nativeRawText" not in event.get("changes",{}) for event in old.get("patches",[])) else set())|
+                {field for observation in policy.get("undatedObservations",[]) if cid in observation.get("cardIds",[]) for field in observation.get("fields",[])}
+            ),
             "launchStringEvidence":launch["strings"],
             "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
             "tagHistoryStatus":"snapshot synchronization pending; see tag-observation source manifest",
             "wordingObservations":[x for x in policy.get("wordingObservations",[]) if x["cardId"]==cid],
+            "undatedObservations":[x for x in policy.get("undatedObservations",[]) if cid in x.get("cardIds",[])],
+            "editorialSuggestions":[x for x in policy.get("editorialSuggestions",[]) if x["cardId"]==cid],
             "functionalEvents":[x for x in policy.get("events",[]) if x["cardId"]==cid and x.get("eventType")=="functional-rule-change"],
         }
         if cid=="LOOT_504":
