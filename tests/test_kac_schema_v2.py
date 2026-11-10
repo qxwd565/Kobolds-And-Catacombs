@@ -128,7 +128,7 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(tag["value"],1004)
         self.assertEqual(source["nativeTextBuilder"],0)
         self.assertEqual(self.sources["LOOT_313"]["current"]["race"],"정령, 야수")
-        self.assertEqual(self.sources["LOOT_313"]["current"]["races"],["BEAST","ELEMENTAL"])
+        self.assertEqual(self.sources["LOOT_313"]["current"]["races"],["ELEMENTAL","BEAST"])
         for cid,doc in self.sources.items():
             self.assertNotIn("nativeTextBuilder",doc[dates(doc)[0]]["state"],cid)
 
