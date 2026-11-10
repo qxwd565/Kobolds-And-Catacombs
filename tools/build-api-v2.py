@@ -99,24 +99,38 @@ def replay_v2(source,record,cid):
  for field in STATE_FIELDS:
   if field in current and field not in latest:
    incomplete.add(field)
+ public_baseline={}
+ for field in STATE_FIELDS:
+  if field in record:
+   public_baseline[field]=copy.deepcopy(record[field])
+  elif field=="nativeRawText" and source.get("nativeRawText") is not None:
+   public_baseline[field]=copy.deepcopy(source["nativeRawText"])
+  elif field=="nativeTextBuilder" and source.get("nativeTextBuilder") is not None:
+   public_baseline[field]=copy.deepcopy(source["nativeTextBuilder"])
  revisions=[]
  for index,(day,state,entry) in enumerate(states):
   changes={}
   removed=[]
-  for field,value in state.items():
-   if field in undated_by_field:
-    continue
-   if field not in current_state or current_state[field]!=value:
-    changes[field]=copy.deepcopy(value)
-  for field in current_state:
-   if field not in state:
+  # render.json is the actual public current baseline. Historical race labels
+  # and arrays must override that display baseline, not the canonical Tag 200
+  # validation state above.
+  for field in STATE_FIELDS:
+   if field in state:
+    baseline=public_baseline.get(field,MISSING)
+    if baseline is MISSING or baseline!=state[field]:
+     changes[field]=copy.deepcopy(state[field])
+   elif field in public_baseline:
     removed.append(field)
-  tag_changes=entry.get("nativeTagChanges") or entry.get("referencedTagChanges")
-  if changes or removed or tag_changes:
+  native_changes=entry.get("nativeTagChanges")
+  referenced_changes=entry.get("referencedTagChanges")
+  tag_evidence=entry.get("tagSnapshotEvidence")
+  if changes or removed or native_changes or referenced_changes or tag_evidence:
    revision={"from":day,"changes":changes}
    if index+1<len(states): revision["before"]=states[index+1][0]
    if removed: revision["removedFields"]=sorted(removed)
-   if tag_changes: revision["nativeTagChanges"]=copy.deepcopy(tag_changes)
+   if native_changes: revision["nativeTagChanges"]=copy.deepcopy(native_changes)
+   if referenced_changes: revision["referencedTagChanges"]=copy.deepcopy(referenced_changes)
+   if tag_evidence: revision["tagSnapshotEvidence"]=copy.deepcopy(tag_evidence)
    if entry.get("sources"): revision["sources"]=copy.deepcopy(entry["sources"])
    if entry.get("eventTypes"): revision["eventTypes"]=copy.deepcopy(entry["eventTypes"])
    if incomplete: revision["historyIncompleteFields"]=sorted(incomplete)
@@ -132,6 +146,7 @@ def main():
   raise ValueError("Release policy must use Asia/Seoul")
  renderer=[]
  history={}
+ legacy={}
  seen=set()
  release_counts={"verified":0,"estimated":0,"pending":0}
  for record in catalog["cards"]:
@@ -145,8 +160,23 @@ def main():
   if source.get("current",{}).get("id")!=cid or source["current"].get("dbfId")!=record.get("dbfId"):
    raise ValueError(f"{cid}: current cache identity mismatch")
   revisions,details=replay_v2(source,record,cid)
-  if revisions:
-   history[str(record["dbfId"])]={"id":cid,"history":revisions,"historyIncompleteFields":details["incomplete"]}
+  timeline=timeline_dates(source)
+  first=source[timeline[0]]
+  initial_spec=copy.deepcopy(first["state"])
+  initial_spec["nativeTags"]=[copy.deepcopy(x) for x in first.get("ownedTags",[]) if x.get("value") is not None]
+  initial_spec["referencedTags"]=[copy.deepcopy(x) for x in first.get("referencedTags",[]) if x.get("value") is not None]
+  patches=[]
+  for patch_day in timeline[1:]:
+   event=source[patch_day]
+   patch={"date":patch_day,"changes":copy.deepcopy(event.get("changes",{}))}
+   if event.get("removedFields"): patch["removedFields"]=copy.deepcopy(event["removedFields"])
+   for key in ("nativeTagChanges","referencedTagChanges","tagSnapshotEvidence","sources","eventTypes"):
+    if event.get(key): patch[key]=copy.deepcopy(event[key])
+   if patch["changes"] or any(key in patch for key in ("removedFields","nativeTagChanges","referencedTagChanges","tagSnapshotEvidence")):
+    patches.append(patch)
+  legacy[str(record["dbfId"])]={"id":cid,"initialSpec":initial_spec,"patches":patches}
+  history[str(record["dbfId"])]={"id":cid,"history":revisions,"historyIncompleteFields":details["incomplete"],
+                                 "initialSpec":initial_spec,"patches":patches}
   render_card={field:copy.deepcopy(record[field]) for field in RENDER_FIELDS if field in record}
   if revisions: render_card["history"]=revisions
   # Preserve the exact approved current card cache; only release metadata is
@@ -166,9 +196,10 @@ def main():
   "cards.json":catalog,
   "render.json":{"schema":1,"set":catalog["set"],"cards":renderer},
   "history.json":{"schema":1,"set":catalog["set"],"cards":history},
+  "legacy.json":{"schema":1,"set":catalog["set"],"cards":legacy},
  }
  changed=[name for name,value in files.items() if publish(ROOT/name,value)]
- print(json.dumps({"cards":len(renderer),"datedCards":len(history),"historyIntervals":sum(len(x["history"]) for x in history.values()),"published":changed,"releaseDates":release_counts},ensure_ascii=False))
+ print(json.dumps({"cards":len(renderer),"datedCards":len(history),"historyIntervals":sum(len(x["history"]) for x in history.values()),"legacyCards":len(legacy),"legacyPatches":sum(len(x["patches"]) for x in legacy.values()),"published":changed,"releaseDates":release_counts},ensure_ascii=False))
 
 if __name__=="__main__":
  main()
