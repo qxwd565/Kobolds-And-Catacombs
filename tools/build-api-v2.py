@@ -125,6 +125,8 @@ def replay_v2(source,record,cid):
   if native_changes: revision["nativeTagChanges"]=copy.deepcopy(native_changes)
   if referenced_changes: revision["referencedTagChanges"]=copy.deepcopy(referenced_changes)
   if tag_evidence: revision["tagSnapshotEvidence"]=copy.deepcopy(tag_evidence)
+  if entry.get("nativeRawTextChanges"): revision["nativeRawTextChanges"]=copy.deepcopy(entry["nativeRawTextChanges"])
+  if entry.get("enTextChanges"): revision["enTextChanges"]=copy.deepcopy(entry["enTextChanges"])
   if entry.get("sources"): revision["sources"]=copy.deepcopy(entry["sources"])
   if entry.get("eventTypes"): revision["eventTypes"]=copy.deepcopy(entry["eventTypes"])
   if incomplete: revision["historyIncompleteFields"]=sorted(incomplete)
@@ -167,9 +169,9 @@ def main():
    event=source[patch_day]
    patch={"date":patch_day,"changes":copy.deepcopy(event.get("changes",{}))}
    if event.get("removedFields"): patch["removedFields"]=copy.deepcopy(event["removedFields"])
-   for key in ("nativeTagChanges","referencedTagChanges","tagSnapshotEvidence","sources","eventTypes"):
+   for key in ("nativeTagChanges","referencedTagChanges","tagSnapshotEvidence","nativeRawTextChanges","enTextChanges","sources","eventTypes"):
     if event.get(key): patch[key]=copy.deepcopy(event[key])
-   if patch["changes"] or any(key in patch for key in ("removedFields","nativeTagChanges","referencedTagChanges","tagSnapshotEvidence")):
+   if patch["changes"] or any(key in patch for key in ("removedFields","nativeTagChanges","referencedTagChanges","tagSnapshotEvidence","nativeRawTextChanges","enTextChanges")):
     patches.append(patch)
   legacy[str(record["dbfId"])]={"id":cid,"initialSpec":initial_spec,"patches":patches}
   history[str(record["dbfId"])]={"id":cid,"history":revisions,"historyIncompleteFields":details["incomplete"],
