@@ -266,18 +266,27 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
             referenced={x["id"]:x["value"] for x in initial.get("referencedTags",[])}
             self.assertTrue(isinstance(initial.get("nativeTags"),list),f"{cid}: nativeTags missing")
             self.assertTrue(isinstance(initial.get("referencedTags"),list),f"{cid}: referencedTags missing")
+            self.assertTrue(isinstance(initial.get("ownedTagRecords"),list),f"{cid}: owned tag records missing")
+            self.assertTrue(isinstance(initial.get("referencedTagRecords"),list),f"{cid}: referenced tag records missing")
+            self.assertTrue(isinstance(initial.get("launchStrings"),dict),f"{cid}: launch string-tag evidence missing")
             self.assertFalse(set(native)&set(referenced),f"{cid}: owned/reference tag identity collision")
             touched_native=set()
             touched_referenced=set()
             for patch in legacy["patches"]:
                 for tag_id,delta in patch.get("nativeTagChanges",{}).items():
                     tag_id=int(tag_id); touched_native.add(tag_id)
+                    before={"present":tag_id in native}
+                    if tag_id in native: before["value"]=native[tag_id]
+                    self.assertEqual(delta["before"],before,f"{cid}:native-before:{tag_id}:{patch['date']}")
                     if delta["after"].get("present"):
                         native[tag_id]=delta["after"].get("value")
                     else:
                         native.pop(tag_id,None)
                 for tag_id,delta in patch.get("referencedTagChanges",{}).items():
                     tag_id=int(tag_id); touched_referenced.add(tag_id)
+                    before={"present":tag_id in referenced}
+                    if tag_id in referenced: before["value"]=referenced[tag_id]
+                    self.assertEqual(delta["before"],before,f"{cid}:referenced-before:{tag_id}:{patch['date']}")
                     if delta["after"].get("present"):
                         referenced[tag_id]=delta["after"].get("value")
                     else:
