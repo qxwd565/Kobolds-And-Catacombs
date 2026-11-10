@@ -108,6 +108,17 @@ def merge_delta(target,key,delta,context):
             raise ValueError(f"{context}: conflicting {key} for tag {tag_id}")
         existing[tag_id]=copy.deepcopy(value)
 
+def normalize_delta(delta):
+    normalized={}
+    for tag_id,change in delta.items():
+        item=copy.deepcopy(change)
+        for side in ("before","after"):
+            state=item[side]
+            if state.get("present") and state.get("value") is not None:
+                state["value"]=M.scalar(str(state["value"]))
+        normalized[str(tag_id)]=item
+    return normalized
+
 def display_text(raw):
     return raw.replace("[x]","").replace("\\n","<br></br>").replace("\n","<br></br>")
 
@@ -215,7 +226,7 @@ def main():
                 fields=card.get("fields",{})
                 # Create/merge the confirmed observation boundary first. A
                 # wording-only date need not already exist in the gameplay timeline.
-                sync_event(source,cid,day,group,{"nativeTags":{str(k):v for k,v in fields.items() if k.isdigit()}},fid,dated_types[fid])
+                sync_event(source,cid,day,group,{"nativeTags":normalize_delta({str(k):v for k,v in fields.items() if k.isdigit()})},fid,dated_types[fid])
                 entry=source[day]
                 raw=fields.get("rawText",{}).get("after")
                 if raw is not None:
@@ -228,7 +239,7 @@ def main():
                 # raw/enUS strings and before/after evidence in _meta.observations.
             if fid=="KNC-D004" and cid=="LOOT_504":
                 fields=card.get("fields",{})
-                delta={str(k):v for k,v in fields.items() if k.isdigit()}
+                delta=normalize_delta({str(k):v for k,v in fields.items() if k.isdigit()})
                 sync_event(source,cid,"2022-04-06",group,{"nativeTags":delta},fid,"functional-rule-change")
             observations+=1
             if write(path,source): changed+=1
