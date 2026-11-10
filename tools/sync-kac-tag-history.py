@@ -135,13 +135,11 @@ def merge_string_delta(entry,key,delta,context):
 def add_snapshot_evidence(entry,group,finding_id=None):
     item={"before":copy.deepcopy(group["before"]),"after":copy.deepcopy(group["after"])}
     if finding_id: item["findingId"]=finding_id
-    existing=entry.get("tagSnapshotEvidence")
-    if existing is None:
-        entry["tagSnapshotEvidence"]=item
-    else:
-        evidence=existing if isinstance(existing,list) else [existing]
-        if item not in evidence: evidence.append(item)
-        entry["tagSnapshotEvidence"]=evidence
+    existing=entry.get("tagSnapshotEvidence",[])
+    evidence=existing if isinstance(existing,list) else [existing]
+    if item not in evidence: evidence.append(item)
+    # Always serialize the collection as a list, even for its first member.
+    entry["tagSnapshotEvidence"]=evidence
     for side in ("before","after"):
         add_source(entry, f"https://github.com/HearthSim/hsdata/commit/{group[side]['commit']}")
 
