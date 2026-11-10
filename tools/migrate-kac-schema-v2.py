@@ -250,6 +250,7 @@ def main():
         # explicitly undated; neither side is copied over the other.
         latest_raw=state.get("nativeRawText")
         latest_text=state.get("text")
+        latest_name=state.get("name")
         for event in events:
             changes=event["changes"]
             if "nativeRawText" in changes:
@@ -280,6 +281,16 @@ def main():
                 "sourceCommits":[policy["snapshotSources"]["launchMarine" if cid in marine_ids else "launchMain"]["commit"],policy["snapshotSources"]["current"]["commit"]],
                 "note":"Immutable launch plus dated events compared with the approved current display text; transition date is not established."
             })
+        if latest_name != record.get("name"):
+            undated_text_observations.append({
+                "topic":"card-name-current-vs-dated",
+                "fields":["name"],
+                "before":latest_name,
+                "after":record.get("name"),
+                "date":None,
+                "sourceCommits":[policy["snapshotSources"]["launchMarine" if cid in marine_ids else "launchMain"]["commit"],policy["snapshotSources"]["current"]["commit"]],
+                "note":"Immutable CARDNAME launch value compared with the approved current name; transition date is not established."
+            })
         stable={key:copy.deepcopy(source[key]) for key in STABLE}
         owner_ids={tag["id"] for tag in current_xml[cid]["owned"]}
         names={tag["id"]:tag.get("name",TAG_NAMES.get(tag["id"],f"Tag {tag['id']}")) for tag in old.get("nativeTags",[])}
@@ -297,7 +308,7 @@ def main():
                 {field for observation in policy.get("undatedObservations",[]) if cid in observation.get("cardIds",[]) for field in observation.get("fields",[])}
             ),
             "launchStringEvidence":launch["strings"],
-            "currentStringEvidence":{"nativeRawText":{"present":"nativeRawText" in old,"value":current_raw}},
+            "currentStringEvidence":{"name":{"present":"name" in old.get("card",{}),"value":old.get("card",{}).get("name")},"nativeRawText":{"present":"nativeRawText" in old,"value":current_raw}},
             "launchPrimaryRace":{"tagId":200,"value":tags_by_id(launch).get(200),"race":primary_race_label(launch)},
             "currentPrimaryRace":{"tagId":200,"value":tags_by_id(current_xml[cid]).get(200),"race":primary_race_label(current_xml[cid])},
             "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
