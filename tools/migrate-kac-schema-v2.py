@@ -255,8 +255,6 @@ def main():
             changes=event["changes"]
             if "nativeRawText" in changes:
                 latest_raw=changes["nativeRawText"]
-            elif "text" in changes:
-                latest_raw=changes["text"].replace("<br></br>","\\n")
             if "text" in changes:
                 latest_text=changes["text"]
         current_raw=old.get("nativeRawText")
