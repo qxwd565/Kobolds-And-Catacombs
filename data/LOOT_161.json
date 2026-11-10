@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "육식 보물상자"
       },
       "nativeRawText": {
         "present": true,
@@ -122,7 +122,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -134,10 +134,9 @@
         "after": "<b>전투의 함성:</b> 아군\n하수인을 처치합니다.\n<b>죽음의 메아리:</b> 그 하수인을 둘 복사하여 소환합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -148,10 +147,9 @@
         "after": "<b>전투의 함성:</b> 아군<br></br>하수인을 처치합니다.<br></br><b>죽음의 메아리:</b> 그 하수인을 둘 복사하여 소환합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],

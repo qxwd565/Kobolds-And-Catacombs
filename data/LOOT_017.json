@@ -64,8 +64,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "어둠의 서약"
       },
       "nativeRawText": {
         "present": true,
@@ -113,7 +113,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -125,10 +125,9 @@
         "after": "아군 하수인을\n처치합니다. 내 영웅이\n생명력을 #8 회복합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -305,26 +304,91 @@
       "text": "아군 하수인을<br></br>처치합니다. 내 영웅이<br></br>생명력을 #4 회복합니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5"
+      "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5",
+      "https://github.com/HearthSim/hsdata/commit/0445fcab2b98505c8afa69370ef78d349593e27a",
+      "https://github.com/HearthSim/hsdata/commit/b378113a0d83405eab56db202a697c9875e0d421"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 24377,
+          "commit": "0445fcab2b98505c8afa69370ef78d349593e27a",
+          "source": "https://github.com/HearthSim/hsdata/blob/0445fcab2b98505c8afa69370ef78d349593e27a/CardDefs.xml",
+          "xmlSha256": "b82a9a4654f343418bb3327f0d39f44c02d26b63e0b594988e8116d56206fc17"
+        },
+        "after": {
+          "build": 24589,
+          "commit": "b378113a0d83405eab56db202a697c9875e0d421",
+          "source": "https://github.com/HearthSim/hsdata/blob/b378113a0d83405eab56db202a697c9875e0d421/CardDefs.xml",
+          "xmlSha256": "f5c12e8a944b14f72eb20e3eb5be86c375f94d4143d8b6f02cf0dcbe1f9ac3e7"
+        }
+      }
+    ]
   },
   "2021-03-26": {
     "changes": {
       "spellSchool": "SHADOW"
     },
     "sources": [
-      "taxonomy introduction"
+      "taxonomy introduction",
+      "https://github.com/HearthSim/hsdata/commit/132c8a94327896bbd9b911d7ee26086df7089290",
+      "https://github.com/HearthSim/hsdata/commit/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "1635": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 6
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 74257,
+          "commit": "132c8a94327896bbd9b911d7ee26086df7089290",
+          "source": "https://github.com/HearthSim/hsdata/blob/132c8a94327896bbd9b911d7ee26086df7089290/CardDefs.xml",
+          "xmlSha256": "622494f6cf70da9ecdfc79020c822b79a342bdd7e9e2d161fc961dce7bc57887"
+        },
+        "after": {
+          "build": 77662,
+          "commit": "9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62",
+          "source": "https://github.com/HearthSim/hsdata/blob/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62/CardDefs.xml",
+          "xmlSha256": "36879caf88f629052e57d728d1fb3649a21f7198f649ab1cdc916c72ab1b8e29"
+        }
+      }
+    ]
   },
   "2023-04-05": {
     "changes": {
       "text": "아군 하수인을<br></br>처치합니다. 내 영웅이<br></br>생명력을 #8 회복합니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/en-us/news/23934449"
+      "https://hearthstone.blizzard.com/en-us/news/23934449",
+      "https://github.com/HearthSim/hsdata/commit/da8f2db996f1e7191e501ebe2943af5636697e06",
+      "https://github.com/HearthSim/hsdata/commit/8bfb29fa4064a213262beb5a8941203f6aa7434c"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 170126,
+          "commit": "da8f2db996f1e7191e501ebe2943af5636697e06",
+          "source": "https://github.com/HearthSim/hsdata/blob/da8f2db996f1e7191e501ebe2943af5636697e06/CardDefs.xml",
+          "xmlSha256": "df31e3949cf6219e14d2d54d9fcdc58dc4442937494b2c214945d321d793a055"
+        },
+        "after": {
+          "build": 170824,
+          "commit": "8bfb29fa4064a213262beb5a8941203f6aa7434c",
+          "source": "https://github.com/HearthSim/hsdata/blob/8bfb29fa4064a213262beb5a8941203f6aa7434c/CardDefs.xml",
+          "xmlSha256": "8a407ab48fc4f7ded3eaa72870f4330facb82a1f334bb843258c982b9193988f"
+        }
+      }
+    ]
   }
 }

@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "고르곤 졸라"
       },
       "nativeRawText": {
         "present": true,
@@ -132,7 +132,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -144,10 +144,9 @@
         "after": "[x]<b>전투의 함성:</b> 아군 하수인을\n선택합니다. 그 하수인을\n황금_카드로 복사하여\n내 손으로 가져옵니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -158,10 +157,9 @@
         "after": "<b>전투의 함성:</b> 아군 하수인을<br></br>선택합니다. 그 하수인을<br></br>황금 카드로 복사하여<br></br>내 손으로 가져옵니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -394,8 +392,37 @@
       "race": "나가"
     },
     "sources": [
-      "taxonomy introduction"
+      "taxonomy introduction",
+      "https://github.com/HearthSim/hsdata/commit/d48f0a5642df703653cfe141e94310dfb78b5642",
+      "https://github.com/HearthSim/hsdata/commit/9016168146cc3ce0369e8cbc54eb8395afba75a0"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "200": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 92
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 134558,
+          "commit": "d48f0a5642df703653cfe141e94310dfb78b5642",
+          "source": "https://github.com/HearthSim/hsdata/blob/d48f0a5642df703653cfe141e94310dfb78b5642/CardDefs.xml",
+          "xmlSha256": "ec899c579c7425236b1f27a585153bf40845626b46b6144647f9649bd399a481"
+        },
+        "after": {
+          "build": 135540,
+          "commit": "9016168146cc3ce0369e8cbc54eb8395afba75a0",
+          "source": "https://github.com/HearthSim/hsdata/blob/9016168146cc3ce0369e8cbc54eb8395afba75a0/CardDefs.xml",
+          "xmlSha256": "5e83b2381fb9373c2f407645d630a4b0b6ef97912ce0428905c10e6d00cfa608"
+        }
+      }
+    ]
   }
 }

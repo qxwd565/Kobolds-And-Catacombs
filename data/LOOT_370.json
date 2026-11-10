@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "파티 모집"
       },
       "nativeRawText": {
         "present": true,
@@ -114,7 +114,7 @@
         "source": "referenced"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -126,10 +126,9 @@
         "after": "하수인을 <b>소집</b>합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -140,10 +139,9 @@
         "after": "하수인을 <b>소집</b>합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],

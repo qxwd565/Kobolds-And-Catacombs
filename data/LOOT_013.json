@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "야비한 소악마"
       },
       "nativeRawText": {
         "present": true,
@@ -156,7 +156,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -214,10 +214,9 @@
         "after": "<b>도발</b>, <b>전투의 함성</b>:&\n내 영웅에게\n피해를 2 줍니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -228,10 +227,9 @@
         "after": "<b>도발</b>, <b>전투의 함성</b>:<br></br>내 영웅에게<br></br>피해를 2 줍니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [
@@ -241,7 +239,42 @@
         "suggestion": "갯수 → 개수"
       }
     ],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D008",
+        "date": "2021-03-26",
+        "before": {
+          "build": 74257,
+          "commit": "132c8a94327896bbd9b911d7ee26086df7089290",
+          "source": "https://github.com/HearthSim/hsdata/blob/132c8a94327896bbd9b911d7ee26086df7089290/CardDefs.xml",
+          "xmlSha256": "622494f6cf70da9ecdfc79020c822b79a342bdd7e9e2d161fc961dce7bc57887"
+        },
+        "after": {
+          "build": 77662,
+          "commit": "9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62",
+          "source": "https://github.com/HearthSim/hsdata/blob/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62/CardDefs.xml",
+          "xmlSha256": "36879caf88f629052e57d728d1fb3649a21f7198f649ab1cdc916c72ab1b8e29"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_013",
+          "dbfId": 43121,
+          "name": "야비한 소악마",
+          "englishName": "Vulgar Homunculus",
+          "fields": {
+            "1965": {
+              "before": {
+                "present": false
+              },
+              "after": {
+                "present": true,
+                "value": "1"
+              }
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_013",
@@ -531,5 +564,43 @@
       }
     ],
     "referencedTags": []
+  },
+  "2021-03-26": {
+    "changes": {},
+    "sources": [
+      "https://github.com/HearthSim/hsdata/commit/132c8a94327896bbd9b911d7ee26086df7089290",
+      "https://github.com/HearthSim/hsdata/commit/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62"
+    ],
+    "eventTypes": [
+      "observed-engine-metadata"
+    ],
+    "nativeTagChanges": {
+      "1965": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 1
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 74257,
+          "commit": "132c8a94327896bbd9b911d7ee26086df7089290",
+          "source": "https://github.com/HearthSim/hsdata/blob/132c8a94327896bbd9b911d7ee26086df7089290/CardDefs.xml",
+          "xmlSha256": "622494f6cf70da9ecdfc79020c822b79a342bdd7e9e2d161fc961dce7bc57887"
+        },
+        "after": {
+          "build": 77662,
+          "commit": "9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62",
+          "source": "https://github.com/HearthSim/hsdata/blob/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62/CardDefs.xml",
+          "xmlSha256": "36879caf88f629052e57d728d1fb3649a21f7198f649ab1cdc916c72ab1b8e29"
+        },
+        "findingId": "KNC-D008"
+      }
+    ]
   }
 }

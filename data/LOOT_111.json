@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "전갈로봇"
       },
       "nativeRawText": {
         "present": true,
@@ -129,7 +129,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -141,10 +141,9 @@
         "after": "<b>전투의 함성:</b>\n공격력이 1 이하인 하수인을 처치합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -155,10 +154,9 @@
         "after": "<b>전투의 함성:</b><br></br>공격력이 1 이하인 하수인을 처치합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -384,10 +382,50 @@
       ]
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4"
+      "https://hearthstone.blizzard.com/ko-kr/news/23913671/25-4",
+      "https://github.com/HearthSim/hsdata/commit/cf08a2eee9159a63ff589cfe2deabc4035673871",
+      "https://github.com/HearthSim/hsdata/commit/ef8297aadee616ea2ffbc941a7b55a84b6cfc819"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "200": {
+        "before": {
+          "present": true,
+          "value": 17
+        },
+        "after": {
+          "present": true,
+          "value": 17
+        }
+      },
+      "2542": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 1
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 163976,
+          "commit": "cf08a2eee9159a63ff589cfe2deabc4035673871",
+          "source": "https://github.com/HearthSim/hsdata/blob/cf08a2eee9159a63ff589cfe2deabc4035673871/CardDefs.xml",
+          "xmlSha256": "73043cbecbfadd4cc6ffe42ddd977a6667ac60fb2efd8aec19d2abfe1977b6d4"
+        },
+        "after": {
+          "build": 165029,
+          "commit": "ef8297aadee616ea2ffbc941a7b55a84b6cfc819",
+          "source": "https://github.com/HearthSim/hsdata/blob/ef8297aadee616ea2ffbc941a7b55a84b6cfc819/CardDefs.xml",
+          "xmlSha256": "1fa3e9bae99d369dbbcb622f964f225a1506d48344c5535ac1c83543b4bc3d53"
+        },
+        "findingId": "KNC-B014"
+      }
     ]
   }
 }

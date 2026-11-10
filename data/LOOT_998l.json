@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "불가사의한 마법봉"
       },
       "nativeRawText": {
         "present": true,
@@ -98,7 +98,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -122,14 +122,14 @@
         "fields": [
           "nativeRawText"
         ],
-        "before": "카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다.",
+        "before": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다.",
         "after": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n(1)|1(으로,로) 만듭니다.",
         "date": null,
         "sourceCommits": [
-          "c623eb10a6fed4a214cf27923e749da9cb52c226",
+          "8616eadbbd159acd6009e50bce099b806d1467e1",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -140,14 +140,48 @@
         "after": "카드를 3장 뽑습니다.<br></br>그 카드들의 비용을<br></br>(1)|1(으로,로) 만듭니다.",
         "date": null,
         "sourceCommits": [
-          "c623eb10a6fed4a214cf27923e749da9cb52c226",
+          "8616eadbbd159acd6009e50bce099b806d1467e1",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D011",
+        "date": null,
+        "before": {
+          "build": 239422,
+          "commit": "552bca16aca965b882c1614b4673afa0f93d3f6e",
+          "source": "https://github.com/HearthSim/hsdata/blob/552bca16aca965b882c1614b4673afa0f93d3f6e/CardDefs.xml",
+          "xmlSha256": "d61d1d97381ccfdeafb2841dcf8d8a1f8fe3bc932768e9c08c76b7ff19e03d92"
+        },
+        "after": {
+          "build": 239550,
+          "commit": "8616eadbbd159acd6009e50bce099b806d1467e1",
+          "source": "https://github.com/HearthSim/hsdata/blob/8616eadbbd159acd6009e50bce099b806d1467e1/CardDefs.xml",
+          "xmlSha256": "df17828c509e4a24f6ad86128192f7a7f1de5c26829f8d3a91b424dbd0f5bf0c"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_998l",
+          "dbfId": 45726,
+          "name": "불가사의한 마법봉",
+          "englishName": "Wondrous Wand",
+          "fields": {
+            "rawText": {
+              "before": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다.",
+              "after": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n(1)|1(으로,로) 만듭니다."
+            },
+            "enText": {
+              "before": "Draw 3 cards.\nSet their Cost to 1.",
+              "after": "Draw 3 cards.\nSet their Cost to (1)."
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_998l",
@@ -253,26 +287,72 @@
   },
   "2024-10-18": {
     "changes": {
-      "text": "카드를 3장 뽑습니다.<br></br>그 카드들의 비용을<br></br>(3) 감소시킵니다.",
-      "nativeRawText": "카드를 3장 뽑습니다.\n그 카드들의 비용을\n(3) 감소시킵니다."
+      "text": "카드 3장을 뽑습니다.<br></br>그 카드들의 비용을<br></br>(3) 감소시킵니다.",
+      "nativeRawText": "[x]카드 3장을 뽑습니다.\n그 카드들의 비용을\n(3) 감소시킵니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/24149104"
+      "https://hearthstone.blizzard.com/ko-kr/news/24149104",
+      "https://github.com/HearthSim/hsdata/commit/37797c6c5e9af546306299ade90189454f2b16ac",
+      "https://github.com/HearthSim/hsdata/commit/e6b9c5e51678d5035d1188f63c246326bb221c60"
     ],
     "eventTypes": [
       "gameplay-change"
-    ]
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 208591,
+          "commit": "37797c6c5e9af546306299ade90189454f2b16ac",
+          "source": "https://github.com/HearthSim/hsdata/blob/37797c6c5e9af546306299ade90189454f2b16ac/CardDefs.xml",
+          "xmlSha256": "668c03ff170b26b03bab89f8fffd5c51fc8cd85a17dc81f484ebcf4b91b1782b"
+        },
+        "after": {
+          "build": 209698,
+          "commit": "e6b9c5e51678d5035d1188f63c246326bb221c60",
+          "source": "https://github.com/HearthSim/hsdata/blob/e6b9c5e51678d5035d1188f63c246326bb221c60/CardDefs.xml",
+          "xmlSha256": "5625316024488e65c0cad7a3409775e1a70e14aa896fd2ee90eb3426f89f9ca2"
+        },
+        "findingId": "KNC-B022"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "카드를 3장 뽑습니다. 그 카드들의 비용이 (0)이 됩니다.",
+      "after": "[x]카드 3장을 뽑습니다.\n그 카드들의 비용을\n(3) 감소시킵니다."
+    }
   },
   "2026-03-11": {
     "changes": {
       "text": "카드를 3장 뽑습니다.<br></br>그 카드들의 비용을<br></br>1로 만듭니다.",
-      "nativeRawText": "카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다."
+      "nativeRawText": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/24267727"
+      "https://hearthstone.blizzard.com/ko-kr/news/24267727",
+      "https://github.com/HearthSim/hsdata/commit/0a5a61e3867ae9eea535bdbd4df714671ff87910",
+      "https://github.com/HearthSim/hsdata/commit/a770d899b7ea12594f2edfc7d097f6ee0a858eb8"
     ],
     "eventTypes": [
       "gameplay-change"
-    ]
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 236529,
+          "commit": "0a5a61e3867ae9eea535bdbd4df714671ff87910",
+          "source": "https://github.com/HearthSim/hsdata/blob/0a5a61e3867ae9eea535bdbd4df714671ff87910/CardDefs.xml",
+          "xmlSha256": "7dac9874ff56544d1b2c43c6e446fad519f059b66073c3960318a01c32d66a26"
+        },
+        "after": {
+          "build": 237510,
+          "commit": "a770d899b7ea12594f2edfc7d097f6ee0a858eb8",
+          "source": "https://github.com/HearthSim/hsdata/blob/a770d899b7ea12594f2edfc7d097f6ee0a858eb8/CardDefs.xml",
+          "xmlSha256": "a86b5126943a91ceb1e18decca646ce533f0a06c3fec34e12dc11f45e602c3e6"
+        },
+        "findingId": "KNC-B025"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n(3) 감소시킵니다.",
+      "after": "[x]카드를 3장 뽑습니다.\n그 카드들의 비용을\n1로 만듭니다."
+    }
   }
 }

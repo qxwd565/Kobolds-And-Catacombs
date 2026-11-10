@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "레벨 업!"
       },
       "nativeRawText": {
         "present": true,
@@ -122,7 +122,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -325,10 +325,41 @@
       "cost": 6
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/22817529"
+      "https://hearthstone.blizzard.com/ko-kr/news/22817529",
+      "https://github.com/HearthSim/hsdata/commit/1a69a81aa9bbe99d9fc6ee7048fc32614b5fe44d",
+      "https://github.com/HearthSim/hsdata/commit/e6f83dcccd27eebb11dfa9bd0b35f93d31da61fe"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "48": {
+        "before": {
+          "present": true,
+          "value": 5
+        },
+        "after": {
+          "present": true,
+          "value": 6
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 28242,
+          "commit": "1a69a81aa9bbe99d9fc6ee7048fc32614b5fe44d",
+          "source": "https://github.com/HearthSim/hsdata/blob/1a69a81aa9bbe99d9fc6ee7048fc32614b5fe44d/CardDefs.xml",
+          "xmlSha256": "18bc0de4222092edf1293481e5f7c385bb6706f7dc2cda0b206f103df3dbf45f"
+        },
+        "after": {
+          "build": 28329,
+          "commit": "e6f83dcccd27eebb11dfa9bd0b35f93d31da61fe",
+          "source": "https://github.com/HearthSim/hsdata/blob/e6f83dcccd27eebb11dfa9bd0b35f93d31da61fe/CardDefs.xml",
+          "xmlSha256": "a4fd3deabc4da4f2fb5e78960a922b96112a017f45533600ecfa4eb3d5dede99"
+        },
+        "findingId": "KNC-B004"
+      }
     ]
   },
   "2023-04-05": {
@@ -336,10 +367,41 @@
       "cost": 5
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23934449"
+      "https://hearthstone.blizzard.com/ko-kr/news/23934449",
+      "https://github.com/HearthSim/hsdata/commit/da8f2db996f1e7191e501ebe2943af5636697e06",
+      "https://github.com/HearthSim/hsdata/commit/8bfb29fa4064a213262beb5a8941203f6aa7434c"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "48": {
+        "before": {
+          "present": true,
+          "value": 6
+        },
+        "after": {
+          "present": true,
+          "value": 5
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 170126,
+          "commit": "da8f2db996f1e7191e501ebe2943af5636697e06",
+          "source": "https://github.com/HearthSim/hsdata/blob/da8f2db996f1e7191e501ebe2943af5636697e06/CardDefs.xml",
+          "xmlSha256": "df31e3949cf6219e14d2d54d9fcdc58dc4442937494b2c214945d321d793a055"
+        },
+        "after": {
+          "build": 170824,
+          "commit": "8bfb29fa4064a213262beb5a8941203f6aa7434c",
+          "source": "https://github.com/HearthSim/hsdata/blob/8bfb29fa4064a213262beb5a8941203f6aa7434c/CardDefs.xml",
+          "xmlSha256": "8a407ab48fc4f7ded3eaa72870f4330facb82a1f334bb843258c982b9193988f"
+        },
+        "findingId": "KNC-B016"
+      }
     ]
   }
 }

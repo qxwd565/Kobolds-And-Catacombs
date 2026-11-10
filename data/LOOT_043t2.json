@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "자수정 주문석"
       },
       "nativeRawText": {
         "present": true,
@@ -110,7 +110,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -122,10 +122,9 @@
         "after": "<b>생명력 흡수</b>, 하수인에게 피해를 $5 줍니다. <i>(내 카드로 피해를 받으면 강화됩니다.)</i>",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -136,10 +135,9 @@
         "after": "<b>생명력 흡수</b>, 하수인에게 피해를 $5 줍니다. <i>(내 카드로 피해를 받으면 강화됩니다.)</i>",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -292,8 +290,37 @@
       "spellSchool": "SHADOW"
     },
     "sources": [
-      "taxonomy introduction"
+      "taxonomy introduction",
+      "https://github.com/HearthSim/hsdata/commit/132c8a94327896bbd9b911d7ee26086df7089290",
+      "https://github.com/HearthSim/hsdata/commit/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "1635": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 6
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 74257,
+          "commit": "132c8a94327896bbd9b911d7ee26086df7089290",
+          "source": "https://github.com/HearthSim/hsdata/blob/132c8a94327896bbd9b911d7ee26086df7089290/CardDefs.xml",
+          "xmlSha256": "622494f6cf70da9ecdfc79020c822b79a342bdd7e9e2d161fc961dce7bc57887"
+        },
+        "after": {
+          "build": 77662,
+          "commit": "9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62",
+          "source": "https://github.com/HearthSim/hsdata/blob/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62/CardDefs.xml",
+          "xmlSha256": "36879caf88f629052e57d728d1fb3649a21f7198f649ab1cdc916c72ab1b8e29"
+        }
+      }
+    ]
   }
 }

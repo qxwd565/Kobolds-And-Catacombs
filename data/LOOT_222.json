@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "양초 화살"
       },
       "nativeRawText": {
         "present": true,
@@ -118,7 +118,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -191,7 +191,83 @@
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D007",
+        "date": null,
+        "before": {
+          "build": 217489,
+          "commit": "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+          "source": "https://github.com/HearthSim/hsdata/blob/62cc0f00dbed73f2d48ccefca6f611e6f8898986/CardDefs.xml",
+          "xmlSha256": "6dfe10c33d284ade4b0675f24a51e11510011e8cd70cf1112774f2babcf1b2c2"
+        },
+        "after": {
+          "build": 217964,
+          "commit": "fdad346dc49ebb5465f548a0a2b58b59edcbe087",
+          "source": "https://github.com/HearthSim/hsdata/blob/fdad346dc49ebb5465f548a0a2b58b59edcbe087/CardDefs.xml",
+          "xmlSha256": "039e4cb30c4e4a994778edcd0d6af9b60c1f0ef1571aab8d02af62568681bddf"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_222",
+          "dbfId": 45537,
+          "name": "양초 화살",
+          "englishName": "Candleshot",
+          "fields": {
+            "45": {
+              "before": {
+                "present": false
+              },
+              "after": {
+                "present": true,
+                "value": "3"
+              }
+            },
+            "187": {
+              "before": {
+                "present": true,
+                "value": "3"
+              },
+              "after": {
+                "present": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "findingId": "KNC-D012",
+        "date": "2018-02-07",
+        "before": {
+          "build": 22611,
+          "commit": "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "source": "https://github.com/HearthSim/hsdata/blob/d399871096675e4186c1c2d35b9c410464a4ffbf/CardDefs.xml",
+          "xmlSha256": "c42c99ca2216802a072eac484bd221706349e4ed278dae93d252f8a503e380a2"
+        },
+        "after": {
+          "build": 23180,
+          "commit": "1a0dcda07394c622066630e4d09817aca8ff9fbf",
+          "source": "https://github.com/HearthSim/hsdata/blob/1a0dcda07394c622066630e4d09817aca8ff9fbf/CardDefs.xml",
+          "xmlSha256": "dbe848ad25b843779b0accca4ad4fffebbbbf2beee2caffd04e09dfc9c8332f5"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_222",
+          "dbfId": 45537,
+          "name": "양초 화살",
+          "englishName": "Candleshot",
+          "fields": {
+            "rawText": {
+              "before": "공격할 때 <b>면역</b>\n상태가 됩니다.",
+              "after": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다."
+            },
+            "enText": {
+              "before": "<b>Immune</b> while attacking.",
+              "after": "Your hero is <b>Immune</b> while attacking."
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_222",
@@ -375,5 +451,43 @@
       }
     ],
     "referencedTags": []
+  },
+  "2018-02-07": {
+    "changes": {
+      "nativeRawText": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다.",
+      "text": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다."
+    },
+    "sources": [
+      "https://github.com/HearthSim/hsdata/commit/d399871096675e4186c1c2d35b9c410464a4ffbf",
+      "https://github.com/HearthSim/hsdata/commit/1a0dcda07394c622066630e4d09817aca8ff9fbf"
+    ],
+    "eventTypes": [
+      "wording"
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 22611,
+          "commit": "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "source": "https://github.com/HearthSim/hsdata/blob/d399871096675e4186c1c2d35b9c410464a4ffbf/CardDefs.xml",
+          "xmlSha256": "c42c99ca2216802a072eac484bd221706349e4ed278dae93d252f8a503e380a2"
+        },
+        "after": {
+          "build": 23180,
+          "commit": "1a0dcda07394c622066630e4d09817aca8ff9fbf",
+          "source": "https://github.com/HearthSim/hsdata/blob/1a0dcda07394c622066630e4d09817aca8ff9fbf/CardDefs.xml",
+          "xmlSha256": "dbe848ad25b843779b0accca4ad4fffebbbbf2beee2caffd04e09dfc9c8332f5"
+        },
+        "findingId": "KNC-D012"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "공격할 때 <b>면역</b>\n상태가 됩니다.",
+      "after": "내 영웅이 공격할 때, <b>면역</b> 상태가 됩니다."
+    },
+    "enTextChanges": {
+      "before": "<b>Immune</b> while attacking.",
+      "after": "Your hero is <b>Immune</b> while attacking."
+    }
   }
 }

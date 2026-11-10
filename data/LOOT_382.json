@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "코볼트 수도사"
       },
       "nativeRawText": {
         "present": true,
@@ -122,7 +122,7 @@
         "source": "referenced"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -165,7 +165,41 @@
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D005",
+        "date": "2024-03-12",
+        "before": {
+          "build": 195316,
+          "commit": "b0d06776272138cab032979722d18ca4de6545f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/b0d06776272138cab032979722d18ca4de6545f0/CardDefs.xml",
+          "xmlSha256": "326d2fe2662a8931f0a1f19aa1ceeb90808c75703ce98ba5ad4230b07ce6b0a9"
+        },
+        "after": {
+          "build": 195635,
+          "commit": "e072e5d302a93dc6fb33542e7c528ae4d39560f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/e072e5d302a93dc6fb33542e7c528ae4d39560f0/CardDefs.xml",
+          "xmlSha256": "a220a1fffc23afde38b8fc79ca4a73e88a54a71c12711608130766a0f0f1351f"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_382",
+          "dbfId": 46079,
+          "name": "코볼트 수도사",
+          "englishName": "Kobold Monk",
+          "fields": {
+            "rawText": {
+              "before": "[x]내 영웅이 주문이나\n영웅 능력의 대상으로\n지정되지 않습니다.",
+              "after": "내 영웅이 <b>모면</b>\n상태가 됩니다."
+            },
+            "enText": {
+              "before": "Your hero can't be targeted by spells or Hero_Powers.",
+              "after": "Your hero is <b>Elusive</b>."
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_382",
@@ -361,5 +395,43 @@
       }
     ],
     "referencedTags": []
+  },
+  "2024-03-12": {
+    "changes": {
+      "nativeRawText": "내 영웅이 <b>모면</b>\n상태가 됩니다.",
+      "text": "내 영웅이 <b>모면</b><br></br>상태가 됩니다."
+    },
+    "sources": [
+      "https://github.com/HearthSim/hsdata/commit/b0d06776272138cab032979722d18ca4de6545f0",
+      "https://github.com/HearthSim/hsdata/commit/e072e5d302a93dc6fb33542e7c528ae4d39560f0"
+    ],
+    "eventTypes": [
+      "wording"
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 195316,
+          "commit": "b0d06776272138cab032979722d18ca4de6545f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/b0d06776272138cab032979722d18ca4de6545f0/CardDefs.xml",
+          "xmlSha256": "326d2fe2662a8931f0a1f19aa1ceeb90808c75703ce98ba5ad4230b07ce6b0a9"
+        },
+        "after": {
+          "build": 195635,
+          "commit": "e072e5d302a93dc6fb33542e7c528ae4d39560f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/e072e5d302a93dc6fb33542e7c528ae4d39560f0/CardDefs.xml",
+          "xmlSha256": "a220a1fffc23afde38b8fc79ca4a73e88a54a71c12711608130766a0f0f1351f"
+        },
+        "findingId": "KNC-D005"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "[x]내 영웅이 주문이나\n영웅 능력의 대상으로\n지정되지 않습니다.",
+      "after": "내 영웅이 <b>모면</b>\n상태가 됩니다."
+    },
+    "enTextChanges": {
+      "before": "Your hero can't be targeted by spells or Hero_Powers.",
+      "after": "Your hero is <b>Elusive</b>."
+    }
   }
 }

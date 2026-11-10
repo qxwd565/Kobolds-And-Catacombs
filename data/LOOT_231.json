@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "비전 기술병"
       },
       "nativeRawText": {
         "present": true,
@@ -122,7 +122,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -334,10 +334,41 @@
       "health": 3
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4"
+      "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4",
+      "https://github.com/HearthSim/hsdata/commit/9b76feb3155f6416239b5bc13c8977974b5225eb",
+      "https://github.com/HearthSim/hsdata/commit/0238602958c2a3f362858704e07db42e078dc193"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "45": {
+        "before": {
+          "present": true,
+          "value": 2
+        },
+        "after": {
+          "present": true,
+          "value": 3
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 172421,
+          "commit": "9b76feb3155f6416239b5bc13c8977974b5225eb",
+          "source": "https://github.com/HearthSim/hsdata/blob/9b76feb3155f6416239b5bc13c8977974b5225eb/CardDefs.xml",
+          "xmlSha256": "e08e6337ebe7a9b95f04d84df785f91e5844c878e29f9c745a7721df12fa0004"
+        },
+        "after": {
+          "build": 173781,
+          "commit": "0238602958c2a3f362858704e07db42e078dc193",
+          "source": "https://github.com/HearthSim/hsdata/blob/0238602958c2a3f362858704e07db42e078dc193/CardDefs.xml",
+          "xmlSha256": "69f27dfeb31714720fa3011ce1e04b5b5cc663b7e2ead5ec8ba57d5227517130"
+        },
+        "findingId": "KNC-B019"
+      }
     ]
   }
 }

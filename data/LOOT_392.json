@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "세계수의 가지"
       },
       "nativeRawText": {
         "present": true,
@@ -120,7 +120,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -156,7 +156,51 @@
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D007",
+        "date": null,
+        "before": {
+          "build": 217489,
+          "commit": "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+          "source": "https://github.com/HearthSim/hsdata/blob/62cc0f00dbed73f2d48ccefca6f611e6f8898986/CardDefs.xml",
+          "xmlSha256": "6dfe10c33d284ade4b0675f24a51e11510011e8cd70cf1112774f2babcf1b2c2"
+        },
+        "after": {
+          "build": 217964,
+          "commit": "fdad346dc49ebb5465f548a0a2b58b59edcbe087",
+          "source": "https://github.com/HearthSim/hsdata/blob/fdad346dc49ebb5465f548a0a2b58b59edcbe087/CardDefs.xml",
+          "xmlSha256": "039e4cb30c4e4a994778edcd0d6af9b60c1f0ef1571aab8d02af62568681bddf"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_392",
+          "dbfId": 46107,
+          "name": "세계수의 가지",
+          "englishName": "Twig of the World Tree",
+          "fields": {
+            "45": {
+              "before": {
+                "present": false
+              },
+              "after": {
+                "present": true,
+                "value": "5"
+              }
+            },
+            "187": {
+              "before": {
+                "present": true,
+                "value": "5"
+              },
+              "after": {
+                "present": false
+              }
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_392",
@@ -359,10 +403,33 @@
       "nativeRawText": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4"
+      "https://hearthstone.blizzard.com/ko-kr/news/23935323/26-0-4",
+      "https://github.com/HearthSim/hsdata/commit/9b76feb3155f6416239b5bc13c8977974b5225eb",
+      "https://github.com/HearthSim/hsdata/commit/0238602958c2a3f362858704e07db42e078dc193"
     ],
     "eventTypes": [
       "gameplay-change"
-    ]
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 172421,
+          "commit": "9b76feb3155f6416239b5bc13c8977974b5225eb",
+          "source": "https://github.com/HearthSim/hsdata/blob/9b76feb3155f6416239b5bc13c8977974b5225eb/CardDefs.xml",
+          "xmlSha256": "e08e6337ebe7a9b95f04d84df785f91e5844c878e29f9c745a7721df12fa0004"
+        },
+        "after": {
+          "build": 173781,
+          "commit": "0238602958c2a3f362858704e07db42e078dc193",
+          "source": "https://github.com/HearthSim/hsdata/blob/0238602958c2a3f362858704e07db42e078dc193/CardDefs.xml",
+          "xmlSha256": "69f27dfeb31714720fa3011ce1e04b5b5cc663b7e2ead5ec8ba57d5227517130"
+        },
+        "findingId": "KNC-B018"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "<b>죽음의 메아리:</b>\n마나 수정을 10개 얻습니다.",
+      "after": "<b>죽음의 메아리:</b> 내 마나 수정을 모두 회복합니다."
+    }
   }
 }

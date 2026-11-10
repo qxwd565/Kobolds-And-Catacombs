@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "엘프 음악가"
       },
       "nativeRawText": {
         "present": true,
@@ -116,7 +116,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -310,10 +310,41 @@
       "health": 3
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23934449"
+      "https://hearthstone.blizzard.com/ko-kr/news/23934449",
+      "https://github.com/HearthSim/hsdata/commit/da8f2db996f1e7191e501ebe2943af5636697e06",
+      "https://github.com/HearthSim/hsdata/commit/8bfb29fa4064a213262beb5a8941203f6aa7434c"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "45": {
+        "before": {
+          "present": true,
+          "value": 2
+        },
+        "after": {
+          "present": true,
+          "value": 3
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 170126,
+          "commit": "da8f2db996f1e7191e501ebe2943af5636697e06",
+          "source": "https://github.com/HearthSim/hsdata/blob/da8f2db996f1e7191e501ebe2943af5636697e06/CardDefs.xml",
+          "xmlSha256": "df31e3949cf6219e14d2d54d9fcdc58dc4442937494b2c214945d321d793a055"
+        },
+        "after": {
+          "build": 170824,
+          "commit": "8bfb29fa4064a213262beb5a8941203f6aa7434c",
+          "source": "https://github.com/HearthSim/hsdata/blob/8bfb29fa4064a213262beb5a8941203f6aa7434c/CardDefs.xml",
+          "xmlSha256": "8a407ab48fc4f7ded3eaa72870f4330facb82a1f334bb843258c982b9193988f"
+        },
+        "findingId": "KNC-B017"
+      }
     ]
   }
 }

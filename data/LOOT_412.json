@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "코볼트 환영술사"
       },
       "nativeRawText": {
         "present": true,
@@ -132,7 +132,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -378,10 +378,41 @@
       "cost": 5
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23840665/24-0-3"
+      "https://hearthstone.blizzard.com/ko-kr/news/23840665/24-0-3",
+      "https://github.com/HearthSim/hsdata/commit/9bb8141a10a96678a8377dc94856a709ba6bcfdb",
+      "https://github.com/HearthSim/hsdata/commit/fa264cc2d1267d71a8de6f5163f3e0b6550bba4a"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "48": {
+        "before": {
+          "present": true,
+          "value": 4
+        },
+        "after": {
+          "present": true,
+          "value": 5
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 145077,
+          "commit": "9bb8141a10a96678a8377dc94856a709ba6bcfdb",
+          "source": "https://github.com/HearthSim/hsdata/blob/9bb8141a10a96678a8377dc94856a709ba6bcfdb/CardDefs.xml",
+          "xmlSha256": "f3646e153b308393b959285267e080da48a618308c12b18ea703b60170ab8b7b"
+        },
+        "after": {
+          "build": 147348,
+          "commit": "fa264cc2d1267d71a8de6f5163f3e0b6550bba4a",
+          "source": "https://github.com/HearthSim/hsdata/blob/fa264cc2d1267d71a8de6f5163f3e0b6550bba4a/CardDefs.xml",
+          "xmlSha256": "39e106f6bd73c3fff4e76c63a66e6f4065ecef1f0828513c9be2860be6110fdf"
+        },
+        "findingId": "KNC-B012"
+      }
     ]
   },
   "2026-11-04": {
@@ -390,10 +421,33 @@
       "nativeRawText": "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.\n그 하수인의 능력치가 1/1이 됩니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/24307311"
+      "https://hearthstone.blizzard.com/ko-kr/news/24307311",
+      "https://github.com/HearthSim/hsdata/commit/6ebd160cc0c685b10265f4d6bfe2ef69c3a0f226",
+      "https://github.com/HearthSim/hsdata/commit/31b034c26f24b8a66ece845ffd03c1ca397b9a02"
     ],
     "eventTypes": [
       "gameplay-change"
-    ]
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 255790,
+          "commit": "6ebd160cc0c685b10265f4d6bfe2ef69c3a0f226",
+          "source": "https://github.com/HearthSim/hsdata/blob/6ebd160cc0c685b10265f4d6bfe2ef69c3a0f226/CardDefs.xml",
+          "xmlSha256": "f951cda7eb91dced049ad515adb714bf787f32b1590d21a308578fa34807b9fa"
+        },
+        "after": {
+          "build": 256589,
+          "commit": "31b034c26f24b8a66ece845ffd03c1ca397b9a02",
+          "source": "https://github.com/HearthSim/hsdata/blob/31b034c26f24b8a66ece845ffd03c1ca397b9a02/CardDefs.xml",
+          "xmlSha256": "420224a8c02eeea4ce7d3f1b39f50d5754b2b869118d4d215ef7c5ca1526594c"
+        },
+        "findingId": "KNC-B026"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "<b>죽음의 메아리:</b> 내 손에 있는 하수인을 복사하여 1/1 하수인으로 소환합니다.",
+      "after": "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.\n그 하수인의 능력치가 1/1이 됩니다."
+    }
   }
 }

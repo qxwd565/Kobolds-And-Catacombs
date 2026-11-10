@@ -66,8 +66,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "동굴 반짝이탐지꾼"
       },
       "nativeRawText": {
         "present": true,
@@ -119,37 +119,9 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
-      {
-        "topic": "native-raw-text-current-vs-dated",
-        "fields": [
-          "nativeRawText"
-        ],
-        "before": "<b>전투의 함성:</b> 내 덱에서 무기를 하나 뽑습니다.",
-        "after": "<b>전투의 함성:</b> 내 덱에서 무기를 뽑습니다.",
-        "date": null,
-        "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
-          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
-        ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
-      },
-      {
-        "topic": "display-text-current-vs-dated",
-        "fields": [
-          "text"
-        ],
-        "before": "<b>전투의 함성:</b> 내 덱에서 무기를 하나 뽑습니다.",
-        "after": "<b>전투의 함성:</b> 내 덱에서 무기를 뽑습니다.",
-        "date": null,
-        "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
-          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
-        ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
-      },
       {
         "topic": "card-name-current-vs-dated",
         "fields": [
@@ -163,6 +135,32 @@
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
         "note": "Immutable CARDNAME launch value compared with the approved current name; transition date is not established."
+      },
+      {
+        "topic": "native-raw-text-current-vs-dated",
+        "fields": [
+          "nativeRawText"
+        ],
+        "before": "<b>전투의 함성:</b> 내 덱에서 무기를 하나 뽑습니다.",
+        "after": "<b>전투의 함성:</b> 내 덱에서 무기를 뽑습니다.",
+        "date": null,
+        "sourceCommits": [
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
+      },
+      {
+        "topic": "display-text-current-vs-dated",
+        "fields": [
+          "text"
+        ],
+        "before": "<b>전투의 함성:</b> 내 덱에서 무기를 하나 뽑습니다.",
+        "after": "<b>전투의 함성:</b> 내 덱에서 무기를 뽑습니다.",
+        "date": null,
+        "sourceCommits": [
+          "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+        ],
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],

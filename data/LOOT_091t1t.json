@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "수호 영혼"
       },
       "nativeRawText": {
         "present": true,
@@ -118,7 +118,7 @@
         "source": "referenced"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -302,8 +302,37 @@
       "race": "언데드"
     },
     "sources": [
-      "taxonomy introduction"
+      "taxonomy introduction",
+      "https://github.com/HearthSim/hsdata/commit/cf08a2eee9159a63ff589cfe2deabc4035673871",
+      "https://github.com/HearthSim/hsdata/commit/ef8297aadee616ea2ffbc941a7b55a84b6cfc819"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "200": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 11
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 163976,
+          "commit": "cf08a2eee9159a63ff589cfe2deabc4035673871",
+          "source": "https://github.com/HearthSim/hsdata/blob/cf08a2eee9159a63ff589cfe2deabc4035673871/CardDefs.xml",
+          "xmlSha256": "73043cbecbfadd4cc6ffe42ddd977a6667ac60fb2efd8aec19d2abfe1977b6d4"
+        },
+        "after": {
+          "build": 165029,
+          "commit": "ef8297aadee616ea2ffbc941a7b55a84b6cfc819",
+          "source": "https://github.com/HearthSim/hsdata/blob/ef8297aadee616ea2ffbc941a7b55a84b6cfc819/CardDefs.xml",
+          "xmlSha256": "1fa3e9bae99d369dbbcb622f964f225a1506d48344c5535ac1c83543b4bc3d53"
+        }
+      }
+    ]
   }
 }

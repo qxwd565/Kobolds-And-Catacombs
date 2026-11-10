@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "버섯 먹기"
       },
       "nativeRawText": {
         "present": true,
@@ -110,7 +110,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -139,10 +139,9 @@
         "after": "카드를 뽑습니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -153,14 +152,48 @@
         "after": "카드를 뽑습니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D001",
+        "date": null,
+        "before": {
+          "build": 180614,
+          "commit": "8d75b318f31f3d4d1faf06f666cde029f0d140ac",
+          "source": "https://github.com/HearthSim/hsdata/blob/8d75b318f31f3d4d1faf06f666cde029f0d140ac/CardDefs.xml",
+          "xmlSha256": "776e7486cdac88a12216e4fa229108761e2b2638bc126c0dcf5399731795f12f"
+        },
+        "after": {
+          "build": 181554,
+          "commit": "1a884ec23e99e4daa26637df99433c6e17bba63c",
+          "source": "https://github.com/HearthSim/hsdata/blob/1a884ec23e99e4daa26637df99433c6e17bba63c/CardDefs.xml",
+          "xmlSha256": "f36fc61a25c794d1fb2886b18d4c32ae7ec5dfab8b4266996c13a4bbd281c1a0"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_054d",
+          "dbfId": 43299,
+          "name": "버섯 먹기",
+          "englishName": "Eat the Mushroom",
+          "fields": {
+            "48": {
+              "before": {
+                "present": false
+              },
+              "after": {
+                "present": true,
+                "value": "4"
+              }
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_054d",

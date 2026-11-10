@@ -67,8 +67,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "어둠의 존재"
       },
       "nativeRawText": {
         "present": true,
@@ -140,7 +140,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -164,10 +164,9 @@
         "after": "<b>휴면</b> 상태로 시작합니다. <b>전투의_함성:</b> 상대편의 덱에 양초를 셋 섞어 넣습니다. 상대편이 양초를 모두 뽑으면, 깨어납니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -178,14 +177,43 @@
         "after": "<b>휴면</b> 상태로 시작합니다. <b>전투의 함성:</b> 상대편의 덱에 양초를 셋 섞어 넣습니다. 상대편이 양초를 모두 뽑으면, 깨어납니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D013",
+        "date": null,
+        "before": {
+          "build": 43246,
+          "commit": "880a9c120d53c05432593e9b3007ecf29f3ccb88",
+          "source": "https://github.com/HearthSim/hsdata/blob/880a9c120d53c05432593e9b3007ecf29f3ccb88/CardDefs.xml",
+          "xmlSha256": "d4c29ef0c109574e5805c3414be11cd590d9388a4b3302e7ad162913e5009fba"
+        },
+        "after": {
+          "build": 44222,
+          "commit": "fc67953f6f6eee064badde3f4a7bd07011508642",
+          "source": "https://github.com/HearthSim/hsdata/blob/fc67953f6f6eee064badde3f4a7bd07011508642/CardDefs.xml",
+          "xmlSha256": "abe292d304af3fec9d84707b8326cf4104e370b8fc93e8adfa2c1156988cfdf5"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_526",
+          "dbfId": 46454,
+          "name": "어둠의 존재",
+          "englishName": "The Darkness",
+          "fields": {
+            "enText": {
+              "before": "[x]Starts dormant.\n<b>Battlecry:</b> Shuffle 3 Candles\ninto the enemy deck. When\ndrawn, this awakens.",
+              "after": "[x]Starts <b>Dormant</b>.\n<b>Battlecry:</b> Shuffle 3 Candles\ninto the enemy deck. When\ndrawn, this awakens."
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_526",

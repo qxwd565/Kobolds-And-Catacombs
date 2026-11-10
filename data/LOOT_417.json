@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "대격변"
       },
       "nativeRawText": {
         "present": true,
@@ -116,7 +116,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -298,9 +298,38 @@
       "spellSchool": "FIRE"
     },
     "sources": [
-      "taxonomy introduction"
+      "taxonomy introduction",
+      "https://github.com/HearthSim/hsdata/commit/132c8a94327896bbd9b911d7ee26086df7089290",
+      "https://github.com/HearthSim/hsdata/commit/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "1635": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 2
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 74257,
+          "commit": "132c8a94327896bbd9b911d7ee26086df7089290",
+          "source": "https://github.com/HearthSim/hsdata/blob/132c8a94327896bbd9b911d7ee26086df7089290/CardDefs.xml",
+          "xmlSha256": "622494f6cf70da9ecdfc79020c822b79a342bdd7e9e2d161fc961dce7bc57887"
+        },
+        "after": {
+          "build": 77662,
+          "commit": "9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62",
+          "source": "https://github.com/HearthSim/hsdata/blob/9e10b526eed8a9c5ece2f73f0c2a6a3b60109d62/CardDefs.xml",
+          "xmlSha256": "36879caf88f629052e57d728d1fb3649a21f7198f649ab1cdc916c72ab1b8e29"
+        }
+      }
+    ]
   },
   "2023-03-03": {
     "changes": {
@@ -309,10 +338,45 @@
       "nativeRawText": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23921492/25-4-3"
+      "https://hearthstone.blizzard.com/ko-kr/news/23921492/25-4-3",
+      "https://github.com/HearthSim/hsdata/commit/ef8297aadee616ea2ffbc941a7b55a84b6cfc819",
+      "https://github.com/HearthSim/hsdata/commit/63bdc035f2d50bc3857d01f88ad13d79b235a0c0"
     ],
     "eventTypes": [
       "gameplay-change"
-    ]
+    ],
+    "nativeTagChanges": {
+      "48": {
+        "before": {
+          "present": true,
+          "value": 4
+        },
+        "after": {
+          "present": true,
+          "value": 5
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 165029,
+          "commit": "ef8297aadee616ea2ffbc941a7b55a84b6cfc819",
+          "source": "https://github.com/HearthSim/hsdata/blob/ef8297aadee616ea2ffbc941a7b55a84b6cfc819/CardDefs.xml",
+          "xmlSha256": "1fa3e9bae99d369dbbcb622f964f225a1506d48344c5535ac1c83543b4bc3d53"
+        },
+        "after": {
+          "build": 168129,
+          "commit": "63bdc035f2d50bc3857d01f88ad13d79b235a0c0",
+          "source": "https://github.com/HearthSim/hsdata/blob/63bdc035f2d50bc3857d01f88ad13d79b235a0c0/CardDefs.xml",
+          "xmlSha256": "4f750bb9270117c595aae59453ecd2d94f4c8dc8cc351ce2319b996170bd76c5"
+        },
+        "findingId": "KNC-B015"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 모두 버립니다.",
+      "after": "<b>모든</b> 하수인을 처치하고 내 손에 있는 카드를 2장 버립니다."
+    }
   }
 }

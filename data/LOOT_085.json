@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "라크델라"
       },
       "nativeRawText": {
         "present": true,
@@ -122,7 +122,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -165,10 +165,9 @@
         "after": "<b>전투의 함성:</b> 내 덱에 하수인이 없으면, 내 손을 사냥꾼 주문으로 가득 채웁니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -179,14 +178,57 @@
         "after": "<b>전투의 함성:</b> 내 덱에 하수인이 없으면, 내 손을 사냥꾼 주문으로 가득 채웁니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D007",
+        "date": null,
+        "before": {
+          "build": 217489,
+          "commit": "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+          "source": "https://github.com/HearthSim/hsdata/blob/62cc0f00dbed73f2d48ccefca6f611e6f8898986/CardDefs.xml",
+          "xmlSha256": "6dfe10c33d284ade4b0675f24a51e11510011e8cd70cf1112774f2babcf1b2c2"
+        },
+        "after": {
+          "build": 217964,
+          "commit": "fdad346dc49ebb5465f548a0a2b58b59edcbe087",
+          "source": "https://github.com/HearthSim/hsdata/blob/fdad346dc49ebb5465f548a0a2b58b59edcbe087/CardDefs.xml",
+          "xmlSha256": "039e4cb30c4e4a994778edcd0d6af9b60c1f0ef1571aab8d02af62568681bddf"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_085",
+          "dbfId": 43369,
+          "name": "라크델라",
+          "englishName": "Rhok'delar",
+          "fields": {
+            "45": {
+              "before": {
+                "present": false
+              },
+              "after": {
+                "present": true,
+                "value": "2"
+              }
+            },
+            "187": {
+              "before": {
+                "present": true,
+                "value": "2"
+              },
+              "after": {
+                "present": false
+              }
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_085",

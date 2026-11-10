@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "원한 맺힌 소환사"
       },
       "nativeRawText": {
         "present": true,
@@ -134,7 +134,7 @@
         "source": "referenced"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -146,10 +146,9 @@
         "after": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -160,10 +159,9 @@
         "after": "<b>전투의 함성:</b> 내 덱의 주문을 공개해, 같은 비용의 무작위 하수인을 소환합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -401,10 +399,41 @@
       "cost": 7
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5"
+      "https://hearthstone.blizzard.com/ko-kr/news/21758133/2018-5",
+      "https://github.com/HearthSim/hsdata/commit/0445fcab2b98505c8afa69370ef78d349593e27a",
+      "https://github.com/HearthSim/hsdata/commit/b378113a0d83405eab56db202a697c9875e0d421"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "48": {
+        "before": {
+          "present": true,
+          "value": 6
+        },
+        "after": {
+          "present": true,
+          "value": 7
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 24377,
+          "commit": "0445fcab2b98505c8afa69370ef78d349593e27a",
+          "source": "https://github.com/HearthSim/hsdata/blob/0445fcab2b98505c8afa69370ef78d349593e27a/CardDefs.xml",
+          "xmlSha256": "b82a9a4654f343418bb3327f0d39f44c02d26b63e0b594988e8116d56206fc17"
+        },
+        "after": {
+          "build": 24589,
+          "commit": "b378113a0d83405eab56db202a697c9875e0d421",
+          "source": "https://github.com/HearthSim/hsdata/blob/b378113a0d83405eab56db202a697c9875e0d421/CardDefs.xml",
+          "xmlSha256": "f5c12e8a944b14f72eb20e3eb5be86c375f94d4143d8b6f02cf0dcbe1f9ac3e7"
+        },
+        "findingId": "KNC-B001"
+      }
     ]
   },
   "2020-03-18": {
@@ -412,10 +441,41 @@
       "cost": 6
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/23319440"
+      "https://hearthstone.blizzard.com/ko-kr/news/23319440",
+      "https://github.com/HearthSim/hsdata/commit/87826d798af6dc58dace839774a708e0cd1e46ca",
+      "https://github.com/HearthSim/hsdata/commit/880a9c120d53c05432593e9b3007ecf29f3ccb88"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "48": {
+        "before": {
+          "present": true,
+          "value": 7
+        },
+        "after": {
+          "present": true,
+          "value": 6
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 42174,
+          "commit": "87826d798af6dc58dace839774a708e0cd1e46ca",
+          "source": "https://github.com/HearthSim/hsdata/blob/87826d798af6dc58dace839774a708e0cd1e46ca/CardDefs.xml",
+          "xmlSha256": "eec88811edbf19933889f5db855527678a0ee260dc9beda5b854e83d81bf6435"
+        },
+        "after": {
+          "build": 43246,
+          "commit": "880a9c120d53c05432593e9b3007ecf29f3ccb88",
+          "source": "https://github.com/HearthSim/hsdata/blob/880a9c120d53c05432593e9b3007ecf29f3ccb88/CardDefs.xml",
+          "xmlSha256": "d4c29ef0c109574e5805c3414be11cd590d9388a4b3302e7ad162913e5009fba"
+        },
+        "findingId": "KNC-B011"
+      }
     ]
   }
 }

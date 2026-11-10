@@ -64,8 +64,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "황금 코볼트"
       },
       "nativeRawText": {
         "present": true,
@@ -117,7 +117,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -317,13 +317,36 @@
   "2024-10-18": {
     "changes": {
       "text": "<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는<br></br><b>모든</b> 카드를 <b>전설</b> 하수인으로<br></br>교체합니다. 그 카드들의 비용이<br></br>(1) 감소합니다.",
-      "nativeRawText": "<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다."
+      "nativeRawText": "[x]<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다."
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/24149104"
+      "https://hearthstone.blizzard.com/ko-kr/news/24149104",
+      "https://github.com/HearthSim/hsdata/commit/37797c6c5e9af546306299ade90189454f2b16ac",
+      "https://github.com/HearthSim/hsdata/commit/e6b9c5e51678d5035d1188f63c246326bb221c60"
     ],
     "eventTypes": [
       "gameplay-change"
-    ]
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 208591,
+          "commit": "37797c6c5e9af546306299ade90189454f2b16ac",
+          "source": "https://github.com/HearthSim/hsdata/blob/37797c6c5e9af546306299ade90189454f2b16ac/CardDefs.xml",
+          "xmlSha256": "668c03ff170b26b03bab89f8fffd5c51fc8cd85a17dc81f484ebcf4b91b1782b"
+        },
+        "after": {
+          "build": 209698,
+          "commit": "e6b9c5e51678d5035d1188f63c246326bb221c60",
+          "source": "https://github.com/HearthSim/hsdata/blob/e6b9c5e51678d5035d1188f63c246326bb221c60/CardDefs.xml",
+          "xmlSha256": "5625316024488e65c0cad7a3409775e1a70e14aa896fd2ee90eb3426f89f9ca2"
+        },
+        "findingId": "KNC-B021"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "<b>도발</b>, <b>전투의 함성:</b>\n내 손에 있는 <b>모든</b> 카드를 <b>전설</b> 하수인으로 교체합니다.",
+      "after": "[x]<b>도발</b>, <b>전투의 함성:</b> 내 손에 있는\n<b>모든</b> 카드를 <b>전설</b> 하수인으로\n교체합니다. 그 카드들의 비용이\n(1) 감소합니다."
+    }
   }
 }

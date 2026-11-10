@@ -67,8 +67,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "수정 사자"
       },
       "nativeRawText": {
         "present": true,
@@ -139,7 +139,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -151,10 +151,9 @@
         "after": "[x]<b>천상의 보호막</b>\n내 은빛 성기사단 신병\n하나당 비용이 (1)씩\n감소합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -165,10 +164,9 @@
         "after": "<b>천상의 보호막</b><br></br>내 은빛 성기사단 신병<br></br>하나당 비용이 (1)씩<br></br>감소합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -409,10 +407,49 @@
       "race": "야수"
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/24242740/34-6"
+      "https://hearthstone.blizzard.com/ko-kr/news/24242740/34-6",
+      "https://github.com/HearthSim/hsdata/commit/98f5d9349a8d993ca01c049734a0ec25707140f0",
+      "https://github.com/HearthSim/hsdata/commit/382ab7f189586f73a4fab4e11a3bc4e1d6827a08"
     ],
     "eventTypes": [
       "gameplay-change"
+    ],
+    "nativeTagChanges": {
+      "200": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 20
+        }
+      },
+      "2540": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 1
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 234747,
+          "commit": "98f5d9349a8d993ca01c049734a0ec25707140f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/98f5d9349a8d993ca01c049734a0ec25707140f0/CardDefs.xml",
+          "xmlSha256": "2622f07919edc2fea93b44b375c9b485d41b8b5bcf381e578fe040c3af281100"
+        },
+        "after": {
+          "build": 235290,
+          "commit": "382ab7f189586f73a4fab4e11a3bc4e1d6827a08",
+          "source": "https://github.com/HearthSim/hsdata/blob/382ab7f189586f73a4fab4e11a3bc4e1d6827a08/CardDefs.xml",
+          "xmlSha256": "494cd3c6505f9372d449a3e596e5448b573c63462ba713f9eff25ed6ddc4e977"
+        },
+        "findingId": "KNC-B023"
+      }
     ]
   }
 }

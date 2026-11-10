@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "길드 소집관"
       },
       "nativeRawText": {
         "present": true,
@@ -132,7 +132,7 @@
         "source": "referenced"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -144,10 +144,9 @@
         "after": "<b>전투의 함성:</b>\n비용이 (4) 이하인\n하수인을 <b>소집</b>합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -158,10 +157,9 @@
         "after": "<b>전투의 함성:</b><br></br>비용이 (4) 이하인<br></br>하수인을 <b>소집</b>합니다.",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
@@ -401,8 +399,37 @@
       "race": "드레나이"
     },
     "sources": [
-      "taxonomy introduction"
+      "taxonomy introduction",
+      "https://github.com/HearthSim/hsdata/commit/e6b9c5e51678d5035d1188f63c246326bb221c60",
+      "https://github.com/HearthSim/hsdata/commit/0a387d653f339297339625710e4df91f0c62b67b"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "200": {
+        "before": {
+          "present": false
+        },
+        "after": {
+          "present": true,
+          "value": 2
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 209698,
+          "commit": "e6b9c5e51678d5035d1188f63c246326bb221c60",
+          "source": "https://github.com/HearthSim/hsdata/blob/e6b9c5e51678d5035d1188f63c246326bb221c60/CardDefs.xml",
+          "xmlSha256": "5625316024488e65c0cad7a3409775e1a70e14aa896fd2ee90eb3426f89f9ca2"
+        },
+        "after": {
+          "build": 210009,
+          "commit": "0a387d653f339297339625710e4df91f0c62b67b",
+          "source": "https://github.com/HearthSim/hsdata/blob/0a387d653f339297339625710e4df91f0c62b67b/CardDefs.xml",
+          "xmlSha256": "672f96b5396ddb4705ea64f0acf8ae9d27e7dcc2544847e02a96342a04581a41"
+        }
+      }
+    ]
   }
 }

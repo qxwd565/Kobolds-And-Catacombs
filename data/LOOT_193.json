@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "희미하게 빛나는 군마"
       },
       "nativeRawText": {
         "present": true,
@@ -136,7 +136,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -192,7 +192,74 @@
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D005",
+        "date": "2024-03-12",
+        "before": {
+          "build": 195316,
+          "commit": "b0d06776272138cab032979722d18ca4de6545f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/b0d06776272138cab032979722d18ca4de6545f0/CardDefs.xml",
+          "xmlSha256": "326d2fe2662a8931f0a1f19aa1ceeb90808c75703ce98ba5ad4230b07ce6b0a9"
+        },
+        "after": {
+          "build": 195635,
+          "commit": "e072e5d302a93dc6fb33542e7c528ae4d39560f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/e072e5d302a93dc6fb33542e7c528ae4d39560f0/CardDefs.xml",
+          "xmlSha256": "a220a1fffc23afde38b8fc79ca4a73e88a54a71c12711608130766a0f0f1351f"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_193",
+          "dbfId": 46892,
+          "name": "희미하게 빛나는 군마",
+          "englishName": "Shimmering Courser",
+          "fields": {
+            "rawText": {
+              "before": "나만이 주문이나 영웅 능력의 대상으로 지정할 수 있습니다.",
+              "after": "상대편의 턴에 <b>모면</b> 상태가 됩니다."
+            },
+            "enText": {
+              "before": "Only you can target\nthis with spells and\nHero Powers.",
+              "after": "<b>Elusive</b> on your \nopponent's turn."
+            }
+          }
+        }
+      },
+      {
+        "findingId": "KNC-D009",
+        "date": null,
+        "before": {
+          "build": 246003,
+          "commit": "59c1e1229b3e48ecbc4436fda2fb0a22030d3808",
+          "source": "https://github.com/HearthSim/hsdata/blob/59c1e1229b3e48ecbc4436fda2fb0a22030d3808/CardDefs.xml",
+          "xmlSha256": "0ecabaa56386e967fa16f7595a022b391d2627f1e0a7892f4326f6d125232d83"
+        },
+        "after": {
+          "build": 247416,
+          "commit": "cc80e8aa220f39632c9c742f8587265f7569c5ef",
+          "source": "https://github.com/HearthSim/hsdata/blob/cc80e8aa220f39632c9c742f8587265f7569c5ef/CardDefs.xml",
+          "xmlSha256": "a3b0e3dcd112626aa47ba16ede1b26506eed175b1fda288c1b6952065c06aac4"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_193",
+          "dbfId": 46892,
+          "name": "희미하게 빛나는 군마",
+          "englishName": "Shimmering Courser",
+          "fields": {
+            "1211": {
+              "before": {
+                "present": false
+              },
+              "after": {
+                "present": true,
+                "value": "1"
+              }
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_193",
@@ -420,5 +487,43 @@
       }
     ],
     "referencedTags": []
+  },
+  "2024-03-12": {
+    "changes": {
+      "nativeRawText": "상대편의 턴에 <b>모면</b> 상태가 됩니다.",
+      "text": "상대편의 턴에 <b>모면</b> 상태가 됩니다."
+    },
+    "sources": [
+      "https://github.com/HearthSim/hsdata/commit/b0d06776272138cab032979722d18ca4de6545f0",
+      "https://github.com/HearthSim/hsdata/commit/e072e5d302a93dc6fb33542e7c528ae4d39560f0"
+    ],
+    "eventTypes": [
+      "wording"
+    ],
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 195316,
+          "commit": "b0d06776272138cab032979722d18ca4de6545f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/b0d06776272138cab032979722d18ca4de6545f0/CardDefs.xml",
+          "xmlSha256": "326d2fe2662a8931f0a1f19aa1ceeb90808c75703ce98ba5ad4230b07ce6b0a9"
+        },
+        "after": {
+          "build": 195635,
+          "commit": "e072e5d302a93dc6fb33542e7c528ae4d39560f0",
+          "source": "https://github.com/HearthSim/hsdata/blob/e072e5d302a93dc6fb33542e7c528ae4d39560f0/CardDefs.xml",
+          "xmlSha256": "a220a1fffc23afde38b8fc79ca4a73e88a54a71c12711608130766a0f0f1351f"
+        },
+        "findingId": "KNC-D005"
+      }
+    ],
+    "nativeRawTextChanges": {
+      "before": "나만이 주문이나 영웅 능력의 대상으로 지정할 수 있습니다.",
+      "after": "상대편의 턴에 <b>모면</b> 상태가 됩니다."
+    },
+    "enTextChanges": {
+      "before": "Only you can target\nthis with spells and\nHero Powers.",
+      "after": "<b>Elusive</b> on your \nopponent's turn."
+    }
   }
 }

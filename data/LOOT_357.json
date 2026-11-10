@@ -71,8 +71,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "교활한 마린"
       },
       "nativeRawText": {
         "present": true,
@@ -128,7 +128,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -140,10 +140,9 @@
         "after": "<b>전투의 함성:</b> 상대편에게 0/8 보물 상자를 소환해 줍니다. <i>(상자를 부수고 멋진 전리품을 획득하세요!)</i>",
         "date": null,
         "sourceCommits": [
-          "c623eb10a6fed4a214cf27923e749da9cb52c226",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -154,10 +153,9 @@
         "after": "<b>전투의 함성:</b> 상대편에게 0/8 보물 상자를 소환해 줍니다. <i>(상자를 부수고 멋진 전리품을 획득하세요!)</i>",
         "date": null,
         "sourceCommits": [
-          "c623eb10a6fed4a214cf27923e749da9cb52c226",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],

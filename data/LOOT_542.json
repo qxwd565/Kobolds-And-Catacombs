@@ -65,8 +65,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "왕의 파멸"
       },
       "nativeRawText": {
         "present": true,
@@ -130,7 +130,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [
       {
@@ -185,10 +185,10 @@
         "after": "모든 강화\n효과가 유지됩니다. <b>죽음의_메아리:</b>\n이 무기를 내 덱에\n섞어 넣습니다. ",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "0565689bc30e7fe550053066d033958f1f90033f",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current raw string; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       },
       {
         "topic": "display-text-current-vs-dated",
@@ -199,14 +199,91 @@
         "after": "모든 강화<br></br>효과가 유지됩니다. <b>죽음의 메아리:</b><br></br>이 무기를 내 덱에<br></br>섞어 넣습니다. ",
         "date": null,
         "sourceCommits": [
-          "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "0565689bc30e7fe550053066d033958f1f90033f",
           "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
         ],
-        "note": "Immutable launch plus dated events compared with the approved current display text; transition date is not established."
+        "note": "The last dated immutable snapshot and approved current cache differ; the later transition date is not established."
       }
     ],
     "editorialSuggestions": [],
-    "functionalEvents": []
+    "functionalEvents": [],
+    "observations": [
+      {
+        "findingId": "KNC-D007",
+        "date": null,
+        "before": {
+          "build": 217489,
+          "commit": "62cc0f00dbed73f2d48ccefca6f611e6f8898986",
+          "source": "https://github.com/HearthSim/hsdata/blob/62cc0f00dbed73f2d48ccefca6f611e6f8898986/CardDefs.xml",
+          "xmlSha256": "6dfe10c33d284ade4b0675f24a51e11510011e8cd70cf1112774f2babcf1b2c2"
+        },
+        "after": {
+          "build": 217964,
+          "commit": "fdad346dc49ebb5465f548a0a2b58b59edcbe087",
+          "source": "https://github.com/HearthSim/hsdata/blob/fdad346dc49ebb5465f548a0a2b58b59edcbe087/CardDefs.xml",
+          "xmlSha256": "039e4cb30c4e4a994778edcd0d6af9b60c1f0ef1571aab8d02af62568681bddf"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_542",
+          "dbfId": 47035,
+          "name": "왕의 파멸",
+          "englishName": "Kingsbane",
+          "fields": {
+            "45": {
+              "before": {
+                "present": true,
+                "value": "3"
+              },
+              "after": {
+                "present": true,
+                "value": "3"
+              }
+            },
+            "187": {
+              "before": {
+                "present": true,
+                "value": "3"
+              },
+              "after": {
+                "present": false
+              }
+            }
+          }
+        }
+      },
+      {
+        "findingId": "KNC-D010",
+        "date": null,
+        "before": {
+          "build": 27641,
+          "commit": "242423aeeeccda4c86a9aed57780d682faf6d044",
+          "source": "https://github.com/HearthSim/hsdata/blob/242423aeeeccda4c86a9aed57780d682faf6d044/CardDefs.xml",
+          "xmlSha256": "95d75205c7c6235d90933f568cdae52cb9714842c5ae21a9d689a7eb66b0290c"
+        },
+        "after": {
+          "build": 27845,
+          "commit": "0565689bc30e7fe550053066d033958f1f90033f",
+          "source": "https://github.com/HearthSim/hsdata/blob/0565689bc30e7fe550053066d033958f1f90033f/CardDefs.xml",
+          "xmlSha256": "dc2fa518bc000ad5aa4d54dbde40e29f67aed75c19705b8799893d0916046d4a"
+        },
+        "cardEvidence": {
+          "originalCardId": "LOOT_542",
+          "dbfId": 47035,
+          "name": "왕의 파멸",
+          "englishName": "Kingsbane",
+          "fields": {
+            "rawText": {
+              "before": "<b>죽음의 메아리:</b> 이 무기를 내 덱에 섞어 넣습니다. 모든 강화 효과가 유지됩니다.",
+              "after": "모든 강화\n효과가 유지됩니다. <b>죽음의_메아리:</b>\n이 무기를 내 덱에\n섞어 넣습니다."
+            },
+            "enText": {
+              "before": "[x]<b>Deathrattle:</b> Shuffle\nthis into your deck.\nIt keeps any\nenchantments.",
+              "after": "[x]Always keeps\nenchantments.\n<b>Deathrattle:</b> Shuffle this\ninto your deck."
+            }
+          }
+        }
+      }
+    ]
   },
   "current": {
     "id": "LOOT_542",

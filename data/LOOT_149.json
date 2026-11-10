@@ -63,8 +63,8 @@
     },
     "currentStringEvidence": {
       "name": {
-        "present": false,
-        "value": null
+        "present": true,
+        "value": "징그러운 지하 벌레"
       },
       "nativeRawText": {
         "present": true,
@@ -122,7 +122,7 @@
         "source": "owned"
       }
     ],
-    "tagHistoryStatus": "snapshot synchronization pending; see tag-observation source manifest",
+    "tagHistoryStatus": "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive",
     "wordingObservations": [],
     "undatedObservations": [],
     "editorialSuggestions": [],
@@ -334,8 +334,38 @@
       "attack": 2
     },
     "sources": [
-      "https://hearthstone.blizzard.com/ko-kr/news/21507224"
+      "https://hearthstone.blizzard.com/ko-kr/news/21507224",
+      "https://github.com/HearthSim/hsdata/commit/d399871096675e4186c1c2d35b9c410464a4ffbf",
+      "https://github.com/HearthSim/hsdata/commit/1a0dcda07394c622066630e4d09817aca8ff9fbf"
     ],
-    "eventTypes": []
+    "eventTypes": [],
+    "nativeTagChanges": {
+      "47": {
+        "before": {
+          "present": true,
+          "value": 5
+        },
+        "after": {
+          "present": true,
+          "value": 2
+        }
+      }
+    },
+    "tagSnapshotEvidence": [
+      {
+        "before": {
+          "build": 22611,
+          "commit": "d399871096675e4186c1c2d35b9c410464a4ffbf",
+          "source": "https://github.com/HearthSim/hsdata/blob/d399871096675e4186c1c2d35b9c410464a4ffbf/CardDefs.xml",
+          "xmlSha256": "c42c99ca2216802a072eac484bd221706349e4ed278dae93d252f8a503e380a2"
+        },
+        "after": {
+          "build": 23180,
+          "commit": "1a0dcda07394c622066630e4d09817aca8ff9fbf",
+          "source": "https://github.com/HearthSim/hsdata/blob/1a0dcda07394c622066630e4d09817aca8ff9fbf/CardDefs.xml",
+          "xmlSha256": "dbe848ad25b843779b0accca4ad4fffebbbbf2beee2caffd04e09dfc9c8332f5"
+        }
+      }
+    ]
   }
 }

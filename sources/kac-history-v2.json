@@ -281,7 +281,8 @@
       "cardId": "LOOT_504",
       "date": "2022-04-27",
       "changes": {
-        "text": "<b>잔상</b>, 아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
+        "nativeRawText": "<b>잔상</b>\n아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다.",
+        "text": "<b>잔상</b><br></br>아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
       },
       "eventType": "wording",
       "source": "https://hearthstone.blizzard.com/ko-kr/news/23797160",
