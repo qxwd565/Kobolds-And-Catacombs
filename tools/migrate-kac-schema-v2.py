@@ -245,6 +245,8 @@ def main():
         primary_at_date=state.get("race","")
         for event in events:
             changes=event["changes"]
+            if "races" in changes and current_primary in changes["races"]:
+                changes["races"]=[current_primary]+[race for race in changes["races"] if race!=current_primary]
             if "race" in changes:
                 primary_at_date=changes["race"]
             elif "races" in changes and current_primary in changes["races"] and primary_at_date!=current_primary_label:
