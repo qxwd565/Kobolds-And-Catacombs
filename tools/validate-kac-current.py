@@ -46,7 +46,8 @@ def main():
     print(json.dumps({
         "cards": len(cards),
         "stableMetadataValues": len(cards) * len(STABLE),
-        "existingLineBreakCardsPreserved": 96,\n        "lineBreakCardsAfterLOOT412Correction": linebreak_cards,
+        "existingLineBreakCardsPreserved": 96,
+        "lineBreakCardsAfterLOOT412Correction": linebreak_cards,
         "illusionistText": "correct",
         "crushingHandOwnedTag215": 3,
         "historyCards": len(history["cards"]),
