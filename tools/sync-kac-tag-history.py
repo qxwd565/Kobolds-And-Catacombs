@@ -115,6 +115,12 @@ def add_source(target,url):
     if url and url not in target.setdefault("sources",[]):
         target["sources"].append(url)
 
+def merge_string_delta(entry,key,delta,context):
+    existing=entry.get(key)
+    if existing is not None and existing!=delta:
+        raise ValueError(f"{context}: conflicting {key}")
+    entry[key]=copy.deepcopy(delta)
+
 def add_snapshot_evidence(entry,group,finding_id=None):
     item={"before":copy.deepcopy(group["before"]),"after":copy.deepcopy(group["after"])}
     if finding_id: item["findingId"]=finding_id
@@ -182,6 +188,9 @@ def main():
                 entry=source[event_day]
                 entry.setdefault("changes",{})["nativeRawText"]=raw
                 entry["changes"]["text"]=display_text(raw)
+                merge_string_delta(entry,"nativeRawTextChanges",card["rawText"],f"{cid} {event_day}")
+            if card.get("enText"):
+                merge_string_delta(source[event_day],"enTextChanges",card["enText"],f"{cid} {event_day}")
             if write(path,source): changed+=1
             synced_events+=1
     # The 13 observation groups are retained individually. Only dated wording
@@ -212,6 +221,9 @@ def main():
                 if raw is not None:
                     entry.setdefault("changes",{})["nativeRawText"]=raw
                     entry["changes"]["text"]=display_text(raw)
+                    merge_string_delta(entry,"nativeRawTextChanges",fields["rawText"],f"{cid} {day}")
+                if fields.get("enText"):
+                    merge_string_delta(entry,"enTextChanges",fields["enText"],f"{cid} {day}")
                 # sync_event has already merged tag changes for D008; preserve exact
                 # raw/enUS strings and before/after evidence in _meta.observations.
             if fid=="KNC-D004" and cid=="LOOT_504":
