@@ -34,6 +34,43 @@ def publish(path,value):
 def timeline_dates(source):
  return sorted(k for k in source if DATE_RE.fullmatch(k))
 
+def public_tag_states(source):
+ dates=timeline_dates(source)
+ first=source[dates[0]]
+ owned={int(x["id"]):copy.deepcopy(x) for x in first.get("ownedTags",[])}
+ referenced={int(x["id"]):copy.deepcopy(x) for x in first.get("referencedTags",[])}
+ current_owned={int(x["id"]):copy.deepcopy(x) for x in source.get("nativeTags",[])}
+ current_referenced={int(x["id"]):copy.deepcopy(x) for x in source.get("referencedTags",[])}
+ output={}
+ def rows(values,current):
+  result=[]
+  for tag_id,item in sorted(values.items()):
+   template=current.get(tag_id,item)
+   row={"id":tag_id}
+   if template.get("name") is not None: row["name"]=template["name"]
+   if "value" in item: row["value"]=copy.deepcopy(item["value"])
+   result.append(row)
+  return result
+ output[dates[0]]={"nativeTags":rows(owned,current_owned),
+                   "referencedTags":rows(referenced,current_referenced)}
+ for day in dates[1:]:
+  entry=source[day]
+  for key,values in (("nativeTagChanges",owned),("referencedTagChanges",referenced)):
+   for raw_id,delta in entry.get(key,{}).items():
+    tag_id=int(raw_id)
+    after=delta["after"]
+    if after.get("present"):
+     template=current_owned.get(tag_id,{}) if key=="nativeTagChanges" else current_referenced.get(tag_id,{})
+     item={"id":tag_id}
+     if template.get("name") is not None: item["name"]=template["name"]
+     if after.get("value") is not None: item["value"]=copy.deepcopy(after["value"])
+     values[tag_id]=item
+    else:
+     values.pop(tag_id,None)
+  output[day]={"nativeTags":rows(owned,current_owned),
+               "referencedTags":rows(referenced,current_referenced)}
+ return output
+
 def tag_history_gaps(source,cid):
  dates=timeline_dates(source)
  first=source[dates[0]]
@@ -147,6 +184,7 @@ def replay_v2(source,record,cid):
   elif field=="mechanics" and "currentMechanics" in meta:
    public_baseline[field]=copy.deepcopy(meta["currentMechanics"])
  gaps_by_day=tag_history_gaps(source,cid)
+ tag_states_by_day=public_tag_states(source)
  revisions=[]
  for index,(day,state,entry) in enumerate(states):
   # Every public interval is a self-contained override of the current card.
@@ -157,6 +195,8 @@ def replay_v2(source,record,cid):
   native_changes=entry.get("nativeTagChanges")
   referenced_changes=entry.get("referencedTagChanges")
   tag_evidence=entry.get("tagSnapshotEvidence")
+  changes["nativeTags"]=copy.deepcopy(tag_states_by_day[day]["nativeTags"])
+  changes["referencedTags"]=copy.deepcopy(tag_states_by_day[day]["referencedTags"])
   revision={"from":day,"changes":changes}
   if index+1<len(states): revision["before"]=states[index+1][0]
   if removed: revision["removedFields"]=sorted(removed)
@@ -170,7 +210,7 @@ def replay_v2(source,record,cid):
   if entry.get("eventTypes"): revision["eventTypes"]=copy.deepcopy(entry["eventTypes"])
   if incomplete: revision["historyIncompleteFields"]=sorted(incomplete)
   revisions.append(revision)
- return revisions,{"currentState":current_state,"incomplete":sorted(incomplete),"datedStates":len(states),"tagHistoryGaps":gaps_by_day}
+ return revisions,{"currentState":current_state,"incomplete":sorted(incomplete),"datedStates":len(states),"tagHistoryGaps":gaps_by_day,"tagStatesByDay":tag_states_by_day}
 
 def main():
  catalog=read(ROOT/"cards.json")
