@@ -238,6 +238,12 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(loot504_gap["observedBeforeState"],{"present":True,"value":1})
         self.assertIsNone(loot504_gap["transitionDate"])
         self.assertIsNone(loot504_gap["unknownInterval"]["start"])
+        loot504_render_revision=next(x for x in {x["id"]:x for x in self.render["cards"]}["LOOT_504"]["history"]
+                                      if x["from"]=="2022-04-06")
+        loot504_history_revision=next(x for x in self.history["cards"][str(self.records["LOOT_504"]["dbfId"])]["history"]
+                                      if x["from"]=="2022-04-06")
+        self.assertEqual(loot504_render_revision["tagHistoryGaps"]["nativeTags"]["1114"],loot504_gap)
+        self.assertEqual(loot504_history_revision["tagHistoryGaps"]["nativeTags"]["1114"],loot504_gap)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["nativeRawText"],exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["text"],
                          "<b>잔상</b><br></br>아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다.")
