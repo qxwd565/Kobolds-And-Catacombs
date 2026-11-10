@@ -241,7 +241,7 @@ def main():
     for cid in records:
         path=ROOT/"data"/(cid+".json")
         source=read(path)
-        dates=sorted(k for k in source if re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}",k))
+        dates=sorted(k for k in source if re.fullmatch(r"\d{4}-\d{2}-\d{2}",k))
         if not dates:
             continue
         latest_state=copy.deepcopy(source[dates[0]].get("state",{}))
