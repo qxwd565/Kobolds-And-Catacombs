@@ -6,7 +6,7 @@
     "id": "LOOT_413",
     "dbfId": 45930,
     "name": "단단한 딱정벌레",
-    "text": "<b>죽음의 메아리</b>:\n방어도를 3 얻습니다.",
+    "text": "<b>죽음의 메아리</b>:<br></br>방어도를 3 얻습니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_286t4",
     "dbfId": 45780,
     "name": "정화자의 망치",
-    "text": "<b>전투의 함성:</b>\n내 하수인들에게 <b>천상의 보호막</b>을 부여합니다.",
+    "text": "<b>전투의 함성:</b><br></br>내 하수인들에게 <b>천상의 보호막</b>을 부여합니다.",
     "type": "WEAPON",
     "cardClass": "PALADIN",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_013",
     "dbfId": 43121,
     "name": "야비한 소악마",
-    "text": "<b>도발</b>, <b>전투의 함성</b>:\n내 영웅에게\n피해를 2 줍니다.",
+    "text": "<b>도발</b>, <b>전투의 함성</b>:<br></br>내 영웅에게<br></br>피해를 2 줍니다.",
     "type": "MINION",
     "cardClass": "WARLOCK",
     "classes": [],

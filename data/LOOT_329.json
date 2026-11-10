@@ -6,7 +6,7 @@
     "id": "LOOT_329",
     "dbfId": 45859,
     "name": "곰팡이 군주 익슬리드",
-    "text": "내가 하수인을 낸 후에,\n그 하수인을 복사하여 소환합니다.",
+    "text": "내가 하수인을 낸 후에,<br></br>그 하수인을 복사하여 소환합니다.",
     "type": "MINION",
     "cardClass": "DRUID",
     "classes": [],

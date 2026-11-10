@@ -6,7 +6,7 @@
     "id": "LOOT_375",
     "dbfId": 46069,
     "name": "길드 소집관",
-    "text": "<b>전투의 함성:</b>\n비용이 (4) 이하인\n하수인을 <b>소집</b>합니다.",
+    "text": "<b>전투의 함성:</b><br></br>비용이 (4) 이하인<br></br>하수인을 <b>소집</b>합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_108",
     "dbfId": 43426,
     "name": "알루네스",
-    "text": "내 턴이 끝날 때,\n카드를 3장 뽑습니다.",
+    "text": "내 턴이 끝날 때,<br></br>카드를 3장 뽑습니다.",
     "type": "WEAPON",
     "cardClass": "MAGE",
     "classes": [],

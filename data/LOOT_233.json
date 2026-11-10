@@ -6,7 +6,7 @@
     "id": "LOOT_233",
     "dbfId": 45594,
     "name": "저주받은 사도",
-    "text": "<b>죽음의 메아리:</b>\n5/1 망령을 소환합니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>5/1 망령을 소환합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

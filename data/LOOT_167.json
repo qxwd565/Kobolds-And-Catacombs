@@ -6,7 +6,7 @@
     "id": "LOOT_167",
     "dbfId": 45265,
     "name": "곰팡이술사",
-    "text": "<b>전투의 함성:</b>\n양옆의 하수인들에게\n+2/+2를 부여합니다.",
+    "text": "<b>전투의 함성:</b><br></br>양옆의 하수인들에게<br></br>+2/+2를 부여합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_184",
     "dbfId": 45287,
     "name": "은빛 선봉대원",
-    "text": "<b>죽음의 메아리:</b>\n비용이 8인 하수인을 <b>소집</b>합니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>비용이 8인 하수인을 <b>소집</b>합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

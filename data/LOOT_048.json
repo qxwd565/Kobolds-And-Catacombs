@@ -6,7 +6,7 @@
     "id": "LOOT_048",
     "dbfId": 43284,
     "name": "강철나무 골렘",
-    "text": "<b>도발</b>, 내 방어도가\n3 이상일 때에만\n공격할 수 있습니다.",
+    "text": "<b>도발</b>, 내 방어도가<br></br>3 이상일 때에만<br></br>공격할 수 있습니다.",
     "type": "MINION",
     "cardClass": "DRUID",
     "classes": [],

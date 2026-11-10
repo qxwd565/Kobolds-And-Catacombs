@@ -6,7 +6,7 @@
     "id": "LOOT_047",
     "dbfId": 43282,
     "name": "나무 껍질",
-    "text": "하수인에게 생명력을\n+3 부여합니다.\n방어도를 +3 얻습니다.",
+    "text": "하수인에게 생명력을<br></br>+3 부여합니다.<br></br>방어도를 +3 얻습니다.",
     "type": "SPELL",
     "cardClass": "DRUID",
     "classes": [],

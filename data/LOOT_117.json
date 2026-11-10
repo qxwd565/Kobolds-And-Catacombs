@@ -6,7 +6,7 @@
     "id": "LOOT_117",
     "dbfId": 43463,
     "name": "밀랍 정령",
-    "text": "<b>도발</b>\n<b>천상의 보호막</b>",
+    "text": "<b>도발</b><br></br><b>천상의 보호막</b>",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

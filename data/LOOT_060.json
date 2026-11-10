@@ -6,7 +6,7 @@
     "id": "LOOT_060",
     "dbfId": 43322,
     "name": "분쇄의 손",
-    "text": "하수인에게 피해를 $8 줍니다.\n<b>과부하:</b> (3)",
+    "text": "하수인에게 피해를 $8 줍니다.<br></br><b>과부하:</b> (3)",
     "type": "SPELL",
     "cardClass": "SHAMAN",
     "classes": [],

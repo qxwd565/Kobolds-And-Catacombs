@@ -6,7 +6,7 @@
     "id": "LOOT_153",
     "dbfId": 43526,
     "name": "보랏빛 땅벌레",
-    "text": "<b>죽음의 메아리:</b>\n1/1 구더기를\n7마리 소환합니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>1/1 구더기를<br></br>7마리 소환합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

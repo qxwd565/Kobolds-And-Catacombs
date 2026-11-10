@@ -6,7 +6,7 @@
     "id": "LOOT_534",
     "dbfId": 46495,
     "name": "금박 가고일",
-    "text": "<b>죽음의 메아리:</b>\n동전을 내 손으로 가져옵니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>동전을 내 손으로 가져옵니다.",
     "type": "MINION",
     "cardClass": "PRIEST",
     "classes": [],

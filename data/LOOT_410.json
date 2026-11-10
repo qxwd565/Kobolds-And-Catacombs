@@ -6,7 +6,7 @@
     "id": "LOOT_410",
     "dbfId": 45899,
     "name": "황혼파괴자",
-    "text": "<b>전투의 함성:</b>\n내 손에 용족이 있으면,\n다른 <b>모든</b> 하수인에게\n피해를 3 줍니다.",
+    "text": "<b>전투의 함성:</b><br></br>내 손에 용족이 있으면,<br></br>다른 <b>모든</b> 하수인에게<br></br>피해를 3 줍니다.",
     "type": "MINION",
     "cardClass": "PRIEST",
     "classes": [],

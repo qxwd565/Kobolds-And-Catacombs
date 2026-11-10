@@ -6,7 +6,7 @@
     "id": "LOOT_209",
     "dbfId": 45528,
     "name": "용의 영혼",
-    "text": "한 턴에 내가 주문을\n3번 시전한 후에,\n5/5 용을\n소환합니다.",
+    "text": "한 턴에 내가 주문을<br></br>3번 시전한 후에,<br></br>5/5 용을<br></br>소환합니다.",
     "type": "WEAPON",
     "cardClass": "PRIEST",
     "classes": [],

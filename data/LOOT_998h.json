@@ -6,7 +6,7 @@
     "id": "LOOT_998h",
     "dbfId": 43178,
     "name": "톨린의 술잔",
-    "text": "카드를 뽑습니다. 그 카드를 복사하여\n내 손을 가득 채웁니다.",
+    "text": "카드를 뽑습니다. 그 카드를 복사하여<br></br>내 손을 가득 채웁니다.",
     "type": "SPELL",
     "cardClass": "NEUTRAL",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_285t3",
     "dbfId": 45773,
     "name": "룬새김 방패",
-    "text": "방어도를 +5 얻고\n5/5 골렘을 소환합니다.",
+    "text": "방어도를 +5 얻고<br></br>5/5 골렘을 소환합니다.",
     "type": "SPELL",
     "cardClass": "WARRIOR",
     "classes": [],

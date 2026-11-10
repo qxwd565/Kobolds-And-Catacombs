@@ -6,7 +6,7 @@
     "id": "LOOT_111",
     "dbfId": 43453,
     "name": "전갈로봇",
-    "text": "<b>전투의 함성:</b>\n공격력이 1 이하인 하수인을 처치합니다.",
+    "text": "<b>전투의 함성:</b><br></br>공격력이 1 이하인 하수인을 처치합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

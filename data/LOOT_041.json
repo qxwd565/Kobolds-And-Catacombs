@@ -6,7 +6,7 @@
     "id": "LOOT_041",
     "dbfId": 43269,
     "name": "코볼트 야만용사",
-    "text": "내 턴이 시작될 때,\n무작위 적을 공격합니다.",
+    "text": "내 턴이 시작될 때,<br></br>무작위 적을 공격합니다.",
     "type": "MINION",
     "cardClass": "WARRIOR",
     "classes": [],

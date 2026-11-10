@@ -6,7 +6,7 @@
     "id": "LOOT_285t2",
     "dbfId": 45771,
     "name": "톱니 방패",
-    "text": "방어도를 +5 얻고,\n피해를 $5 줍니다.",
+    "text": "방어도를 +5 얻고,<br></br>피해를 $5 줍니다.",
     "type": "SPELL",
     "cardClass": "WARRIOR",
     "classes": [],

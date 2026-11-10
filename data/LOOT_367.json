@@ -6,7 +6,7 @@
     "id": "LOOT_367",
     "dbfId": 46031,
     "name": "마른수염 방어구 제작자",
-    "text": "<b>전투의 함성:</b>\n적 하수인 하나당 방어도를 +2 얻습니다.",
+    "text": "<b>전투의 함성:</b><br></br>적 하수인 하나당 방어도를 +2 얻습니다.",
     "type": "MINION",
     "cardClass": "WARRIOR",
     "classes": [],

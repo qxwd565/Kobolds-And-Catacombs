@@ -6,7 +6,7 @@
     "id": "LOOT_144",
     "dbfId": 43507,
     "name": "보물을 지키는 용",
-    "text": "<b>죽음의 메아리:</b> 상대편에게 동전을\n2개 줍니다.",
+    "text": "<b>죽음의 메아리:</b> 상대편에게 동전을<br></br>2개 줍니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

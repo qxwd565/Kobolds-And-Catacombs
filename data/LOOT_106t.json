@@ -6,7 +6,7 @@
     "id": "LOOT_106t",
     "dbfId": 46545,
     "name": "신비의 두루마리",
-    "text": "<b>뽑을 때 시전</b>\n무작위 주문을 시전합니다.",
+    "text": "<b>뽑을 때 시전</b><br></br>무작위 주문을 시전합니다.",
     "type": "SPELL",
     "cardClass": "MAGE",
     "classes": [],

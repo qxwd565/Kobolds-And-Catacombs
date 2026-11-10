@@ -6,7 +6,7 @@
     "id": "LOOT_415",
     "dbfId": 46040,
     "name": "첫 번째 사도 린",
-    "text": "<b>도발</b>, <b>죽음의 메아리:</b>\n'첫 번째 인장'을\n내 손으로 가져옵니다.",
+    "text": "<b>도발</b>, <b>죽음의 메아리:</b><br></br>'첫 번째 인장'을<br></br>내 손으로 가져옵니다.",
     "type": "MINION",
     "cardClass": "WARLOCK",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_286t1",
     "dbfId": 45779,
     "name": "용사의 망치",
-    "text": "<b>전투의 함성:</b>\n1/1 은빛 성기사단 신병을 2명 소환합니다.",
+    "text": "<b>전투의 함성:</b><br></br>1/1 은빛 성기사단 신병을 2명 소환합니다.",
     "type": "WEAPON",
     "cardClass": "PALADIN",
     "classes": [],

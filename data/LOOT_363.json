@@ -6,7 +6,7 @@
     "id": "LOOT_363",
     "dbfId": 46007,
     "name": "마른협곡 교도관",
-    "text": "<b>죽음의 메아리:</b>\n은빛 성기사단 신병 셋을\n내 손으로 가져옵니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>은빛 성기사단 신병 셋을<br></br>내 손으로 가져옵니다.",
     "type": "MINION",
     "cardClass": "PALADIN",
     "classes": [],

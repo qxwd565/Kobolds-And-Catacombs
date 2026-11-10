@@ -6,7 +6,7 @@
     "id": "LOOT_286t3",
     "dbfId": 45778,
     "name": "축복받은 망치",
-    "text": "<b>전투의 함성:</b>\n내 하수인들에게 공격력을 +1 부여합니다.",
+    "text": "<b>전투의 함성:</b><br></br>내 하수인들에게 공격력을 +1 부여합니다.",
     "type": "WEAPON",
     "cardClass": "PALADIN",
     "classes": [],

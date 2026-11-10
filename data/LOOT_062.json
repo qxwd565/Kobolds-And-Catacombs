@@ -6,7 +6,7 @@
     "id": "LOOT_062",
     "dbfId": 43329,
     "name": "코볼트 은둔자",
-    "text": "<b>전투의 함성:</b>\n기본 토템을 선택하여 소환합니다.",
+    "text": "<b>전투의 함성:</b><br></br>기본 토템을 선택하여 소환합니다.",
     "type": "MINION",
     "cardClass": "SHAMAN",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_420",
     "dbfId": 46299,
     "name": "만아리의 해골",
-    "text": "내 턴이 시작될 때,\n내 손에 있는 악마를 소환합니다.",
+    "text": "내 턴이 시작될 때,<br></br>내 손에 있는 악마를 소환합니다.",
     "type": "WEAPON",
     "cardClass": "WARLOCK",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_026e",
     "dbfId": 45870,
     "name": "거미 잠복!",
-    "text": "<b>뽑을 때 시전</b>\n4/4 거미를 소환합니다.",
+    "text": "<b>뽑을 때 시전</b><br></br>4/4 거미를 소환합니다.",
     "type": "SPELL",
     "cardClass": "ROGUE",
     "classes": [],

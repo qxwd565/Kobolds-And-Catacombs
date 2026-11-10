@@ -6,7 +6,7 @@
     "id": "LOOT_008",
     "dbfId": 43112,
     "name": "영혼의 절규",
-    "text": "<b>모든</b> 하수인을 상대편의 덱에\n섞어 넣습니다.",
+    "text": "<b>모든</b> 하수인을 상대편의 덱에<br></br>섞어 넣습니다.",
     "type": "SPELL",
     "cardClass": "PRIEST",
     "classes": [],

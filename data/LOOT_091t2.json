@@ -6,7 +6,7 @@
     "id": "LOOT_091t2",
     "dbfId": 43380,
     "name": "상급 진주 주문석",
-    "text": "<b>도발</b> 능력이 있는\n6/6 영혼을 소환합니다.",
+    "text": "<b>도발</b> 능력이 있는<br></br>6/6 영혼을 소환합니다.",
     "type": "SPELL",
     "cardClass": "PALADIN",
     "classes": [],

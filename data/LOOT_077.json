@@ -6,7 +6,7 @@
     "id": "LOOT_077",
     "dbfId": 43357,
     "name": "측방 강타",
-    "text": "하수인에게 피해를 $3 줍니다.\n3/3 늑대를 소환합니다.",
+    "text": "하수인에게 피해를 $3 줍니다.<br></br>3/3 늑대를 소환합니다.",
     "type": "SPELL",
     "cardClass": "HUNTER",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_415t1",
     "dbfId": 46039,
     "name": "첫 번째 인장",
-    "text": "2/2 악마를 소환합니다.\n'두 번째 인장'을\n내 손으로 가져옵니다.",
+    "text": "2/2 악마를 소환합니다.<br></br>'두 번째 인장'을<br></br>내 손으로 가져옵니다.",
     "type": "SPELL",
     "cardClass": "WARLOCK",
     "classes": [],

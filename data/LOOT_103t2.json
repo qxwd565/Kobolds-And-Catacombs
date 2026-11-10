@@ -6,7 +6,7 @@
     "id": "LOOT_103t2",
     "dbfId": 43411,
     "name": "상급 루비 주문석",
-    "text": "무작위 마법사 주문\n셋을 내 손으로\n가져옵니다.",
+    "text": "무작위 마법사 주문<br></br>셋을 내 손으로<br></br>가져옵니다.",
     "type": "SPELL",
     "cardClass": "MAGE",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_415t5",
     "dbfId": 46034,
     "name": "마지막 인장",
-    "text": "6/6 악마를 소환합니다.\n'포식자 아자리'를\n내 손으로 가져옵니다.",
+    "text": "6/6 악마를 소환합니다.<br></br>'포식자 아자리'를<br></br>내 손으로 가져옵니다.",
     "type": "SPELL",
     "cardClass": "WARLOCK",
     "classes": [],

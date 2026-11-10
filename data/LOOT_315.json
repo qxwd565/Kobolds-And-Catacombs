@@ -6,7 +6,7 @@
     "id": "LOOT_315",
     "dbfId": 45837,
     "name": "트로그 버섯먹보",
-    "text": "<b>도발</b>\n<b>독성</b>",
+    "text": "<b>도발</b><br></br><b>독성</b>",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

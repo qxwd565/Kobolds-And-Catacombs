@@ -6,7 +6,7 @@
     "id": "LOOT_134",
     "dbfId": 43489,
     "name": "덥석 상자",
-    "text": "내 턴이 시작될 때,\n이 하수인의 공격력을 4로 만듭니다.",
+    "text": "내 턴이 시작될 때,<br></br>이 하수인의 공격력을 4로 만듭니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_211",
     "dbfId": 45531,
     "name": "엘프 음악가",
-    "text": "<b>연계:</b> 내 덱에서\n하수인을 둘 뽑습니다.",
+    "text": "<b>연계:</b> 내 덱에서<br></br>하수인을 둘 뽑습니다.",
     "type": "MINION",
     "cardClass": "ROGUE",
     "classes": [],

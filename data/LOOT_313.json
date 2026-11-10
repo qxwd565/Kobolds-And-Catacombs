@@ -6,7 +6,7 @@
     "id": "LOOT_313",
     "dbfId": 45833,
     "name": "수정 사자",
-    "text": "<b>천상의 보호막</b>\n내 은빛 성기사단 신병\n하나당 비용이 (1)씩\n감소합니다.",
+    "text": "<b>천상의 보호막</b><br></br>내 은빛 성기사단 신병<br></br>하나당 비용이 (1)씩<br></br>감소합니다.",
     "type": "MINION",
     "cardClass": "PALADIN",
     "classes": [],

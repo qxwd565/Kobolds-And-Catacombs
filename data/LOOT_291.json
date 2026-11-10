@@ -6,7 +6,7 @@
     "id": "LOOT_291",
     "dbfId": 45784,
     "name": "버섯 물약꾼",
-    "text": "<b>전투의 함성:</b>\n생명력을 #4 회복시킵니다.",
+    "text": "<b>전투의 함성:</b><br></br>생명력을 #4 회복시킵니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

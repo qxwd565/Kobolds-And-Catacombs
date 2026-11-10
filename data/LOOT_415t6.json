@@ -6,7 +6,7 @@
     "id": "LOOT_415t6",
     "dbfId": 46033,
     "name": "포식자 아자리",
-    "text": "<b>전투의 함성:</b>\n상대편의 덱을 파괴합니다.",
+    "text": "<b>전투의 함성:</b><br></br>상대편의 덱을 파괴합니다.",
     "type": "MINION",
     "cardClass": "WARLOCK",
     "classes": [],

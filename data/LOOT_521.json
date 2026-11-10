@@ -6,7 +6,7 @@
     "id": "LOOT_521",
     "dbfId": 46449,
     "name": "달인 오크하트",
-    "text": "<b>전투의 함성:</b> 공격력이\n1, 2, 3인 하수인을\n<b>소집</b>합니다.",
+    "text": "<b>전투의 함성:</b> 공격력이<br></br>1, 2, 3인 하수인을<br></br><b>소집</b>합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

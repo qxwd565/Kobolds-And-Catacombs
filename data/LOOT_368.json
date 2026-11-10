@@ -6,7 +6,7 @@
     "id": "LOOT_368",
     "dbfId": 46056,
     "name": "공허군주",
-    "text": "<b>도발</b>, <b>죽음의 메아리</b>:\n<b>도발</b> 능력이 있는\n1/3 악마를 셋 소환합니다.",
+    "text": "<b>도발</b>, <b>죽음의 메아리</b>:<br></br><b>도발</b> 능력이 있는<br></br>1/3 악마를 셋 소환합니다.",
     "type": "MINION",
     "cardClass": "WARLOCK",
     "classes": [],

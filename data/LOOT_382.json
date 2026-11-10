@@ -6,7 +6,7 @@
     "id": "LOOT_382",
     "dbfId": 46079,
     "name": "코볼트 수도사",
-    "text": "내 영웅이 <b>모면</b>\n상태가 됩니다.",
+    "text": "내 영웅이 <b>모면</b><br></br>상태가 됩니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

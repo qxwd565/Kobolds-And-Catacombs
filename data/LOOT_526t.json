@@ -6,7 +6,7 @@
     "id": "LOOT_526t",
     "dbfId": 46467,
     "name": "어둠의 양초",
-    "text": "<b>뽑을 때 시전</b>\n양초를 끕니다.",
+    "text": "<b>뽑을 때 시전</b><br></br>양초를 끕니다.",
     "type": "SPELL",
     "cardClass": "NEUTRAL",
     "classes": [],

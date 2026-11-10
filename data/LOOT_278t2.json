@@ -6,7 +6,7 @@
     "id": "LOOT_278t2",
     "dbfId": 45753,
     "name": "정화의 비약",
-    "text": "하수인에게 +2/+2와\n<b>천상의 보호막</b>을\n부여합니다.",
+    "text": "하수인에게 +2/+2와<br></br><b>천상의 보호막</b>을<br></br>부여합니다.",
     "type": "SPELL",
     "cardClass": "PRIEST",
     "classes": [],

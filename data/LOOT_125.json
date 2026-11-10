@@ -6,7 +6,7 @@
     "id": "LOOT_125",
     "dbfId": 43474,
     "name": "돌가죽 바실리스크",
-    "text": "<b>천상의 보호막</b>\n<b>독성</b>",
+    "text": "<b>천상의 보호막</b><br></br><b>독성</b>",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

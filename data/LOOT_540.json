@@ -6,7 +6,7 @@
     "id": "LOOT_540",
     "dbfId": 46557,
     "name": "용 사육사",
-    "text": "내 턴이 끝날 때,\n용족을 <b>소집</b>합니다.",
+    "text": "내 턴이 끝날 때,<br></br>용족을 <b>소집</b>합니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

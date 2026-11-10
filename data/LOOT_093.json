@@ -6,7 +6,7 @@
     "id": "LOOT_093",
     "dbfId": 43384,
     "name": "긴급 소집",
-    "text": "비용이 (2) 이하인\n하수인을 셋 <b>소집</b>합니다.",
+    "text": "비용이 (2) 이하인<br></br>하수인을 셋 <b>소집</b>합니다.",
     "type": "SPELL",
     "cardClass": "PALADIN",
     "classes": [],

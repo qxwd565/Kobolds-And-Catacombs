@@ -6,7 +6,7 @@
     "id": "LOOT_306",
     "dbfId": 45820,
     "name": "지배당한 졸개",
-    "text": "<b>죽음의 메아리:</b>\n악마를 <b>소집</b>합니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>악마를 <b>소집</b>합니다.",
     "type": "MINION",
     "cardClass": "WARLOCK",
     "classes": [],

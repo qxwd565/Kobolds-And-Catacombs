@@ -6,7 +6,7 @@
     "id": "LOOT_388",
     "dbfId": 46087,
     "name": "버섯 마법부여사",
-    "text": "<b>전투의 함성:</b> 모든 아군 캐릭터의 생명력을\n#2 회복시킵니다.",
+    "text": "<b>전투의 함성:</b> 모든 아군 캐릭터의 생명력을<br></br>#2 회복시킵니다.",
     "type": "MINION",
     "cardClass": "NEUTRAL",
     "classes": [],

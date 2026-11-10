@@ -6,7 +6,7 @@
     "id": "LOOT_353",
     "dbfId": 45979,
     "name": "정신 관찰",
-    "text": "상대편의 덱에서 주문을 복사하여\n내 손으로 가져옵니다.",
+    "text": "상대편의 덱에서 주문을 복사하여<br></br>내 손으로 가져옵니다.",
     "type": "SPELL",
     "cardClass": "PRIEST",
     "classes": [],

@@ -6,7 +6,7 @@
     "id": "LOOT_398",
     "dbfId": 46258,
     "name": "자애로운 신령",
-    "text": "내 턴이 끝날 때,\n내 영웅의 생명력을\n#3 회복시킵니다.",
+    "text": "내 턴이 끝날 때,<br></br>내 영웅의 생명력을<br></br>#3 회복시킵니다.",
     "type": "MINION",
     "cardClass": "PALADIN",
     "classes": [],

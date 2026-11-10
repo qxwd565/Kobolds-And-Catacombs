@@ -6,7 +6,7 @@
     "id": "LOOT_056",
     "dbfId": 43304,
     "name": "천공의 호랑이",
-    "text": "<b>죽음의 메아리:</b>\n이 하수인을 복사하여\n내 덱에 섞어 넣습니다.",
+    "text": "<b>죽음의 메아리:</b><br></br>이 하수인을 복사하여<br></br>내 덱에 섞어 넣습니다.",
     "type": "MINION",
     "cardClass": "DRUID",
     "classes": [],

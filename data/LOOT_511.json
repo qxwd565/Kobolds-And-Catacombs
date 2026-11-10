@@ -6,7 +6,7 @@
     "id": "LOOT_511",
     "dbfId": 46390,
     "name": "카트레나 윈터위습",
-    "text": "<b>전투의 함성과 죽음의 메아리:</b>\n야수를 <b>소집</b>합니다.",
+    "text": "<b>전투의 함성과 죽음의 메아리:</b><br></br>야수를 <b>소집</b>합니다.",
     "type": "MINION",
     "cardClass": "HUNTER",
     "classes": [],
