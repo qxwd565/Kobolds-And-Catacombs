@@ -39,7 +39,7 @@ jobs:
           print(" ".join(sorted(commits)))
           PY
           )"
-          ALL_COMMITS="$(printf '%s\\n%s\\n' "$COMMITS" "$EVIDENCE_COMMITS" | tr ' ' '\\n' | sed '/^$/d' | sort -u | tr '\\n' ' ')"
+          ALL_COMMITS="$(printf '%s\n%s\n' "$COMMITS" "$EVIDENCE_COMMITS" | tr ' ' '\n' | sed '/^$/d' | sort -u | tr '\n' ' ')"
           git -C /tmp/hsdata fetch --depth=1 origin $ALL_COMMITS
           git -C /tmp/hsdata show c623eb10a6fed4a214cf27923e749da9cb52c226:CardDefs.xml > /tmp/CardDefs-marine-launch.xml
           git -C /tmp/hsdata show d399871096675e4186c1c2d35b9c410464a4ffbf:CardDefs.xml > /tmp/CardDefs-main-launch.xml
