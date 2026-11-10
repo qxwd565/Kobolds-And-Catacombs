@@ -107,6 +107,8 @@ def replay_v2(source,record,cid):
    public_baseline[field]=copy.deepcopy(source["nativeRawText"])
   elif field=="nativeTextBuilder" and source.get("nativeTextBuilder") is not None:
    public_baseline[field]=copy.deepcopy(source["nativeTextBuilder"])
+  elif field=="mechanics" and "currentMechanics" in meta:
+   public_baseline[field]=copy.deepcopy(meta["currentMechanics"])
  revisions=[]
  for index,(day,state,entry) in enumerate(states):
   changes={}
@@ -178,6 +180,8 @@ def main():
   history[str(record["dbfId"])]={"id":cid,"history":revisions,"historyIncompleteFields":details["incomplete"],
                                  "initialSpec":initial_spec,"patches":patches}
   render_card={field:copy.deepcopy(record[field]) for field in RENDER_FIELDS if field in record}
+  if "mechanics" not in render_card and "currentMechanics" in source.get("_meta",{}):
+   render_card["mechanics"]=copy.deepcopy(source["_meta"]["currentMechanics"])
   if revisions: render_card["history"]=revisions
   # Preserve the exact approved current card cache; only release metadata is
   # updated from the explicit Korea-local policy.
