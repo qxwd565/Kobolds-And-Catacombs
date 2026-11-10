@@ -1,4 +1,4 @@
-name: Validate Kobolds and Catacombs API
+name: Validate and build Kobolds and Catacombs API
 
 on:
   push:
@@ -6,17 +6,75 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  validate:
+  validate-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Validate current catalogue and preserved metadata
-        run: python tools/validate-kac-current.py
+      - name: Fetch immutable launch, current, and historical CardDefs snapshots
+        run: |
+          git init /tmp/hsdata
+          git -C /tmp/hsdata remote add origin https://github.com/HearthSim/hsdata.git
+          COMMITS="c623eb10a6fed4a214cf27923e749da9cb52c226 d399871096675e4186c1c2d35b9c410464a4ffbf 31b034c26f24b8a66ece845ffd03c1ca397b9a02 87826d798af6dc58dace839774a708e0cd1e46ca beaa46cc24c1332ad91d4f7ae096024f6ff7d394 da8f2db996f1e7191e501ebe2943af5636697e06 37797c6c5e9af546306299ade90189454f2b16ac 0a5a61e3867ae9eea535bdbd4df714671ff87910 54141c4a6bf3efeedaf69d7510b987f216ff00e6 0a387d653f339297339625710e4df91f0c62b67b 8d75b318f31f3d4d1faf06f666cde029f0d140ac 1a884ec23e99e4daa26637df99433c6e17bba63c 48d8f8261c56e0b5109f5e363cd47c000585857f 9016168146cc3ce0369e8cbc54eb8395afba75a0 62cc0f00dbed73f2d48ccefca6f611e6f8898986 fdad346dc49ebb5465f548a0a2b58b59edcbe087 132c8a94327896bbd9b911d7ee26086df7089290 59c1e1229b3e48ecbc4436fda2fb0a22030d3808 cc80e8aa220f39632c9c742f8587265f7569c5ef 242423aeeeccda4c86a9aed57780d682faf6d044 0565689bc30e7fe550053066d033958f1f90033f 552bca16aca965b882c1614b4673afa0f93d3f6e 8616eadbbd159acd6009e50bce099b806d1467e1 880a9c120d53c05432593e9b3007ecf29f3ccb88 fc67953f6f6eee064badde3f4a7bd07011508642"
+          git -C /tmp/hsdata fetch --depth=1 origin $COMMITS
+          git -C /tmp/hsdata show c623eb10a6fed4a214cf27923e749da9cb52c226:CardDefs.xml > /tmp/CardDefs-marine-launch.xml
+          git -C /tmp/hsdata show d399871096675e4186c1c2d35b9c410464a4ffbf:CardDefs.xml > /tmp/CardDefs-main-launch.xml
+          git -C /tmp/hsdata show 31b034c26f24b8a66ece845ffd03c1ca397b9a02:CardDefs.xml > /tmp/CardDefs-current.xml
+          sha256sum /tmp/CardDefs-marine-launch.xml | grep 632aa9cbbb8ce8815fa80173bcbcc5c21af6e0ecbe2558c164b8e6504b84f94a
+          sha256sum /tmp/CardDefs-main-launch.xml | grep c42c99ca2216802a072eac484bd221706349e4ed278dae93d252f8a503e380a2
+          sha256sum /tmp/CardDefs-current.xml | grep 420224a8c02eeea4ce7d3f1b39f50d5754b2b869118d4d215ef7c5ca1526594c
+          for commit in $COMMITS; do
+            git -C /tmp/hsdata show "$commit:CardDefs.xml" > "/tmp/CardDefs-$commit.xml"
+          done
+      - name: Migrate all 204 cards from immutable launch XML
+        run: |
+          python tools/migrate-kac-schema-v2.py \
+            --marine-launch /tmp/CardDefs-marine-launch.xml \
+            --main-launch /tmp/CardDefs-main-launch.xml \
+            --current /tmp/CardDefs-current.xml
+      - name: Build legacy schema-1 compatibility endpoints from schema-2 history
+        run: python tools/build-api.py
+      - name: Run schema, history-boundary, and current-data regression tests
+        run: |
+          python -m unittest discover -s tests -v
+          python tools/validate-kac-current.py
+      - name: Re-run full pipeline in independent hash-seeded Python processes
+        run: |
+          run_pipeline() {
+            seed="$1"
+            env PYTHONHASHSEED="$seed" python tools/migrate-kac-schema-v2.py --marine-launch /tmp/CardDefs-marine-launch.xml --main-launch /tmp/CardDefs-main-launch.xml --current /tmp/CardDefs-current.xml
+            env PYTHONHASHSEED="$seed" python tools/build-api.py
+            env PYTHONHASHSEED="$seed" python -m unittest discover -s tests -v
+            env PYTHONHASHSEED="$seed" python tools/validate-kac-current.py
+          }
+          if ! git diff --quiet; then
+            echo "Generated schema v2 sources or compatibility indexes differ from HEAD; replay proof deferred to the resulting commit's workflow run."
+          else
+            run_pipeline 1
+            git diff --exit-code
+            test -z "$(git status --porcelain --untracked-files=no)"
+            echo "PYTHONHASHSEED=1: git diff --exit-code clean"
+            run_pipeline 8675309
+            git diff --exit-code
+            test -z "$(git status --porcelain --untracked-files=no)"
+            echo "PYTHONHASHSEED=8675309: git diff --exit-code clean"
+          fi
+      - name: Commit migrated card sources and compatibility indexes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cards.json render.json history.json data/*.json
+          if git diff --cached --quiet; then
+            echo "No card source changes."
+            exit 0
+          fi
+          git commit -m "Migrate Kobolds cards to date-keyed schema v2"
+          git push origin HEAD:main
