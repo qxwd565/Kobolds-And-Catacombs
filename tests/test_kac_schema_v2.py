@@ -218,7 +218,7 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(self.sources["LOOT_504"]["2022-04-06"]["nativeTagChanges"]["1114"],
                          {"before":{"present":True,"value":1},"after":{"present":False}})
         exact="<b>잔상</b>\n아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
-        self.assertIn("\\n",exact)
+        self.assertIn("\n",exact)
         self.assertNotIn("\\\\n",exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["nativeRawTextChanges"]["after"],exact)
         self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["nativeRawText"],exact)
