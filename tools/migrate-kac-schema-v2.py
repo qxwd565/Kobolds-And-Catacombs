@@ -254,7 +254,7 @@ def main():
             if "nativeRawText" in changes:
                 latest_raw=changes["nativeRawText"]
             elif "text" in changes:
-                latest_raw=changes["text"].replace("<br></br>","\\n")
+                latest_raw=changes["text"].replace("<br></br>","\n")
         current_raw=old.get("nativeRawText")
         undated_text_observation=None
         if latest_raw != current_raw:
