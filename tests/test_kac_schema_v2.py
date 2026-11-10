@@ -38,6 +38,9 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         cls.records={x["id"]:x for x in cls.catalog["cards"]}
         cls.sources={p.stem:read(p) for p in sorted((ROOT/"data").glob("LOOT_*.json"))}
         cls.policy=read(ROOT/"sources/kac-history-v2.json")
+        cls.render=read(ROOT/"render.json")
+        cls.history=read(ROOT/"history.json")
+        cls.legacy=read(ROOT/"legacy.json")
 
     def test_complete_card_set_and_stable_metadata(self):
         self.assertEqual(len(self.records),204)
@@ -73,7 +76,11 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
             revisions,details=BUILD.replay_v2(source,self.records[cid],cid)
             for revision in revisions:
                 target=dict(next(state for day,state in forward if day==revision["from"]))
-                recovered=copy.deepcopy(details["currentState"])
+                recovered=copy.deepcopy(self.records[cid])
+                if self.sources[cid].get("nativeRawText") is not None:
+                    recovered["nativeRawText"]=self.sources[cid]["nativeRawText"]
+                if self.sources[cid].get("nativeTextBuilder") is not None:
+                    recovered["nativeTextBuilder"]=self.sources[cid]["nativeTextBuilder"]
                 recovered.update(copy.deepcopy(revision["changes"]))
                 for field in revision.get("removedFields",[]):
                     recovered.pop(field,None)
@@ -117,8 +124,9 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(observation["after"],current)
         revisions,details=BUILD.replay_v2(source,self.records["LOOT_013"],"LOOT_013")
         self.assertIn("nativeRawText",details["incomplete"])
-        self.assertFalse(any("nativeRawText" in revision["changes"] for revision in revisions))
-        self.assertFalse(any("text" in revision["changes"] for revision in revisions))
+        release_revision=next(x for x in revisions if x["from"]=="2017-12-08")
+        self.assertEqual(release_revision["changes"]["nativeRawText"],launch)
+        self.assertEqual(release_revision["changes"]["text"],source["2017-12-08"]["state"]["text"])
 
     def test_card_set_tag_183_is_not_native_text_builder(self):
         source=self.sources["LOOT_060"]
@@ -173,6 +181,99 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(self.sources["LOOT_412"]["nativeRawText"],"<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.\n그 하수인의 능력치가 1/1이 됩니다.")
         tag=next(x for x in self.records["LOOT_060"]["nativeTags"] if x["id"]==215)
         self.assertEqual(tag,{"id":215,"name":"과부하","value":3})
+
+    def test_raw_tag_deltas_and_thirteen_observation_groups_are_synchronized(self):
+        self.assertEqual(self.sources["LOOT_008"]["2021-03-26"]["nativeTagChanges"]["1635"],
+                         {"before":{"present":False},"after":{"present":True,"value":6}})
+        self.assertEqual(self.sources["LOOT_093"]["2021-03-26"]["nativeTagChanges"]["48"],
+                         {"before":{"present":True,"value":5},"after":{"present":True,"value":4}})
+        self.assertEqual(self.sources["LOOT_504"]["2022-04-06"]["nativeTagChanges"]["846"],
+                         {"before":{"present":False},"after":{"present":True,"value":1}})
+        self.assertEqual(self.sources["LOOT_504"]["2022-04-06"]["nativeTagChanges"]["1114"],
+                         {"before":{"present":True,"value":1},"after":{"present":False}})
+        exact="<b>잔상</b>\\n아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다."
+        self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["nativeRawText"],exact)
+        self.assertEqual(self.sources["LOOT_504"]["2022-04-27"]["changes"]["text"],
+                         "<b>잔상</b><br></br>아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다.")
+        self.assertNotIn("2022-04-06",dates(self.sources["LOOT_504t"]))
+        self.assertNotIn("2022-04-27",dates(self.sources["LOOT_504t"]))
+        self.assertTrue(any(x["findingId"]=="KNC-D004" for x in self.sources["LOOT_504t"]["_meta"]["observations"]))
+        self.assertEqual(len({x["findingId"] for source in self.sources.values()
+                              for x in source["_meta"].get("observations",[])}),13)
+        self.assertNotIn("pending", " ".join(x["_meta"]["tagHistoryStatus"] for x in self.sources.values()))
+        self.assertEqual(self.sources["LOOT_504"]["_meta"]["tagHistoryStatus"],
+                         "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive")
+        self.assertEqual(self.sources["LOOT_504"]["_meta"]["currentStringEvidence"]["name"],
+                         {"present":True,"value":"불안정한 진화"})
+        self.assertNotIn("2022-04-06",dates(self.sources["LOOT_504t"]))
+
+    def test_public_render_history_replays_every_card_date_interval(self):
+        rendered={x["id"]:x for x in self.render["cards"]}
+        self.assertEqual(len(rendered),204)
+        self.assertEqual(len(self.legacy["cards"]),204)
+        for cid,source in self.sources.items():
+            card=rendered[cid]
+            revisions=card.get("history",[])
+            for day,state in replay_forward(source):
+                applicable=next((x for x in revisions if x["from"]<=day and
+                                 (x.get("before") is None or day<x["before"])),None)
+                public=copy.deepcopy(card)
+                public.pop("history",None)
+                if applicable:
+                    public.update(copy.deepcopy(applicable["changes"]))
+                    for field in applicable.get("removedFields",[]):
+                        public.pop(field,None)
+                incomplete=set(source["_meta"].get("historyIncompleteFields",[]))
+                for field in BUILD.STATE_FIELDS:
+                    if field in incomplete or field in ("nativeRawText","nativeTextBuilder"):
+                        continue
+                    self.assertEqual(public.get(field,BUILD.MISSING),state.get(field,BUILD.MISSING),
+                                     f"{cid}:{day}:{field}")
+            legacy=self.legacy["cards"][str(self.records[cid]["dbfId"])]
+            self.assertEqual(legacy["id"],cid)
+            initial=legacy["initialSpec"]
+            native={x["id"]:x["value"] for x in initial.get("nativeTags",[])}
+            referenced={x["id"]:x["value"] for x in initial.get("referencedTags",[])}
+            touched_native=set()
+            touched_referenced=set()
+            for patch in legacy["patches"]:
+                for tag_id,delta in patch.get("nativeTagChanges",{}).items():
+                    tag_id=int(tag_id); touched_native.add(tag_id)
+                    if delta["after"].get("present"):
+                        native[tag_id]=delta["after"].get("value")
+                    else:
+                        native.pop(tag_id,None)
+                for tag_id,delta in patch.get("referencedTagChanges",{}).items():
+                    tag_id=int(tag_id); touched_referenced.add(tag_id)
+                    if delta["after"].get("present"):
+                        referenced[tag_id]=delta["after"].get("value")
+                    else:
+                        referenced.pop(tag_id,None)
+            current_native={x["id"]:x.get("value") for x in source.get("nativeTags",[])}
+            current_referenced={x["id"]:x.get("value") for x in source.get("referencedTags",[])}
+            for tag_id in touched_native:
+                self.assertEqual(native.get(tag_id,BUILD.MISSING),current_native.get(tag_id,BUILD.MISSING),f"{cid}:native:{tag_id}")
+            for tag_id in touched_referenced:
+                self.assertEqual(referenced.get(tag_id,BUILD.MISSING),current_referenced.get(tag_id,BUILD.MISSING),f"{cid}:referenced:{tag_id}")
+
+    def test_public_race_history_uses_primary_tag_not_multitribe_display(self):
+        rendered={x["id"]:x for x in self.render["cards"]}
+        expected={
+            "LOOT_111":("기계",["MECHANICAL"]),
+            "LOOT_209t":("용족",["DRAGON"]),
+            "LOOT_313":("",[]),
+        }
+        for cid,(race,races) in expected.items():
+            revisions=rendered[cid]["history"]
+            release=next(x for x in revisions if x["from"]=="2017-12-08")
+            self.assertEqual(release["changes"].get("race"),race,cid)
+            self.assertEqual(release["changes"].get("races",[]),races,cid)
+        r209=next(x for x in rendered["LOOT_209t"]["history"] if x["from"]=="2023-02-15")
+        self.assertEqual(r209["changes"]["race"],"용족")
+        self.assertEqual(r209["changes"]["races"],["DRAGON","UNDEAD"])
+        r313=next(x for x in rendered["LOOT_313"]["history"] if x["from"]=="2026-02-10")
+        self.assertEqual(r313["changes"]["race"],"야수")
+        self.assertEqual(r313["changes"]["races"],["BEAST","ELEMENTAL"])
 
 if __name__=="__main__":
     unittest.main()
