@@ -6,7 +6,7 @@
     "id": "LOOT_412",
     "dbfId": 45936,
     "name": "코볼트 환영술사",
-    "text": "<b>죽음의 메아리:</b> 내 손에 있는 하수인을 복사하여 1/1 하수인으로 소환합니다.",
+    "text": "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.<br></br>그 하수인의 능력치가 1/1이 됩니다.",
     "type": "MINION",
     "cardClass": "ROGUE",
     "classes": [],
@@ -88,7 +88,7 @@
         "value": 1
       }
     ],
-    "nativeRawText": "<b>죽음의 메아리:</b> 내 손에 있는 하수인을 복사하여 1/1 하수인으로 소환합니다.",
+    "nativeRawText": "<b>죽음의 메아리</b>: 내 손에 있는 하수인을 소환합니다.\n그 하수인의 능력치가 1/1이 됩니다.",
     "nativeTextBuilder": 0,
     "releasedAt": "2017-12-08",
     "releaseStatus": "verified",
