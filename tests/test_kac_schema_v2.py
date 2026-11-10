@@ -225,12 +225,23 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
                          "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive")
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["currentStringEvidence"]["name"],
                          {"present":True,"value":"불안정한 진화"})
+        self.assertEqual(self.sources["LOOT_504"]["nativeRawText"],
+                         "<b>잔상</b>, 아군 하수인을 비용이 (1) 높은 하수인으로 변신시킵니다.")
+        raw_observation=next(x for x in self.sources["LOOT_504"]["_meta"]["undatedObservations"]
+                             if x["topic"]=="native-raw-text-current-vs-dated")
+        self.assertIsNone(raw_observation["date"])
+        self.assertEqual(raw_observation["before"],exact)
+        self.assertEqual(raw_observation["after"],self.sources["LOOT_504"]["nativeRawText"])
+        revisions,details=BUILD.replay_v2(self.sources["LOOT_504"],self.records["LOOT_504"],"LOOT_504")
+        self.assertIn("nativeRawText",details["incomplete"])
+        self.assertEqual(next(x for x in revisions if x["from"]=="2022-04-27")["changes"]["nativeRawText"],exact)
         self.assertNotIn("2022-04-06",dates(self.sources["LOOT_504t"]))
 
     def test_public_render_history_replays_every_card_date_interval(self):
         rendered={x["id"]:x for x in self.render["cards"]}
         self.assertEqual(len(rendered),204)
         self.assertEqual(len(self.legacy["cards"]),204)
+        self.assertEqual(len(self.history["cards"]),204)
         for cid,source in self.sources.items():
             card=rendered[cid]
             revisions=card.get("history",[])
@@ -253,6 +264,9 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
             initial=legacy["initialSpec"]
             native={x["id"]:x["value"] for x in initial.get("nativeTags",[])}
             referenced={x["id"]:x["value"] for x in initial.get("referencedTags",[])}
+            self.assertTrue(isinstance(initial.get("nativeTags"),list),f"{cid}: nativeTags missing")
+            self.assertTrue(isinstance(initial.get("referencedTags"),list),f"{cid}: referencedTags missing")
+            self.assertFalse(set(native)&set(referenced),f"{cid}: owned/reference tag identity collision")
             touched_native=set()
             touched_referenced=set()
             for patch in legacy["patches"]:
