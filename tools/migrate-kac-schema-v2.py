@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATE_RE = re.compile(r"^\\d{4}-\\d{2}-\\d{2}$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 STABLE = ("root", "relatedIds", "englishName", "expansion", "setOrder", "formats", "provenance", "mode")
 CLASS = {2:"DRUID",3:"HUNTER",4:"MAGE",5:"PALADIN",6:"PRIEST",7:"ROGUE",8:"SHAMAN",9:"WARLOCK",10:"WARRIOR",12:"NEUTRAL",14:"DEMONHUNTER",16:"DEATHKNIGHT"}
 TYPE = {3:"HERO",4:"MINION",5:"SPELL",7:"WEAPON",10:"HERO_POWER",39:"LOCATION"}
@@ -27,9 +27,9 @@ def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 def write(path, value):
-    rendered = json.dumps(value, ensure_ascii=False, indent=2) + "\\n"
+    rendered = json.dumps(value, ensure_ascii=False, indent=2) + "\n"
     if not path.exists() or path.read_text(encoding="utf-8") != rendered:
-        path.write_text(rendered, encoding="utf-8", newline="\\n")
+        path.write_text(rendered, encoding="utf-8", newline="\n")
         return True
     return False
 
@@ -40,9 +40,9 @@ def scalar(value):
     if value is None:
         return None
     try:
-        if re.fullmatch(r"-?\\d+", value):
+        if re.fullmatch(r"-?\d+", value):
             return int(value)
-        if re.fullmatch(r"-?\\d+\\.\\d+", value):
+        if re.fullmatch(r"-?\d+\\.\d+", value):
             return float(value)
     except TypeError:
         pass
@@ -237,13 +237,16 @@ def main():
             **stable,
             "schemaVersion":2,
             "releaseStatus":old.get("releaseStatus","verified"),
-            "historyIncompleteFields":sorted(set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}),
+            "releasedAt":release,
+            "historyIncompleteFields":sorted(set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|({"nativeRawText"} if any("text" in event["changes"] for event in events) else set())),
             "launchStringEvidence":launch["strings"],
             "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
             "tagHistoryStatus":"snapshot synchronization pending; see tag-observation source manifest",
             "wordingObservations":[x for x in policy.get("wordingObservations",[]) if x["cardId"]==cid],
             "functionalEvents":[x for x in policy.get("events",[]) if x["cardId"]==cid and x.get("eventType")=="functional-rule-change"],
         }
+        if cid=="LOOT_504":
+            meta["currentMechanics"]=["ECHO"]
         # Preserve the approved current raw text, builder, tag-array order, names,
         # values, and all non-target current fields exactly as they are.
         doc={
