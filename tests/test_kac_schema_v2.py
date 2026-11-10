@@ -110,6 +110,7 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         current=source["nativeRawText"]
         self.assertEqual(launch,"<b>도발</b>, <b>전투의 함성:</b>\\n내 영웅에게\\n피해를 2 줍니다.")
         self.assertEqual(current,"<b>도발</b>, <b>전투의 함성</b>:&\\n내 영웅에게\\n피해를 2 줍니다.")
+        self.assertEqual(source["current"]["text"],"<b>도발</b>, <b>전투의 함성</b>:<br></br>내 영웅에게<br></br>피해를 2 줍니다.")
         observation=next(x for x in source["_meta"]["undatedObservations"] if x["topic"]=="loot013-battlecry-markup")
         self.assertIsNone(observation["date"])
         self.assertEqual(observation["before"],launch)
@@ -117,6 +118,7 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         revisions,details=BUILD.replay_v2(source,self.records["LOOT_013"],"LOOT_013")
         self.assertIn("nativeRawText",details["incomplete"])
         self.assertFalse(any("nativeRawText" in revision["changes"] for revision in revisions))
+        self.assertFalse(any("text" in revision["changes"] for revision in revisions))
 
     def test_card_set_tag_183_is_not_native_text_builder(self):
         source=self.sources["LOOT_060"]
@@ -125,6 +127,8 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         tag=next(x for x in launch["ownedTags"] if x["id"]==183)
         self.assertEqual(tag["value"],1004)
         self.assertEqual(source["nativeTextBuilder"],0)
+        self.assertEqual(self.sources["LOOT_313"]["current"]["race"],"야수")
+        self.assertEqual(self.sources["LOOT_313"]["current"]["races"],["BEAST","ELEMENTAL"])
         for cid,doc in self.sources.items():
             self.assertNotIn("nativeTextBuilder",doc[dates(doc)[0]]["state"],cid)
 

@@ -562,6 +562,23 @@
         "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
       ],
       "note": "출시와 현재 CardDefs의 원시 문구 차이. 전환일 미확정. 양쪽 문자열을 각각 보존하며 날짜 이력에 임의 배치하지 않음."
+    },
+    {
+      "topic": "loot013-battlecry-display-text",
+      "cardIds": [
+        "LOOT_013"
+      ],
+      "fields": [
+        "text"
+      ],
+      "before": "<b>도발</b>, <b>전투의 함성:</b><br></br>내 영웅에게<br></br>피해를 2 줍니다.",
+      "after": "<b>도발</b>, <b>전투의 함성</b>:<br></br>내 영웅에게<br></br>피해를 2 줍니다.",
+      "date": null,
+      "sourceCommits": [
+        "d399871096675e4186c1c2d35b9c410464a4ffbf",
+        "31b034c26f24b8a66ece845ffd03c1ca397b9a02"
+      ],
+      "note": "출시와 현재 표시용 문구의 마크업 위치 차이. 전환일 미확정. nativeRawText 관측과 별도로 표시용 text를 보존."
     }
   ],
   "editorialSuggestions": [

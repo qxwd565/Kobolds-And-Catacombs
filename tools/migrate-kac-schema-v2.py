@@ -109,6 +109,11 @@ def race_list(entity):
             result.append(tribe)
     return result
 
+def primary_race_label(entity):
+    primary = tags_by_id(entity).get(200)
+    race = RACE.get(primary) if primary is not None else None
+    return RACE_KO.get(race, race) if race else ""
+
 def launch_state(entity, cid):
     tags = tags_by_id(entity)
     kind = TYPE.get(tags.get(202))
@@ -134,9 +139,7 @@ def launch_state(entity, cid):
     if kind == "MINION":
         races = race_list(entity)
         state["races"] = races
-        primary = tags.get(200)
-        primary_race = RACE.get(primary) if primary is not None else None
-        state["race"] = RACE_KO.get(primary_race, primary_race) if primary_race else ""
+        state["race"] = primary_race_label(entity)
     if kind == "SPELL" and 1635 in tags:
         state["spellSchool"] = SCHOOL.get(tags[1635], "")
     strings = entity["strings"]
@@ -240,6 +243,11 @@ def main():
                 raise ValueError(f"{cid}: event {event['date']} is not after release {release}")
             dates[event["date"]]={"changes":event["changes"],"sources":event.get("sources",[]),"eventTypes":event.get("eventTypes",[])}
         current_card=copy.deepcopy(record)
+        if current_card.get("type") == "MINION":
+            # The singular race label is strictly CARDRACE/Tag 200. Secondary
+            # tribes remain in races and are never promoted into the primary slot.
+            current_card["races"] = race_list(current_xml[cid])
+            current_card["race"] = primary_race_label(current_xml[cid])
         stable={key:copy.deepcopy(source[key]) for key in STABLE}
         owner_ids={tag["id"] for tag in current_xml[cid]["owned"]}
         names={tag["id"]:tag.get("name",TAG_NAMES.get(tag["id"],f"Tag {tag['id']}")) for tag in old.get("nativeTags",[])}
