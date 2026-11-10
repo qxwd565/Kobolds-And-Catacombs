@@ -309,6 +309,7 @@ def main():
             "currentStringEvidence":{"name":{"present":"name" in old.get("card",{}),"value":old.get("card",{}).get("name")},"nativeRawText":{"present":"nativeRawText" in old,"value":current_raw}},
             "launchPrimaryRace":{"tagId":200,"value":tags_by_id(launch).get(200),"race":primary_race_label(launch)},
             "currentPrimaryRace":{"tagId":200,"value":tags_by_id(current_xml[cid]).get(200),"race":primary_race_label(current_xml[cid])},
+            "currentCanonicalRaces":race_list(current_xml[cid]) if current_card.get("type")=="MINION" else [],
             "currentTagOrigins":[{"id":t["id"],"source":"owned" if t["id"] in owner_ids else "referenced"} for t in old.get("nativeTags",[])],
             "tagHistoryStatus":"snapshot synchronization pending; see tag-observation source manifest",
             "wordingObservations":[x for x in policy.get("wordingObservations",[]) if x["cardId"]==cid],
