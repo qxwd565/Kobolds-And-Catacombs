@@ -176,7 +176,7 @@ def main():
             source=read(path)
             if source.get("schemaVersion")!=2:
                 raise ValueError(f"{cid}: expected schema v2 before tag synchronization")
-            sync_event(source,cid,event_day,group,card)
+            sync_event(source,cid,event_day,group,card,card.get("findingId"))
             if card.get("rawText"):
                 raw=card["rawText"]["after"]
                 entry=source[event_day]
