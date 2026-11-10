@@ -135,6 +135,17 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertEqual(self.sources["LOOT_998k"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_k)
         self.assertEqual(self.sources["LOOT_998l"]["2024-10-18"]["nativeRawTextChanges"]["after"],raw_l_2024)
         self.assertEqual(self.sources["LOOT_998l"]["2026-03-11"]["nativeRawTextChanges"]["after"],raw_l_2026)
+        rendered={x["id"]:x for x in self.render["cards"]}
+        for cid,day,raw in (("LOOT_998k","2024-10-18",raw_k),
+                            ("LOOT_998l","2024-10-18",raw_l_2024),
+                            ("LOOT_998l","2026-03-11",raw_l_2026)):
+            public_revision=next(x for x in rendered[cid]["history"] if x["from"]==day)
+            self.assertEqual(public_revision["nativeRawTextChanges"]["after"],raw)
+            dbf=str(self.records[cid]["dbfId"])
+            legacy_patch=next(x for x in self.legacy["cards"][dbf]["patches"] if x["date"]==day)
+            history_patch=next(x for x in self.history["cards"][dbf]["patches"] if x["date"]==day)
+            self.assertEqual(legacy_patch["nativeRawTextChanges"]["after"],raw)
+            self.assertEqual(history_patch["nativeRawTextChanges"]["after"],raw)
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["functionalEvents"][0]["date"],"2022-04-06")
 
     def test_undated_loot013_raw_text_observation_is_exact_and_not_dated(self):
