@@ -39,18 +39,15 @@ jobs:
           print(" ".join(sorted(commits)))
           PY
           )"
-          git -C /tmp/hsdata fetch --depth=1 origin $COMMITS
-          git -C /tmp/hsdata fetch --depth=1 origin $EVIDENCE_COMMITS
+          ALL_COMMITS="$(printf '%s\\n%s\\n' "$COMMITS" "$EVIDENCE_COMMITS" | tr ' ' '\\n' | sed '/^$/d' | sort -u | tr '\\n' ' ')"
+          git -C /tmp/hsdata fetch --depth=1 origin $ALL_COMMITS
           git -C /tmp/hsdata show c623eb10a6fed4a214cf27923e749da9cb52c226:CardDefs.xml > /tmp/CardDefs-marine-launch.xml
           git -C /tmp/hsdata show d399871096675e4186c1c2d35b9c410464a4ffbf:CardDefs.xml > /tmp/CardDefs-main-launch.xml
           git -C /tmp/hsdata show 31b034c26f24b8a66ece845ffd03c1ca397b9a02:CardDefs.xml > /tmp/CardDefs-current.xml
           sha256sum /tmp/CardDefs-marine-launch.xml | grep 632aa9cbbb8ce8815fa80173bcbcc5c21af6e0ecbe2558c164b8e6504b84f94a
           sha256sum /tmp/CardDefs-main-launch.xml | grep c42c99ca2216802a072eac484bd221706349e4ed278dae93d252f8a503e380a2
           sha256sum /tmp/CardDefs-current.xml | grep 420224a8c02eeea4ce7d3f1b39f50d5754b2b869118d4d215ef7c5ca1526594c
-          for commit in $COMMITS; do
-            git -C /tmp/hsdata show "$commit:CardDefs.xml" > "/tmp/CardDefs-$commit.xml"
-          done
-          for commit in $EVIDENCE_COMMITS; do
+          for commit in $ALL_COMMITS; do
             git -C /tmp/hsdata show "$commit:CardDefs.xml" > "/tmp/CardDefs-$commit.xml"
           done
       - name: Migrate all 204 cards from immutable launch XML
