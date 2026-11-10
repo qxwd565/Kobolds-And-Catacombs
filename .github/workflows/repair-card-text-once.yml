@@ -1,0 +1,74 @@
+name: Repair card text line breaks (one shot)
+on:
+  push:
+    paths:
+      - '.github/workflows/repair-card-text-once.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Repair display text only, preserve native evidence and tokens
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          root = Path('.')
+          counters = {'files': 0, 'fields': 0, 'breaks': 0}
+          def fix_text(t):
+              u = re.sub(r'\r\n|\r|\n|\\r\\n|\\r|\\n|/n', '<br></br>', t)
+              u = re.sub(r'<br\s*/?\s*>(?:</br>)?', '<br></br>', u, flags=re.I)
+              u = re.sub(r'<b><b>([^<>]*)</b>([^<>]*)</b>', r'<b>\1</b>\2', u)
+              return u
+          def walk(obj):
+              if isinstance(obj, dict):
+                  for key, val in obj.items():
+                      if key == 'text' and isinstance(val, str):
+                          replacement = fix_text(val)
+                          if replacement != val:
+                              counters['fields'] += 1
+                              counters['breaks'] += replacement.count('<br></br>')-val.count('<br></br>')
+                              obj[key] = replacement
+                      else:
+                          walk(val)
+              elif isinstance(obj, list):
+                  for val in obj: walk(val)
+          paths = sorted(Path('data').glob('*.json'))
+          paths.extend(p for p in map(Path, ['cards.json','render.json','history.json']) if p.is_file())
+          for path in paths:
+              before = path.read_text(encoding='utf-8')
+              doc = json.loads(before)
+              walk(doc)
+              pretty = before.lstrip().startswith('{\n')
+              after = json.dumps(doc,ensure_ascii=False,indent=2) if pretty else json.dumps(doc,ensure_ascii=False,separators=(',',':'))
+              if before.endswith('\n'): after += '\n'
+              if after != before:
+                  path.write_text(after,encoding='utf-8',newline='\n')
+                  counters['files'] += 1
+          for path in paths:
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              def verify(o):
+                  if isinstance(o,dict):
+                      for k,v in o.items():
+                          if k=='text' and isinstance(v,str) and ('\n' in v or '\r' in v or '/n' in v or '\\n' in v):
+                              raise ValueError(str(path)+': unnormalized text')
+                          verify(v)
+                  elif isinstance(o,list):
+                      for v in o: verify(v)
+              verify(doc)
+          print(json.dumps(counters))
+          PY
+      - name: Commit normalized card JSON
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data cards.json render.json history.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Normalize card description breaks [skip ci]"
+            git push
+          fi
