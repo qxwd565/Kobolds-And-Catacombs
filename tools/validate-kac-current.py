@@ -20,7 +20,7 @@ def main():
     assert len(list((ROOT / "data").glob("LOOT_*.json"))) == 204
     assert len({card["id"] for card in cards}) == 204
     linebreak_cards = sum("<br></br>" in card.get("text", "") for card in cards)
-    assert linebreak_cards == 96, f"Expected 96 existing line-break repairs, got {linebreak_cards}"
+    assert linebreak_cards == 97, f"Expected 96 preserved repairs plus the corrected LOOT_412 break, got {linebreak_cards}"
     for card in cards:
         cid = card["id"]
         assert rendered[cid]["text"] == card.get("text"), f"{cid}: current render text drift"
@@ -46,7 +46,7 @@ def main():
     print(json.dumps({
         "cards": len(cards),
         "stableMetadataValues": len(cards) * len(STABLE),
-        "existingLineBreakCardsPreserved": linebreak_cards,
+        "existingLineBreakCardsPreserved": 96,\n        "lineBreakCardsAfterLOOT412Correction": linebreak_cards,
         "illusionistText": "correct",
         "crushingHandOwnedTag215": 3,
         "historyCards": len(history["cards"]),
