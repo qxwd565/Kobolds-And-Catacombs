@@ -6,7 +6,32 @@
     "status": "verified"
   },
   "prefixes": {},
-  "cards": {},
+  "cards": {
+    "LOOT_357": {
+      "date": "2017-11-07",
+      "status": "verified"
+    },
+    "LOOT_357l": {
+      "date": "2017-11-07",
+      "status": "verified"
+    },
+    "LOOT_998h": {
+      "date": "2017-11-07",
+      "status": "verified"
+    },
+    "LOOT_998j": {
+      "date": "2017-11-07",
+      "status": "verified"
+    },
+    "LOOT_998k": {
+      "date": "2017-11-07",
+      "status": "verified"
+    },
+    "LOOT_998l": {
+      "date": "2017-11-07",
+      "status": "verified"
+    }
+  },
   "sources": {
     "main": "https://hearthstone.blizzard.com/ko-kr/expansions-adventures/kobolds-and-catacombs"
   }
