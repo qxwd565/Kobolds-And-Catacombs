@@ -228,9 +228,9 @@ def main():
             if event["cardId"]==cid:
                 changes=copy.deepcopy(event["changes"])
                 if "text" in changes:
-                    raw_text=changes.get("nativeRawText",changes["text"].replace("<br></br>","\\n"))
+                    raw_text=changes.get("nativeRawText",changes["text"].replace("<br></br>","\n"))
                     changes["nativeRawText"]=raw_text
-                    changes["text"]=changes["text"].replace("\\n","<br></br>")
+                    changes["text"]=changes["text"].replace("\n","<br></br>")
                 merge_event(events,event["date"],changes,event.get("source"),event.get("eventType","gameplay-change"))
         events.sort(key=lambda x:x["date"])
         dates={}
@@ -252,6 +252,8 @@ def main():
             "historyIncompleteFields":sorted(
                 set(source.get("historyIncompleteFields",[]))|{"nativeTags","referencedTags"}|
                 ({"nativeRawText"} if any("text" in event.get("changes",{}) and "nativeRawText" not in event.get("changes",{}) for event in old.get("patches",[])) else set())|
+                ({"nativeTextBuilder"} if "nativeTextBuilder" in state and old.get("nativeTextBuilder")!=state["nativeTextBuilder"] else set())|
+                ({"name"} if "name" in state and record.get("name")!=state["name"] else set())|
                 {field for observation in policy.get("undatedObservations",[]) if cid in observation.get("cardIds",[]) for field in observation.get("fields",[])}
             ),
             "launchStringEvidence":launch["strings"],
