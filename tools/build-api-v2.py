@@ -69,6 +69,10 @@ def replay_v2(source,record,cid):
    else: incomplete.add(field)
   elif field=="mechanics" and field not in current and "currentMechanics" in meta:
    current_state[field]=copy.deepcopy(meta["currentMechanics"])
+  elif field=="race" and "currentPrimaryRace" in meta:
+   current_state[field]=copy.deepcopy(meta["currentPrimaryRace"].get("race") or "")
+  elif field=="races" and "currentCanonicalRaces" in meta:
+   current_state[field]=copy.deepcopy(meta["currentCanonicalRaces"])
   elif field in current:
    current_state[field]=copy.deepcopy(current[field])
   else:
