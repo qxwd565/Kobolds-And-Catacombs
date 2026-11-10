@@ -252,6 +252,9 @@ def main():
             elif "races" in changes and current_primary in changes["races"] and primary_at_date!=current_primary_label:
                 changes["race"]=current_primary_label
                 primary_at_date=current_primary_label
+            elif "races" in changes and current_primary is None and not changes["races"] and primary_at_date:
+                changes["race"]=""
+                primary_at_date=""
         dates={}
         dates[release]={"state":state,"ownedTags":launch["owned"],"referencedTags":launch["referenced"]}
         for event in events:
