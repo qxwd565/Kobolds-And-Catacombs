@@ -255,6 +255,12 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         self.assertNotIn("pending", " ".join(x["_meta"]["tagHistoryStatus"] for x in self.sources.values()))
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["tagHistoryStatus"],
                          "confirmed event deltas synchronized; intervening snapshots are not claimed exhaustive")
+        for source in self.sources.values():
+            for day,entry in source.items():
+                if not isinstance(entry,dict) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}",day):
+                    continue
+                if "tagSnapshotEvidence" in entry:
+                    self.assertIsInstance(entry["tagSnapshotEvidence"],list)
         self.assertEqual(self.sources["LOOT_504"]["_meta"]["currentStringEvidence"]["name"],
                          {"present":True,"value":"불안정한 진화"})
         self.assertEqual(self.sources["LOOT_504"]["nativeRawText"],
@@ -359,6 +365,20 @@ class KoboldsSchemaV2Tests(unittest.TestCase):
         patch_093=next(x for x in l093["patches"] if x["date"]=="2021-03-26")
         self.assertEqual(patch_093["nativeTagChanges"]["48"],
                          {"before":{"present":True,"value":5},"after":{"present":True,"value":4}})
+        rendered={x["id"]:x for x in self.render["cards"]}
+        def public_at(cid,day):
+            card=copy.deepcopy(rendered[cid])
+            revisions=card.pop("history",[])
+            revision=next(x for x in revisions if x["from"]<=day and
+                          (x.get("before") is None or day<x["before"]))
+            card.update(copy.deepcopy(revision["changes"]))
+            for field in revision.get("removedFields",[]): card.pop(field,None)
+            return card
+        self.assertNotIn(1635,{x["id"]:x["value"] for x in public_at("LOOT_008","2017-12-08")["nativeTags"]})
+        self.assertEqual({x["id"]:x["value"] for x in public_at("LOOT_008","2021-03-26")["nativeTags"]}[1635],6)
+        self.assertEqual({x["id"]:x["value"] for x in public_at("LOOT_093","2017-12-08")["nativeTags"]}[48],4)
+        self.assertEqual({x["id"]:x["value"] for x in public_at("LOOT_093","2018-05-23")["nativeTags"]}[48],5)
+        self.assertEqual({x["id"]:x["value"] for x in public_at("LOOT_093","2021-03-26")["nativeTags"]}[48],4)
 
     def test_public_race_history_uses_primary_tag_not_multitribe_display(self):
         rendered={x["id"]:x for x in self.render["cards"]}
