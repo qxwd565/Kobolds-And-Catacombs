@@ -42,7 +42,7 @@ def scalar(value):
     try:
         if re.fullmatch(r"-?\d+", value):
             return int(value)
-        if re.fullmatch(r"-?\d+\\.\d+", value):
+        if re.fullmatch(r"-?\d+\.\d+", value):
             return float(value)
     except TypeError:
         pass
@@ -77,7 +77,7 @@ def parse_entity(elem):
             if tag_id in (184,185):
                 for locale in ("koKR","enUS"):
                     if locale in locales:
-                        strings[str(tag_id)]["locales"][locale]["nativeRawText"] = locales[locale].replace("\\\\n","\\n")
+                        strings[str(tag_id)]["locales"][locale]["nativeRawText"] = locales[locale].replace("\\n","\n")
     return {"owned":owned,"referenced":referenced,"strings":strings}
 
 def read_xml(path, wanted):
