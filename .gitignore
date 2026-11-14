@@ -1,2 +1,9 @@
 __pycache__/
 *.py[cod]
+
+# Temporary compatibility projections
+/render.json
+/history.json
+/cards-date.json
+/render-date.json
+/history-date.json
